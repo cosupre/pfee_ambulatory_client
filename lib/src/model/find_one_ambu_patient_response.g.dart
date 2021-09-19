@@ -8,33 +8,48 @@ part of 'find_one_ambu_patient_response.dart';
 
 class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
   @override
-  final String? attendantPhone;
+  final String attendantPhone;
   @override
-  final DateTime? birth;
+  final DateTime birth;
   @override
-  final String? code;
+  final String code;
   @override
-  final String? firstName;
+  final String firstName;
   @override
-  final String? id;
+  final String id;
   @override
-  final String? lastName;
+  final String lastName;
   @override
-  final String? operation;
+  final String operation;
 
   factory _$FindOneAmbuPatientResponse(
           [void Function(FindOneAmbuPatientResponseBuilder)? updates]) =>
       (new FindOneAmbuPatientResponseBuilder()..update(updates)).build();
 
   _$FindOneAmbuPatientResponse._(
-      {this.attendantPhone,
-      this.birth,
-      this.code,
-      this.firstName,
-      this.id,
-      this.lastName,
-      this.operation})
-      : super._();
+      {required this.attendantPhone,
+      required this.birth,
+      required this.code,
+      required this.firstName,
+      required this.id,
+      required this.lastName,
+      required this.operation})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        attendantPhone, 'FindOneAmbuPatientResponse', 'attendantPhone');
+    BuiltValueNullFieldError.checkNotNull(
+        birth, 'FindOneAmbuPatientResponse', 'birth');
+    BuiltValueNullFieldError.checkNotNull(
+        code, 'FindOneAmbuPatientResponse', 'code');
+    BuiltValueNullFieldError.checkNotNull(
+        firstName, 'FindOneAmbuPatientResponse', 'firstName');
+    BuiltValueNullFieldError.checkNotNull(
+        id, 'FindOneAmbuPatientResponse', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        lastName, 'FindOneAmbuPatientResponse', 'lastName');
+    BuiltValueNullFieldError.checkNotNull(
+        operation, 'FindOneAmbuPatientResponse', 'operation');
+  }
 
   @override
   FindOneAmbuPatientResponse rebuild(
@@ -154,13 +169,20 @@ class FindOneAmbuPatientResponseBuilder
   _$FindOneAmbuPatientResponse build() {
     final _$result = _$v ??
         new _$FindOneAmbuPatientResponse._(
-            attendantPhone: attendantPhone,
-            birth: birth,
-            code: code,
-            firstName: firstName,
-            id: id,
-            lastName: lastName,
-            operation: operation);
+            attendantPhone: BuiltValueNullFieldError.checkNotNull(
+                attendantPhone, 'FindOneAmbuPatientResponse', 'attendantPhone'),
+            birth: BuiltValueNullFieldError.checkNotNull(
+                birth, 'FindOneAmbuPatientResponse', 'birth'),
+            code: BuiltValueNullFieldError.checkNotNull(
+                code, 'FindOneAmbuPatientResponse', 'code'),
+            firstName: BuiltValueNullFieldError.checkNotNull(
+                firstName, 'FindOneAmbuPatientResponse', 'firstName'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, 'FindOneAmbuPatientResponse', 'id'),
+            lastName: BuiltValueNullFieldError.checkNotNull(
+                lastName, 'FindOneAmbuPatientResponse', 'lastName'),
+            operation: BuiltValueNullFieldError.checkNotNull(
+                operation, 'FindOneAmbuPatientResponse', 'operation'));
     replace(_$result);
     return _$result;
   }

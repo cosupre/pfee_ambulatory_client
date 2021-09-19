@@ -11,25 +11,25 @@ part 'create_ambu_patient_response.g.dart';
 
 abstract class CreateAmbuPatientResponse implements Built<CreateAmbuPatientResponse, CreateAmbuPatientResponseBuilder> {
     @BuiltValueField(wireName: r'attendantPhone')
-    String? get attendantPhone;
+    String get attendantPhone;
 
     @BuiltValueField(wireName: r'birth')
-    DateTime? get birth;
+    DateTime get birth;
 
     @BuiltValueField(wireName: r'code')
-    String? get code;
+    String get code;
 
     @BuiltValueField(wireName: r'firstName')
-    String? get firstName;
+    String get firstName;
 
     @BuiltValueField(wireName: r'id')
-    String? get id;
+    String get id;
 
     @BuiltValueField(wireName: r'lastName')
-    String? get lastName;
+    String get lastName;
 
     @BuiltValueField(wireName: r'operation')
-    String? get operation;
+    String get operation;
 
     CreateAmbuPatientResponse._();
 
@@ -52,48 +52,34 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
     Iterable<Object?> serialize(Serializers serializers, CreateAmbuPatientResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        if (object.attendantPhone != null) {
-            result
-                ..add(r'attendantPhone')
-                ..add(serializers.serialize(object.attendantPhone,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.birth != null) {
-            result
-                ..add(r'birth')
-                ..add(serializers.serialize(object.birth,
-                    specifiedType: const FullType(DateTime)));
-        }
-        if (object.code != null) {
-            result
-                ..add(r'code')
-                ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.firstName != null) {
-            result
-                ..add(r'firstName')
-                ..add(serializers.serialize(object.firstName,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.id != null) {
-            result
-                ..add(r'id')
-                ..add(serializers.serialize(object.id,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.lastName != null) {
-            result
-                ..add(r'lastName')
-                ..add(serializers.serialize(object.lastName,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.operation != null) {
-            result
-                ..add(r'operation')
-                ..add(serializers.serialize(object.operation,
-                    specifiedType: const FullType(String)));
-        }
+        result
+            ..add(r'attendantPhone')
+            ..add(serializers.serialize(object.attendantPhone,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'birth')
+            ..add(serializers.serialize(object.birth,
+                specifiedType: const FullType(DateTime)));
+        result
+            ..add(r'code')
+            ..add(serializers.serialize(object.code,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'firstName')
+            ..add(serializers.serialize(object.firstName,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'id')
+            ..add(serializers.serialize(object.id,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'lastName')
+            ..add(serializers.serialize(object.lastName,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'operation')
+            ..add(serializers.serialize(object.operation,
+                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -125,8 +111,8 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    result.id.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String);
                     break;
                 case r'lastName':
                     result.lastName = serializers.deserialize(value,

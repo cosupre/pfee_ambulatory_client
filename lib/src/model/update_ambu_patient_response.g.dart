@@ -8,18 +8,26 @@ part of 'update_ambu_patient_response.dart';
 
 class _$UpdateAmbuPatientResponse extends UpdateAmbuPatientResponse {
   @override
-  final String? attendantPhone;
+  final String attendantPhone;
   @override
-  final String? code;
+  final String code;
   @override
-  final String? id;
+  final String id;
 
   factory _$UpdateAmbuPatientResponse(
           [void Function(UpdateAmbuPatientResponseBuilder)? updates]) =>
       (new UpdateAmbuPatientResponseBuilder()..update(updates)).build();
 
-  _$UpdateAmbuPatientResponse._({this.attendantPhone, this.code, this.id})
-      : super._();
+  _$UpdateAmbuPatientResponse._(
+      {required this.attendantPhone, required this.code, required this.id})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        attendantPhone, 'UpdateAmbuPatientResponse', 'attendantPhone');
+    BuiltValueNullFieldError.checkNotNull(
+        code, 'UpdateAmbuPatientResponse', 'code');
+    BuiltValueNullFieldError.checkNotNull(
+        id, 'UpdateAmbuPatientResponse', 'id');
+  }
 
   @override
   UpdateAmbuPatientResponse rebuild(
@@ -103,7 +111,12 @@ class UpdateAmbuPatientResponseBuilder
   _$UpdateAmbuPatientResponse build() {
     final _$result = _$v ??
         new _$UpdateAmbuPatientResponse._(
-            attendantPhone: attendantPhone, code: code, id: id);
+            attendantPhone: BuiltValueNullFieldError.checkNotNull(
+                attendantPhone, 'UpdateAmbuPatientResponse', 'attendantPhone'),
+            code: BuiltValueNullFieldError.checkNotNull(
+                code, 'UpdateAmbuPatientResponse', 'code'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, 'UpdateAmbuPatientResponse', 'id'));
     replace(_$result);
     return _$result;
   }

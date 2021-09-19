@@ -11,13 +11,13 @@ part 'update_ambu_patient_response.g.dart';
 
 abstract class UpdateAmbuPatientResponse implements Built<UpdateAmbuPatientResponse, UpdateAmbuPatientResponseBuilder> {
     @BuiltValueField(wireName: r'attendantPhone')
-    String? get attendantPhone;
+    String get attendantPhone;
 
     @BuiltValueField(wireName: r'code')
-    String? get code;
+    String get code;
 
     @BuiltValueField(wireName: r'id')
-    String? get id;
+    String get id;
 
     UpdateAmbuPatientResponse._();
 
@@ -40,24 +40,18 @@ class _$UpdateAmbuPatientResponseSerializer implements StructuredSerializer<Upda
     Iterable<Object?> serialize(Serializers serializers, UpdateAmbuPatientResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        if (object.attendantPhone != null) {
-            result
-                ..add(r'attendantPhone')
-                ..add(serializers.serialize(object.attendantPhone,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.code != null) {
-            result
-                ..add(r'code')
-                ..add(serializers.serialize(object.code,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.id != null) {
-            result
-                ..add(r'id')
-                ..add(serializers.serialize(object.id,
-                    specifiedType: const FullType(String)));
-        }
+        result
+            ..add(r'attendantPhone')
+            ..add(serializers.serialize(object.attendantPhone,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'code')
+            ..add(serializers.serialize(object.code,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'id')
+            ..add(serializers.serialize(object.id,
+                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -81,8 +75,8 @@ class _$UpdateAmbuPatientResponseSerializer implements StructuredSerializer<Upda
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'id':
-                    result.id = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
+                    result.id.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String);
                     break;
             }
         }

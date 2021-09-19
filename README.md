@@ -42,14 +42,14 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import 'package:pfee_ambulatory_client/pfee_ambulatory_client.dart';
 
 
-final api = PatientsApi();
-final id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final api = ExitDocumentsApi();
+final patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    api.patientsIdUserIdDelete(id, userId);
+    final response = await api.patientsPatientIdExitDocumentsGet(patientId);
+    print(response);
 } catch on DioError (e) {
-    print("Exception when calling PatientsApi->patientsIdUserIdDelete: $e\n");
+    print("Exception when calling ExitDocumentsApi->patientsPatientIdExitDocumentsGet: $e\n");
 }
 
 ```
@@ -60,21 +60,44 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ExitDocumentsApi* | [**patientsPatientIdExitDocumentsGet**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsget) | **get** /patients/{patientId}/exit-documents | 
+*ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdDelete**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsiddelete) | **delete** /patients/{patientId}/exit-documents/{id} | 
+*ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdGet**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidget) | **get** /patients/{patientId}/exit-documents/{id} | 
+*ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdPatch**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidpatch) | **patch** /patients/{patientId}/exit-documents/{id} | 
+*ExitDocumentsApi* | [**patientsPatientIdExitDocumentsPost**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentspost) | **post** /patients/{patientId}/exit-documents | 
 *PatientsApi* | [**patientsIdUserIdDelete**](doc/PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdGet**](doc/PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdPatch**](doc/PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsUserIdGet**](doc/PatientsApi.md#patientsuseridget) | **get** /patients/{userId} | 
 *PatientsApi* | [**patientsUserIdPost**](doc/PatientsApi.md#patientsuseridpost) | **post** /patients/{userId} | 
+*UsersApi* | [**usersChangeRoleIdPatch**](doc/UsersApi.md#userschangeroleidpatch) | **patch** /users/change-role/{id} | 
+*UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
+*UsersApi* | [**usersIdDelete**](doc/UsersApi.md#usersiddelete) | **delete** /users/{id} | 
+*UsersApi* | [**usersIdGet**](doc/UsersApi.md#usersidget) | **get** /users/{id} | 
+*UsersApi* | [**usersPost**](doc/UsersApi.md#userspost) | **post** /users | 
 
 
 ## Documentation For Models
 
+ - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
+ - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
  - [CreateAmbuPatientRequest](doc/CreateAmbuPatientRequest.md)
  - [CreateAmbuPatientResponse](doc/CreateAmbuPatientResponse.md)
+ - [CreateExitDocumentRequest](doc/CreateExitDocumentRequest.md)
+ - [CreateExitDocumentResponse](doc/CreateExitDocumentResponse.md)
+ - [CreateUserRequest](doc/CreateUserRequest.md)
+ - [CreateUserResponse](doc/CreateUserResponse.md)
  - [FindAllAmbuPatientResponse](doc/FindAllAmbuPatientResponse.md)
+ - [FindAllExitDocumentResponse](doc/FindAllExitDocumentResponse.md)
+ - [FindAllUserResponse](doc/FindAllUserResponse.md)
  - [FindOneAmbuPatientResponse](doc/FindOneAmbuPatientResponse.md)
+ - [FindOneExitDocumentResponse](doc/FindOneExitDocumentResponse.md)
+ - [FindOneUserResponse](doc/FindOneUserResponse.md)
  - [UpdateAmbuPatientRequest](doc/UpdateAmbuPatientRequest.md)
  - [UpdateAmbuPatientResponse](doc/UpdateAmbuPatientResponse.md)
+ - [UpdateExitDocumentRequest](doc/UpdateExitDocumentRequest.md)
+ - [UpdateExitDocumentResponse](doc/UpdateExitDocumentResponse.md)
+ - [UserRoleEntity](doc/UserRoleEntity.md)
 
 
 ## Documentation For Authorization

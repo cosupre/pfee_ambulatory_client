@@ -8,7 +8,9 @@ import 'package:pfee_ambulatory_client/src/serializers.dart';
 import 'package:pfee_ambulatory_client/src/auth/api_key_auth.dart';
 import 'package:pfee_ambulatory_client/src/auth/basic_auth.dart';
 import 'package:pfee_ambulatory_client/src/auth/oauth.dart';
+import 'package:pfee_ambulatory_client/src/api/exit_documents_api.dart';
 import 'package:pfee_ambulatory_client/src/api/patients_api.dart';
+import 'package:pfee_ambulatory_client/src/api/users_api.dart';
 
 class PfeeAmbulatoryClient {
   static const String basePath = r'http://localhost';
@@ -57,9 +59,21 @@ class PfeeAmbulatoryClient {
     }
   }
 
+  /// Get ExitDocumentsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  ExitDocumentsApi getExitDocumentsApi() {
+    return ExitDocumentsApi(dio, serializers);
+  }
+
   /// Get PatientsApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   PatientsApi getPatientsApi() {
     return PatientsApi(dio, serializers);
+  }
+
+  /// Get UsersApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  UsersApi getUsersApi() {
+    return UsersApi(dio, serializers);
   }
 }

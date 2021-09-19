@@ -8,33 +8,48 @@ part of 'create_ambu_patient_response.dart';
 
 class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
   @override
-  final String? attendantPhone;
+  final String attendantPhone;
   @override
-  final DateTime? birth;
+  final DateTime birth;
   @override
-  final String? code;
+  final String code;
   @override
-  final String? firstName;
+  final String firstName;
   @override
-  final String? id;
+  final String id;
   @override
-  final String? lastName;
+  final String lastName;
   @override
-  final String? operation;
+  final String operation;
 
   factory _$CreateAmbuPatientResponse(
           [void Function(CreateAmbuPatientResponseBuilder)? updates]) =>
       (new CreateAmbuPatientResponseBuilder()..update(updates)).build();
 
   _$CreateAmbuPatientResponse._(
-      {this.attendantPhone,
-      this.birth,
-      this.code,
-      this.firstName,
-      this.id,
-      this.lastName,
-      this.operation})
-      : super._();
+      {required this.attendantPhone,
+      required this.birth,
+      required this.code,
+      required this.firstName,
+      required this.id,
+      required this.lastName,
+      required this.operation})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        attendantPhone, 'CreateAmbuPatientResponse', 'attendantPhone');
+    BuiltValueNullFieldError.checkNotNull(
+        birth, 'CreateAmbuPatientResponse', 'birth');
+    BuiltValueNullFieldError.checkNotNull(
+        code, 'CreateAmbuPatientResponse', 'code');
+    BuiltValueNullFieldError.checkNotNull(
+        firstName, 'CreateAmbuPatientResponse', 'firstName');
+    BuiltValueNullFieldError.checkNotNull(
+        id, 'CreateAmbuPatientResponse', 'id');
+    BuiltValueNullFieldError.checkNotNull(
+        lastName, 'CreateAmbuPatientResponse', 'lastName');
+    BuiltValueNullFieldError.checkNotNull(
+        operation, 'CreateAmbuPatientResponse', 'operation');
+  }
 
   @override
   CreateAmbuPatientResponse rebuild(
@@ -154,13 +169,20 @@ class CreateAmbuPatientResponseBuilder
   _$CreateAmbuPatientResponse build() {
     final _$result = _$v ??
         new _$CreateAmbuPatientResponse._(
-            attendantPhone: attendantPhone,
-            birth: birth,
-            code: code,
-            firstName: firstName,
-            id: id,
-            lastName: lastName,
-            operation: operation);
+            attendantPhone: BuiltValueNullFieldError.checkNotNull(
+                attendantPhone, 'CreateAmbuPatientResponse', 'attendantPhone'),
+            birth: BuiltValueNullFieldError.checkNotNull(
+                birth, 'CreateAmbuPatientResponse', 'birth'),
+            code: BuiltValueNullFieldError.checkNotNull(
+                code, 'CreateAmbuPatientResponse', 'code'),
+            firstName: BuiltValueNullFieldError.checkNotNull(
+                firstName, 'CreateAmbuPatientResponse', 'firstName'),
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, 'CreateAmbuPatientResponse', 'id'),
+            lastName: BuiltValueNullFieldError.checkNotNull(
+                lastName, 'CreateAmbuPatientResponse', 'lastName'),
+            operation: BuiltValueNullFieldError.checkNotNull(
+                operation, 'CreateAmbuPatientResponse', 'operation'));
     replace(_$result);
     return _$result;
   }
