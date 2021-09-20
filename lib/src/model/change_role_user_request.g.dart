@@ -8,16 +8,13 @@ part of 'change_role_user_request.dart';
 
 class _$ChangeRoleUserRequest extends ChangeRoleUserRequest {
   @override
-  final UserRoleEntity role;
+  final String? role;
 
   factory _$ChangeRoleUserRequest(
           [void Function(ChangeRoleUserRequestBuilder)? updates]) =>
       (new ChangeRoleUserRequestBuilder()..update(updates)).build();
 
-  _$ChangeRoleUserRequest._({required this.role}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        role, 'ChangeRoleUserRequest', 'role');
-  }
+  _$ChangeRoleUserRequest._({this.role}) : super._();
 
   @override
   ChangeRoleUserRequest rebuild(
@@ -51,9 +48,9 @@ class ChangeRoleUserRequestBuilder
     implements Builder<ChangeRoleUserRequest, ChangeRoleUserRequestBuilder> {
   _$ChangeRoleUserRequest? _$v;
 
-  UserRoleEntity? _role;
-  UserRoleEntity? get role => _$this._role;
-  set role(UserRoleEntity? role) => _$this._role = role;
+  String? _role;
+  String? get role => _$this._role;
+  set role(String? role) => _$this._role = role;
 
   ChangeRoleUserRequestBuilder() {
     ChangeRoleUserRequest._initializeBuilder(this);
@@ -81,10 +78,7 @@ class ChangeRoleUserRequestBuilder
 
   @override
   _$ChangeRoleUserRequest build() {
-    final _$result = _$v ??
-        new _$ChangeRoleUserRequest._(
-            role: BuiltValueNullFieldError.checkNotNull(
-                role, 'ChangeRoleUserRequest', 'role'));
+    final _$result = _$v ?? new _$ChangeRoleUserRequest._(role: role);
     replace(_$result);
     return _$result;
   }

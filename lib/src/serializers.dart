@@ -26,7 +26,6 @@ import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dar
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';
 import 'package:pfee_ambulatory_client/src/model/update_exit_document_response.dart';
-import 'package:pfee_ambulatory_client/src/model/user_role_entity.dart';
 
 part 'serializers.g.dart';
 
@@ -49,7 +48,6 @@ part 'serializers.g.dart';
   UpdateAmbuPatientResponse,
   UpdateExitDocumentRequest,
   UpdateExitDocumentResponse,
-  UserRoleEntity,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(

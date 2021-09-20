@@ -97,7 +97,6 @@ Class | Method | HTTP request | Description
  - [UpdateAmbuPatientResponse](doc/UpdateAmbuPatientResponse.md)
  - [UpdateExitDocumentRequest](doc/UpdateExitDocumentRequest.md)
  - [UpdateExitDocumentResponse](doc/UpdateExitDocumentResponse.md)
- - [UserRoleEntity](doc/UserRoleEntity.md)
 
 
 ## Documentation For Authorization

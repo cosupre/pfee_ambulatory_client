@@ -10,15 +10,13 @@ class _$CreateUserRequest extends CreateUserRequest {
   @override
   final String? id;
   @override
-  final UserRoleEntity role;
+  final String? role;
 
   factory _$CreateUserRequest(
           [void Function(CreateUserRequestBuilder)? updates]) =>
       (new CreateUserRequestBuilder()..update(updates)).build();
 
-  _$CreateUserRequest._({this.id, required this.role}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(role, 'CreateUserRequest', 'role');
-  }
+  _$CreateUserRequest._({this.id, this.role}) : super._();
 
   @override
   CreateUserRequest rebuild(void Function(CreateUserRequestBuilder) updates) =>
@@ -56,9 +54,9 @@ class CreateUserRequestBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  UserRoleEntity? _role;
-  UserRoleEntity? get role => _$this._role;
-  set role(UserRoleEntity? role) => _$this._role = role;
+  String? _role;
+  String? get role => _$this._role;
+  set role(String? role) => _$this._role = role;
 
   CreateUserRequestBuilder() {
     CreateUserRequest._initializeBuilder(this);
@@ -87,11 +85,7 @@ class CreateUserRequestBuilder
 
   @override
   _$CreateUserRequest build() {
-    final _$result = _$v ??
-        new _$CreateUserRequest._(
-            id: id,
-            role: BuiltValueNullFieldError.checkNotNull(
-                role, 'CreateUserRequest', 'role'));
+    final _$result = _$v ?? new _$CreateUserRequest._(id: id, role: role);
     replace(_$result);
     return _$result;
   }

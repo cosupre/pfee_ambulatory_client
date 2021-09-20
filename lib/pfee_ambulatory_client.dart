@@ -30,4 +30,3 @@ export 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dar
 export 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
 export 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';
 export 'package:pfee_ambulatory_client/src/model/update_exit_document_response.dart';
-export 'package:pfee_ambulatory_client/src/model/user_role_entity.dart';

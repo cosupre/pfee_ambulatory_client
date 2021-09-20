@@ -2,7 +2,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:pfee_ambulatory_client/src/model/user_role_entity.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,7 +11,7 @@ part 'change_role_user_request.g.dart';
 
 abstract class ChangeRoleUserRequest implements Built<ChangeRoleUserRequest, ChangeRoleUserRequestBuilder> {
     @BuiltValueField(wireName: r'role')
-    UserRoleEntity get role;
+    String? get role;
 
     ChangeRoleUserRequest._();
 
@@ -35,10 +34,12 @@ class _$ChangeRoleUserRequestSerializer implements StructuredSerializer<ChangeRo
     Iterable<Object?> serialize(Serializers serializers, ChangeRoleUserRequest object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        result
-            ..add(r'role')
-            ..add(serializers.serialize(object.role,
-                specifiedType: const FullType(UserRoleEntity)));
+        if (object.role != null) {
+            result
+                ..add(r'role')
+                ..add(serializers.serialize(object.role,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -54,8 +55,8 @@ class _$ChangeRoleUserRequestSerializer implements StructuredSerializer<ChangeRo
             final Object? value = iterator.current;
             switch (key) {
                 case r'role':
-                    result.role.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(UserRoleEntity)) as UserRoleEntity);
+                    result.role = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
             }
         }

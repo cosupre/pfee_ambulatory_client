@@ -10,15 +10,14 @@ class _$CreateUserResponse extends CreateUserResponse {
   @override
   final String id;
   @override
-  final UserRoleEntity role;
+  final String? role;
 
   factory _$CreateUserResponse(
           [void Function(CreateUserResponseBuilder)? updates]) =>
       (new CreateUserResponseBuilder()..update(updates)).build();
 
-  _$CreateUserResponse._({required this.id, required this.role}) : super._() {
+  _$CreateUserResponse._({required this.id, this.role}) : super._() {
     BuiltValueNullFieldError.checkNotNull(id, 'CreateUserResponse', 'id');
-    BuiltValueNullFieldError.checkNotNull(role, 'CreateUserResponse', 'role');
   }
 
   @override
@@ -58,9 +57,9 @@ class CreateUserResponseBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  UserRoleEntity? _role;
-  UserRoleEntity? get role => _$this._role;
-  set role(UserRoleEntity? role) => _$this._role = role;
+  String? _role;
+  String? get role => _$this._role;
+  set role(String? role) => _$this._role = role;
 
   CreateUserResponseBuilder() {
     CreateUserResponse._initializeBuilder(this);
@@ -93,8 +92,7 @@ class CreateUserResponseBuilder
         new _$CreateUserResponse._(
             id: BuiltValueNullFieldError.checkNotNull(
                 id, 'CreateUserResponse', 'id'),
-            role: BuiltValueNullFieldError.checkNotNull(
-                role, 'CreateUserResponse', 'role'));
+            role: role);
     replace(_$result);
     return _$result;
   }

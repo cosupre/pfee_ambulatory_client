@@ -2,7 +2,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:pfee_ambulatory_client/src/model/user_role_entity.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -15,7 +14,7 @@ abstract class CreateUserRequest implements Built<CreateUserRequest, CreateUserR
     String? get id;
 
     @BuiltValueField(wireName: r'role')
-    UserRoleEntity get role;
+    String? get role;
 
     CreateUserRequest._();
 
@@ -44,10 +43,12 @@ class _$CreateUserRequestSerializer implements StructuredSerializer<CreateUserRe
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        result
-            ..add(r'role')
-            ..add(serializers.serialize(object.role,
-                specifiedType: const FullType(UserRoleEntity)));
+        if (object.role != null) {
+            result
+                ..add(r'role')
+                ..add(serializers.serialize(object.role,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -67,8 +68,8 @@ class _$CreateUserRequestSerializer implements StructuredSerializer<CreateUserRe
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'role':
-                    result.role.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(UserRoleEntity)) as UserRoleEntity);
+                    result.role = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
             }
         }

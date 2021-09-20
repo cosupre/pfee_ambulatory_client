@@ -10,15 +10,14 @@ class _$FindOneUserResponse extends FindOneUserResponse {
   @override
   final String id;
   @override
-  final UserRoleEntity role;
+  final String? role;
 
   factory _$FindOneUserResponse(
           [void Function(FindOneUserResponseBuilder)? updates]) =>
       (new FindOneUserResponseBuilder()..update(updates)).build();
 
-  _$FindOneUserResponse._({required this.id, required this.role}) : super._() {
+  _$FindOneUserResponse._({required this.id, this.role}) : super._() {
     BuiltValueNullFieldError.checkNotNull(id, 'FindOneUserResponse', 'id');
-    BuiltValueNullFieldError.checkNotNull(role, 'FindOneUserResponse', 'role');
   }
 
   @override
@@ -58,9 +57,9 @@ class FindOneUserResponseBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  UserRoleEntity? _role;
-  UserRoleEntity? get role => _$this._role;
-  set role(UserRoleEntity? role) => _$this._role = role;
+  String? _role;
+  String? get role => _$this._role;
+  set role(String? role) => _$this._role = role;
 
   FindOneUserResponseBuilder() {
     FindOneUserResponse._initializeBuilder(this);
@@ -93,8 +92,7 @@ class FindOneUserResponseBuilder
         new _$FindOneUserResponse._(
             id: BuiltValueNullFieldError.checkNotNull(
                 id, 'FindOneUserResponse', 'id'),
-            role: BuiltValueNullFieldError.checkNotNull(
-                role, 'FindOneUserResponse', 'role'));
+            role: role);
     replace(_$result);
     return _$result;
   }
