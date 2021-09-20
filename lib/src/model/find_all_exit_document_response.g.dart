@@ -8,17 +8,24 @@ part of 'find_all_exit_document_response.dart';
 
 class _$FindAllExitDocumentResponse extends FindAllExitDocumentResponse {
   @override
-  final int? count;
+  final int count;
   @override
   final String? id;
   @override
-  final String? name;
+  final String name;
 
   factory _$FindAllExitDocumentResponse(
           [void Function(FindAllExitDocumentResponseBuilder)? updates]) =>
       (new FindAllExitDocumentResponseBuilder()..update(updates)).build();
 
-  _$FindAllExitDocumentResponse._({this.count, this.id, this.name}) : super._();
+  _$FindAllExitDocumentResponse._(
+      {required this.count, this.id, required this.name})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, 'FindAllExitDocumentResponse', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        name, 'FindAllExitDocumentResponse', 'name');
+  }
 
   @override
   FindAllExitDocumentResponse rebuild(
@@ -100,7 +107,12 @@ class FindAllExitDocumentResponseBuilder
   @override
   _$FindAllExitDocumentResponse build() {
     final _$result = _$v ??
-        new _$FindAllExitDocumentResponse._(count: count, id: id, name: name);
+        new _$FindAllExitDocumentResponse._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, 'FindAllExitDocumentResponse', 'count'),
+            id: id,
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, 'FindAllExitDocumentResponse', 'name'));
     replace(_$result);
     return _$result;
   }

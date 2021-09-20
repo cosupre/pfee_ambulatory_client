@@ -8,17 +8,24 @@ part of 'find_one_exit_document_response.dart';
 
 class _$FindOneExitDocumentResponse extends FindOneExitDocumentResponse {
   @override
-  final int? count;
+  final int count;
   @override
   final String? id;
   @override
-  final String? name;
+  final String name;
 
   factory _$FindOneExitDocumentResponse(
           [void Function(FindOneExitDocumentResponseBuilder)? updates]) =>
       (new FindOneExitDocumentResponseBuilder()..update(updates)).build();
 
-  _$FindOneExitDocumentResponse._({this.count, this.id, this.name}) : super._();
+  _$FindOneExitDocumentResponse._(
+      {required this.count, this.id, required this.name})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, 'FindOneExitDocumentResponse', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        name, 'FindOneExitDocumentResponse', 'name');
+  }
 
   @override
   FindOneExitDocumentResponse rebuild(
@@ -100,7 +107,12 @@ class FindOneExitDocumentResponseBuilder
   @override
   _$FindOneExitDocumentResponse build() {
     final _$result = _$v ??
-        new _$FindOneExitDocumentResponse._(count: count, id: id, name: name);
+        new _$FindOneExitDocumentResponse._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, 'FindOneExitDocumentResponse', 'count'),
+            id: id,
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, 'FindOneExitDocumentResponse', 'name'));
     replace(_$result);
     return _$result;
   }

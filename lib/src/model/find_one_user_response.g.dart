@@ -8,16 +8,16 @@ part of 'find_one_user_response.dart';
 
 class _$FindOneUserResponse extends FindOneUserResponse {
   @override
-  final String id;
+  final String? id;
   @override
-  final String? role;
+  final String role;
 
   factory _$FindOneUserResponse(
           [void Function(FindOneUserResponseBuilder)? updates]) =>
       (new FindOneUserResponseBuilder()..update(updates)).build();
 
-  _$FindOneUserResponse._({required this.id, this.role}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'FindOneUserResponse', 'id');
+  _$FindOneUserResponse._({this.id, required this.role}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(role, 'FindOneUserResponse', 'role');
   }
 
   @override
@@ -90,9 +90,9 @@ class FindOneUserResponseBuilder
   _$FindOneUserResponse build() {
     final _$result = _$v ??
         new _$FindOneUserResponse._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, 'FindOneUserResponse', 'id'),
-            role: role);
+            id: id,
+            role: BuiltValueNullFieldError.checkNotNull(
+                role, 'FindOneUserResponse', 'role'));
     replace(_$result);
     return _$result;
   }

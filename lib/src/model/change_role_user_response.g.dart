@@ -8,16 +8,17 @@ part of 'change_role_user_response.dart';
 
 class _$ChangeRoleUserResponse extends ChangeRoleUserResponse {
   @override
-  final String id;
+  final String? id;
   @override
-  final String? role;
+  final String role;
 
   factory _$ChangeRoleUserResponse(
           [void Function(ChangeRoleUserResponseBuilder)? updates]) =>
       (new ChangeRoleUserResponseBuilder()..update(updates)).build();
 
-  _$ChangeRoleUserResponse._({required this.id, this.role}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'ChangeRoleUserResponse', 'id');
+  _$ChangeRoleUserResponse._({this.id, required this.role}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        role, 'ChangeRoleUserResponse', 'role');
   }
 
   @override
@@ -92,9 +93,9 @@ class ChangeRoleUserResponseBuilder
   _$ChangeRoleUserResponse build() {
     final _$result = _$v ??
         new _$ChangeRoleUserResponse._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, 'ChangeRoleUserResponse', 'id'),
-            role: role);
+            id: id,
+            role: BuiltValueNullFieldError.checkNotNull(
+                role, 'ChangeRoleUserResponse', 'role'));
     replace(_$result);
     return _$result;
   }

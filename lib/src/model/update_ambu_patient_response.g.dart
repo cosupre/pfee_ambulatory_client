@@ -12,21 +12,19 @@ class _$UpdateAmbuPatientResponse extends UpdateAmbuPatientResponse {
   @override
   final String code;
   @override
-  final String id;
+  final String? id;
 
   factory _$UpdateAmbuPatientResponse(
           [void Function(UpdateAmbuPatientResponseBuilder)? updates]) =>
       (new UpdateAmbuPatientResponseBuilder()..update(updates)).build();
 
   _$UpdateAmbuPatientResponse._(
-      {required this.attendantPhone, required this.code, required this.id})
+      {required this.attendantPhone, required this.code, this.id})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         attendantPhone, 'UpdateAmbuPatientResponse', 'attendantPhone');
     BuiltValueNullFieldError.checkNotNull(
         code, 'UpdateAmbuPatientResponse', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        id, 'UpdateAmbuPatientResponse', 'id');
   }
 
   @override
@@ -115,8 +113,7 @@ class UpdateAmbuPatientResponseBuilder
                 attendantPhone, 'UpdateAmbuPatientResponse', 'attendantPhone'),
             code: BuiltValueNullFieldError.checkNotNull(
                 code, 'UpdateAmbuPatientResponse', 'code'),
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, 'UpdateAmbuPatientResponse', 'id'));
+            id: id);
     replace(_$result);
     return _$result;
   }

@@ -17,7 +17,7 @@ abstract class UpdateAmbuPatientResponse implements Built<UpdateAmbuPatientRespo
     String get code;
 
     @BuiltValueField(wireName: r'id')
-    String get id;
+    String? get id;
 
     UpdateAmbuPatientResponse._();
 
@@ -48,10 +48,12 @@ class _$UpdateAmbuPatientResponseSerializer implements StructuredSerializer<Upda
             ..add(r'code')
             ..add(serializers.serialize(object.code,
                 specifiedType: const FullType(String)));
-        result
-            ..add(r'id')
-            ..add(serializers.serialize(object.id,
-                specifiedType: const FullType(String)));
+        if (object.id != null) {
+            result
+                ..add(r'id')
+                ..add(serializers.serialize(object.id,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -75,8 +77,8 @@ class _$UpdateAmbuPatientResponseSerializer implements StructuredSerializer<Upda
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'id':
-                    result.id.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String);
+                    result.id = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
             }
         }

@@ -16,7 +16,7 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
   @override
   final String firstName;
   @override
-  final String id;
+  final String? id;
   @override
   final String lastName;
   @override
@@ -31,7 +31,7 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
       required this.birth,
       required this.code,
       required this.firstName,
-      required this.id,
+      this.id,
       required this.lastName,
       required this.operation})
       : super._() {
@@ -43,8 +43,6 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
         code, 'CreateAmbuPatientResponse', 'code');
     BuiltValueNullFieldError.checkNotNull(
         firstName, 'CreateAmbuPatientResponse', 'firstName');
-    BuiltValueNullFieldError.checkNotNull(
-        id, 'CreateAmbuPatientResponse', 'id');
     BuiltValueNullFieldError.checkNotNull(
         lastName, 'CreateAmbuPatientResponse', 'lastName');
     BuiltValueNullFieldError.checkNotNull(
@@ -177,8 +175,7 @@ class CreateAmbuPatientResponseBuilder
                 code, 'CreateAmbuPatientResponse', 'code'),
             firstName: BuiltValueNullFieldError.checkNotNull(
                 firstName, 'CreateAmbuPatientResponse', 'firstName'),
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, 'CreateAmbuPatientResponse', 'id'),
+            id: id,
             lastName: BuiltValueNullFieldError.checkNotNull(
                 lastName, 'CreateAmbuPatientResponse', 'lastName'),
             operation: BuiltValueNullFieldError.checkNotNull(

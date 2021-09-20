@@ -11,13 +11,13 @@ part 'find_one_exit_document_response.g.dart';
 
 abstract class FindOneExitDocumentResponse implements Built<FindOneExitDocumentResponse, FindOneExitDocumentResponseBuilder> {
     @BuiltValueField(wireName: r'count')
-    int? get count;
+    int get count;
 
     @BuiltValueField(wireName: r'id')
     String? get id;
 
     @BuiltValueField(wireName: r'name')
-    String? get name;
+    String get name;
 
     FindOneExitDocumentResponse._();
 
@@ -40,24 +40,20 @@ class _$FindOneExitDocumentResponseSerializer implements StructuredSerializer<Fi
     Iterable<Object?> serialize(Serializers serializers, FindOneExitDocumentResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        if (object.count != null) {
-            result
-                ..add(r'count')
-                ..add(serializers.serialize(object.count,
-                    specifiedType: const FullType(int)));
-        }
+        result
+            ..add(r'count')
+            ..add(serializers.serialize(object.count,
+                specifiedType: const FullType(int)));
         if (object.id != null) {
             result
                 ..add(r'id')
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        if (object.name != null) {
-            result
-                ..add(r'name')
-                ..add(serializers.serialize(object.name,
-                    specifiedType: const FullType(String)));
-        }
+        result
+            ..add(r'name')
+            ..add(serializers.serialize(object.name,
+                specifiedType: const FullType(String)));
         return result;
     }
 

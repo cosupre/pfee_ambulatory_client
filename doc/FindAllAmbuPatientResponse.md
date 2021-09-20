@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **birth** | [**DateTime**](DateTime.md) |  | 
 **code** | **String** |  | 
 **firstName** | **String** |  | 
-**id** | **String** |  | 
+**id** | **String** |  | [optional] 
 **lastName** | **String** |  | 
 **operation** | **String** |  | 
 

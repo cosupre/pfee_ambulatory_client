@@ -23,7 +23,7 @@ abstract class FindOneAmbuPatientResponse implements Built<FindOneAmbuPatientRes
     String get firstName;
 
     @BuiltValueField(wireName: r'id')
-    String get id;
+    String? get id;
 
     @BuiltValueField(wireName: r'lastName')
     String get lastName;
@@ -68,10 +68,12 @@ class _$FindOneAmbuPatientResponseSerializer implements StructuredSerializer<Fin
             ..add(r'firstName')
             ..add(serializers.serialize(object.firstName,
                 specifiedType: const FullType(String)));
-        result
-            ..add(r'id')
-            ..add(serializers.serialize(object.id,
-                specifiedType: const FullType(String)));
+        if (object.id != null) {
+            result
+                ..add(r'id')
+                ..add(serializers.serialize(object.id,
+                    specifiedType: const FullType(String)));
+        }
         result
             ..add(r'lastName')
             ..add(serializers.serialize(object.lastName,
@@ -111,8 +113,8 @@ class _$FindOneAmbuPatientResponseSerializer implements StructuredSerializer<Fin
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'id':
-                    result.id.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String);
+                    result.id = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'lastName':
                     result.lastName = serializers.deserialize(value,

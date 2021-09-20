@@ -8,17 +8,24 @@ part of 'create_exit_document_response.dart';
 
 class _$CreateExitDocumentResponse extends CreateExitDocumentResponse {
   @override
-  final int? count;
+  final int count;
   @override
   final String? id;
   @override
-  final String? name;
+  final String name;
 
   factory _$CreateExitDocumentResponse(
           [void Function(CreateExitDocumentResponseBuilder)? updates]) =>
       (new CreateExitDocumentResponseBuilder()..update(updates)).build();
 
-  _$CreateExitDocumentResponse._({this.count, this.id, this.name}) : super._();
+  _$CreateExitDocumentResponse._(
+      {required this.count, this.id, required this.name})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, 'CreateExitDocumentResponse', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        name, 'CreateExitDocumentResponse', 'name');
+  }
 
   @override
   CreateExitDocumentResponse rebuild(
@@ -99,7 +106,12 @@ class CreateExitDocumentResponseBuilder
   @override
   _$CreateExitDocumentResponse build() {
     final _$result = _$v ??
-        new _$CreateExitDocumentResponse._(count: count, id: id, name: name);
+        new _$CreateExitDocumentResponse._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, 'CreateExitDocumentResponse', 'count'),
+            id: id,
+            name: BuiltValueNullFieldError.checkNotNull(
+                name, 'CreateExitDocumentResponse', 'name'));
     replace(_$result);
     return _$result;
   }

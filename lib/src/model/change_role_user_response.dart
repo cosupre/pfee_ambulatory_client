@@ -11,10 +11,10 @@ part 'change_role_user_response.g.dart';
 
 abstract class ChangeRoleUserResponse implements Built<ChangeRoleUserResponse, ChangeRoleUserResponseBuilder> {
     @BuiltValueField(wireName: r'id')
-    String get id;
+    String? get id;
 
     @BuiltValueField(wireName: r'role')
-    String? get role;
+    String get role;
 
     ChangeRoleUserResponse._();
 
@@ -37,16 +37,16 @@ class _$ChangeRoleUserResponseSerializer implements StructuredSerializer<ChangeR
     Iterable<Object?> serialize(Serializers serializers, ChangeRoleUserResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        result
-            ..add(r'id')
-            ..add(serializers.serialize(object.id,
-                specifiedType: const FullType(String)));
-        if (object.role != null) {
+        if (object.id != null) {
             result
-                ..add(r'role')
-                ..add(serializers.serialize(object.role,
+                ..add(r'id')
+                ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
+        result
+            ..add(r'role')
+            ..add(serializers.serialize(object.role,
+                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -62,8 +62,8 @@ class _$ChangeRoleUserResponseSerializer implements StructuredSerializer<ChangeR
             final Object? value = iterator.current;
             switch (key) {
                 case r'id':
-                    result.id.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String);
+                    result.id = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'role':
                     result.role = serializers.deserialize(value,

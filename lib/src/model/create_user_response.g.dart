@@ -8,16 +8,16 @@ part of 'create_user_response.dart';
 
 class _$CreateUserResponse extends CreateUserResponse {
   @override
-  final String id;
+  final String? id;
   @override
-  final String? role;
+  final String role;
 
   factory _$CreateUserResponse(
           [void Function(CreateUserResponseBuilder)? updates]) =>
       (new CreateUserResponseBuilder()..update(updates)).build();
 
-  _$CreateUserResponse._({required this.id, this.role}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, 'CreateUserResponse', 'id');
+  _$CreateUserResponse._({this.id, required this.role}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(role, 'CreateUserResponse', 'role');
   }
 
   @override
@@ -90,9 +90,9 @@ class CreateUserResponseBuilder
   _$CreateUserResponse build() {
     final _$result = _$v ??
         new _$CreateUserResponse._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, 'CreateUserResponse', 'id'),
-            role: role);
+            id: id,
+            role: BuiltValueNullFieldError.checkNotNull(
+                role, 'CreateUserResponse', 'role'));
     replace(_$result);
     return _$result;
   }
