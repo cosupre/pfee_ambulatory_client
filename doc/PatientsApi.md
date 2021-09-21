@@ -9,12 +9,58 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**patientsChangeStatusIdUserIdPatch**](PatientsApi.md#patientschangestatusiduseridpatch) | **patch** /patients/change-status/{id}/{userId} | 
 [**patientsIdUserIdDelete**](PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 [**patientsIdUserIdGet**](PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
 [**patientsIdUserIdPatch**](PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 
 [**patientsUserIdGet**](PatientsApi.md#patientsuseridget) | **get** /patients/{userId} | 
 [**patientsUserIdPost**](PatientsApi.md#patientsuseridpost) | **post** /patients/{userId} | 
 
+
+# **patientsChangeStatusIdUserIdPatch**
+> ChangeStatusAmbuPatientResponse patientsChangeStatusIdUserIdPatch(id, userId, changeStatusAmbuPatientRequest)
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+
+var api_instance = new PatientsApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var changeStatusAmbuPatientRequest = new ChangeStatusAmbuPatientRequest(); // ChangeStatusAmbuPatientRequest | 
+
+try { 
+    var result = api_instance.patientsChangeStatusIdUserIdPatch(id, userId, changeStatusAmbuPatientRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling PatientsApi->patientsChangeStatusIdUserIdPatch: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **userId** | [**String**](.md)|  | 
+ **changeStatusAmbuPatientRequest** | [**ChangeStatusAmbuPatientRequest**](ChangeStatusAmbuPatientRequest.md)|  | [optional] 
+
+### Return type
+
+[**ChangeStatusAmbuPatientResponse**](ChangeStatusAmbuPatientResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patientsIdUserIdDelete**
 > patientsIdUserIdDelete(id, userId)

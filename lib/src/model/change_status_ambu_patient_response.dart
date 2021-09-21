@@ -5,11 +5,11 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'update_ambu_patient_response.g.dart';
+part 'change_status_ambu_patient_response.g.dart';
 
 
 
-abstract class UpdateAmbuPatientResponse implements Built<UpdateAmbuPatientResponse, UpdateAmbuPatientResponseBuilder> {
+abstract class ChangeStatusAmbuPatientResponse implements Built<ChangeStatusAmbuPatientResponse, ChangeStatusAmbuPatientResponseBuilder> {
     @BuiltValueField(wireName: r'attendantPhone')
     String get attendantPhone;
 
@@ -22,25 +22,25 @@ abstract class UpdateAmbuPatientResponse implements Built<UpdateAmbuPatientRespo
     @BuiltValueField(wireName: r'status')
     String get status;
 
-    UpdateAmbuPatientResponse._();
+    ChangeStatusAmbuPatientResponse._();
 
-    static void _initializeBuilder(UpdateAmbuPatientResponseBuilder b) => b;
+    static void _initializeBuilder(ChangeStatusAmbuPatientResponseBuilder b) => b;
 
-    factory UpdateAmbuPatientResponse([void updates(UpdateAmbuPatientResponseBuilder b)]) = _$UpdateAmbuPatientResponse;
+    factory ChangeStatusAmbuPatientResponse([void updates(ChangeStatusAmbuPatientResponseBuilder b)]) = _$ChangeStatusAmbuPatientResponse;
 
     @BuiltValueSerializer(custom: true)
-    static Serializer<UpdateAmbuPatientResponse> get serializer => _$UpdateAmbuPatientResponseSerializer();
+    static Serializer<ChangeStatusAmbuPatientResponse> get serializer => _$ChangeStatusAmbuPatientResponseSerializer();
 }
 
-class _$UpdateAmbuPatientResponseSerializer implements StructuredSerializer<UpdateAmbuPatientResponse> {
+class _$ChangeStatusAmbuPatientResponseSerializer implements StructuredSerializer<ChangeStatusAmbuPatientResponse> {
     @override
-    final Iterable<Type> types = const [UpdateAmbuPatientResponse, _$UpdateAmbuPatientResponse];
+    final Iterable<Type> types = const [ChangeStatusAmbuPatientResponse, _$ChangeStatusAmbuPatientResponse];
 
     @override
-    final String wireName = r'UpdateAmbuPatientResponse';
+    final String wireName = r'ChangeStatusAmbuPatientResponse';
 
     @override
-    Iterable<Object?> serialize(Serializers serializers, UpdateAmbuPatientResponse object,
+    Iterable<Object?> serialize(Serializers serializers, ChangeStatusAmbuPatientResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
         result
@@ -65,9 +65,9 @@ class _$UpdateAmbuPatientResponseSerializer implements StructuredSerializer<Upda
     }
 
     @override
-    UpdateAmbuPatientResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
+    ChangeStatusAmbuPatientResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = UpdateAmbuPatientResponseBuilder();
+        final result = ChangeStatusAmbuPatientResponseBuilder();
 
         final iterator = serialized.iterator;
         while (iterator.moveNext()) {

@@ -31,6 +31,9 @@ abstract class CreateAmbuPatientResponse implements Built<CreateAmbuPatientRespo
     @BuiltValueField(wireName: r'operation')
     String get operation;
 
+    @BuiltValueField(wireName: r'status')
+    String get status;
+
     CreateAmbuPatientResponse._();
 
     static void _initializeBuilder(CreateAmbuPatientResponseBuilder b) => b;
@@ -82,6 +85,10 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
             ..add(r'operation')
             ..add(serializers.serialize(object.operation,
                 specifiedType: const FullType(String)));
+        result
+            ..add(r'status')
+            ..add(serializers.serialize(object.status,
+                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -122,6 +129,10 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
                     break;
                 case r'operation':
                     result.operation = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'status':
+                    result.status = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
             }

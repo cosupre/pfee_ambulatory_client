@@ -9,6 +9,8 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ChangeRoleUserRequest.serializer)
       ..add(ChangeRoleUserResponse.serializer)
+      ..add(ChangeStatusAmbuPatientRequest.serializer)
+      ..add(ChangeStatusAmbuPatientResponse.serializer)
       ..add(CreateAmbuPatientRequest.serializer)
       ..add(CreateAmbuPatientResponse.serializer)
       ..add(CreateExitDocumentRequest.serializer)

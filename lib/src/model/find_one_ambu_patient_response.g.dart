@@ -21,6 +21,8 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
   final String lastName;
   @override
   final String operation;
+  @override
+  final String status;
 
   factory _$FindOneAmbuPatientResponse(
           [void Function(FindOneAmbuPatientResponseBuilder)? updates]) =>
@@ -33,7 +35,8 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
       required this.firstName,
       this.id,
       required this.lastName,
-      required this.operation})
+      required this.operation,
+      required this.status})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         attendantPhone, 'FindOneAmbuPatientResponse', 'attendantPhone');
@@ -47,6 +50,8 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
         lastName, 'FindOneAmbuPatientResponse', 'lastName');
     BuiltValueNullFieldError.checkNotNull(
         operation, 'FindOneAmbuPatientResponse', 'operation');
+    BuiltValueNullFieldError.checkNotNull(
+        status, 'FindOneAmbuPatientResponse', 'status');
   }
 
   @override
@@ -68,7 +73,8 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
         firstName == other.firstName &&
         id == other.id &&
         lastName == other.lastName &&
-        operation == other.operation;
+        operation == other.operation &&
+        status == other.status;
   }
 
   @override
@@ -77,12 +83,16 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, attendantPhone.hashCode), birth.hashCode),
-                        code.hashCode),
-                    firstName.hashCode),
-                id.hashCode),
-            lastName.hashCode),
-        operation.hashCode));
+                    $jc(
+                        $jc(
+                            $jc($jc(0, attendantPhone.hashCode),
+                                birth.hashCode),
+                            code.hashCode),
+                        firstName.hashCode),
+                    id.hashCode),
+                lastName.hashCode),
+            operation.hashCode),
+        status.hashCode));
   }
 
   @override
@@ -94,7 +104,8 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
           ..add('firstName', firstName)
           ..add('id', id)
           ..add('lastName', lastName)
-          ..add('operation', operation))
+          ..add('operation', operation)
+          ..add('status', status))
         .toString();
   }
 }
@@ -133,6 +144,10 @@ class FindOneAmbuPatientResponseBuilder
   String? get operation => _$this._operation;
   set operation(String? operation) => _$this._operation = operation;
 
+  String? _status;
+  String? get status => _$this._status;
+  set status(String? status) => _$this._status = status;
+
   FindOneAmbuPatientResponseBuilder() {
     FindOneAmbuPatientResponse._initializeBuilder(this);
   }
@@ -147,6 +162,7 @@ class FindOneAmbuPatientResponseBuilder
       _id = $v.id;
       _lastName = $v.lastName;
       _operation = $v.operation;
+      _status = $v.status;
       _$v = null;
     }
     return this;
@@ -179,7 +195,9 @@ class FindOneAmbuPatientResponseBuilder
             lastName: BuiltValueNullFieldError.checkNotNull(
                 lastName, 'FindOneAmbuPatientResponse', 'lastName'),
             operation: BuiltValueNullFieldError.checkNotNull(
-                operation, 'FindOneAmbuPatientResponse', 'operation'));
+                operation, 'FindOneAmbuPatientResponse', 'operation'),
+            status: BuiltValueNullFieldError.checkNotNull(
+                status, 'FindOneAmbuPatientResponse', 'status'));
     replace(_$result);
     return _$result;
   }

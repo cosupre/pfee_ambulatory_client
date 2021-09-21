@@ -1,12 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'update_ambu_patient_response.dart';
+part of 'change_status_ambu_patient_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$UpdateAmbuPatientResponse extends UpdateAmbuPatientResponse {
+class _$ChangeStatusAmbuPatientResponse
+    extends ChangeStatusAmbuPatientResponse {
   @override
   final String attendantPhone;
   @override
@@ -16,37 +17,37 @@ class _$UpdateAmbuPatientResponse extends UpdateAmbuPatientResponse {
   @override
   final String status;
 
-  factory _$UpdateAmbuPatientResponse(
-          [void Function(UpdateAmbuPatientResponseBuilder)? updates]) =>
-      (new UpdateAmbuPatientResponseBuilder()..update(updates)).build();
+  factory _$ChangeStatusAmbuPatientResponse(
+          [void Function(ChangeStatusAmbuPatientResponseBuilder)? updates]) =>
+      (new ChangeStatusAmbuPatientResponseBuilder()..update(updates)).build();
 
-  _$UpdateAmbuPatientResponse._(
+  _$ChangeStatusAmbuPatientResponse._(
       {required this.attendantPhone,
       required this.code,
       this.id,
       required this.status})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        attendantPhone, 'UpdateAmbuPatientResponse', 'attendantPhone');
+        attendantPhone, 'ChangeStatusAmbuPatientResponse', 'attendantPhone');
     BuiltValueNullFieldError.checkNotNull(
-        code, 'UpdateAmbuPatientResponse', 'code');
+        code, 'ChangeStatusAmbuPatientResponse', 'code');
     BuiltValueNullFieldError.checkNotNull(
-        status, 'UpdateAmbuPatientResponse', 'status');
+        status, 'ChangeStatusAmbuPatientResponse', 'status');
   }
 
   @override
-  UpdateAmbuPatientResponse rebuild(
-          void Function(UpdateAmbuPatientResponseBuilder) updates) =>
+  ChangeStatusAmbuPatientResponse rebuild(
+          void Function(ChangeStatusAmbuPatientResponseBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UpdateAmbuPatientResponseBuilder toBuilder() =>
-      new UpdateAmbuPatientResponseBuilder()..replace(this);
+  ChangeStatusAmbuPatientResponseBuilder toBuilder() =>
+      new ChangeStatusAmbuPatientResponseBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UpdateAmbuPatientResponse &&
+    return other is ChangeStatusAmbuPatientResponse &&
         attendantPhone == other.attendantPhone &&
         code == other.code &&
         id == other.id &&
@@ -62,7 +63,7 @@ class _$UpdateAmbuPatientResponse extends UpdateAmbuPatientResponse {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('UpdateAmbuPatientResponse')
+    return (newBuiltValueToStringHelper('ChangeStatusAmbuPatientResponse')
           ..add('attendantPhone', attendantPhone)
           ..add('code', code)
           ..add('id', id)
@@ -71,10 +72,11 @@ class _$UpdateAmbuPatientResponse extends UpdateAmbuPatientResponse {
   }
 }
 
-class UpdateAmbuPatientResponseBuilder
+class ChangeStatusAmbuPatientResponseBuilder
     implements
-        Builder<UpdateAmbuPatientResponse, UpdateAmbuPatientResponseBuilder> {
-  _$UpdateAmbuPatientResponse? _$v;
+        Builder<ChangeStatusAmbuPatientResponse,
+            ChangeStatusAmbuPatientResponseBuilder> {
+  _$ChangeStatusAmbuPatientResponse? _$v;
 
   String? _attendantPhone;
   String? get attendantPhone => _$this._attendantPhone;
@@ -93,11 +95,11 @@ class UpdateAmbuPatientResponseBuilder
   String? get status => _$this._status;
   set status(String? status) => _$this._status = status;
 
-  UpdateAmbuPatientResponseBuilder() {
-    UpdateAmbuPatientResponse._initializeBuilder(this);
+  ChangeStatusAmbuPatientResponseBuilder() {
+    ChangeStatusAmbuPatientResponse._initializeBuilder(this);
   }
 
-  UpdateAmbuPatientResponseBuilder get _$this {
+  ChangeStatusAmbuPatientResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _attendantPhone = $v.attendantPhone;
@@ -110,27 +112,29 @@ class UpdateAmbuPatientResponseBuilder
   }
 
   @override
-  void replace(UpdateAmbuPatientResponse other) {
+  void replace(ChangeStatusAmbuPatientResponse other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$UpdateAmbuPatientResponse;
+    _$v = other as _$ChangeStatusAmbuPatientResponse;
   }
 
   @override
-  void update(void Function(UpdateAmbuPatientResponseBuilder)? updates) {
+  void update(void Function(ChangeStatusAmbuPatientResponseBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$UpdateAmbuPatientResponse build() {
+  _$ChangeStatusAmbuPatientResponse build() {
     final _$result = _$v ??
-        new _$UpdateAmbuPatientResponse._(
+        new _$ChangeStatusAmbuPatientResponse._(
             attendantPhone: BuiltValueNullFieldError.checkNotNull(
-                attendantPhone, 'UpdateAmbuPatientResponse', 'attendantPhone'),
+                attendantPhone,
+                'ChangeStatusAmbuPatientResponse',
+                'attendantPhone'),
             code: BuiltValueNullFieldError.checkNotNull(
-                code, 'UpdateAmbuPatientResponse', 'code'),
+                code, 'ChangeStatusAmbuPatientResponse', 'code'),
             id: id,
             status: BuiltValueNullFieldError.checkNotNull(
-                status, 'UpdateAmbuPatientResponse', 'status'));
+                status, 'ChangeStatusAmbuPatientResponse', 'status'));
     replace(_$result);
     return _$result;
   }

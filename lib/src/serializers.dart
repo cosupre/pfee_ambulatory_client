@@ -10,6 +10,8 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 
 import 'package:pfee_ambulatory_client/src/model/change_role_user_request.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_response.dart';
+import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
+import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_exit_document_request.dart';
@@ -32,6 +34,8 @@ part 'serializers.g.dart';
 @SerializersFor([
   ChangeRoleUserRequest,
   ChangeRoleUserResponse,
+  ChangeStatusAmbuPatientRequest,
+  ChangeStatusAmbuPatientResponse,
   CreateAmbuPatientRequest,
   CreateAmbuPatientResponse,
   CreateExitDocumentRequest,

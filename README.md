@@ -65,6 +65,7 @@ Class | Method | HTTP request | Description
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdGet**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidget) | **get** /patients/{patientId}/exit-documents/{id} | 
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdPatch**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidpatch) | **patch** /patients/{patientId}/exit-documents/{id} | 
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsPost**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentspost) | **post** /patients/{patientId}/exit-documents | 
+*PatientsApi* | [**patientsChangeStatusIdUserIdPatch**](doc/PatientsApi.md#patientschangestatusiduseridpatch) | **patch** /patients/change-status/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdDelete**](doc/PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdGet**](doc/PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdPatch**](doc/PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 
@@ -81,6 +82,8 @@ Class | Method | HTTP request | Description
 
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
  - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
+ - [ChangeStatusAmbuPatientRequest](doc/ChangeStatusAmbuPatientRequest.md)
+ - [ChangeStatusAmbuPatientResponse](doc/ChangeStatusAmbuPatientResponse.md)
  - [CreateAmbuPatientRequest](doc/CreateAmbuPatientRequest.md)
  - [CreateAmbuPatientResponse](doc/CreateAmbuPatientResponse.md)
  - [CreateExitDocumentRequest](doc/CreateExitDocumentRequest.md)

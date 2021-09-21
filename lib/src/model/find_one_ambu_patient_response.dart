@@ -31,6 +31,9 @@ abstract class FindOneAmbuPatientResponse implements Built<FindOneAmbuPatientRes
     @BuiltValueField(wireName: r'operation')
     String get operation;
 
+    @BuiltValueField(wireName: r'status')
+    String get status;
+
     FindOneAmbuPatientResponse._();
 
     static void _initializeBuilder(FindOneAmbuPatientResponseBuilder b) => b;
@@ -82,6 +85,10 @@ class _$FindOneAmbuPatientResponseSerializer implements StructuredSerializer<Fin
             ..add(r'operation')
             ..add(serializers.serialize(object.operation,
                 specifiedType: const FullType(String)));
+        result
+            ..add(r'status')
+            ..add(serializers.serialize(object.status,
+                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -122,6 +129,10 @@ class _$FindOneAmbuPatientResponseSerializer implements StructuredSerializer<Fin
                     break;
                 case r'operation':
                     result.operation = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'status':
+                    result.status = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
             }

@@ -14,6 +14,8 @@ export 'package:pfee_ambulatory_client/src/api/users_api.dart';
 
 export 'package:pfee_ambulatory_client/src/model/change_role_user_request.dart';
 export 'package:pfee_ambulatory_client/src/model/change_role_user_response.dart';
+export 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
+export 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_response.dart';
 export 'package:pfee_ambulatory_client/src/model/create_ambu_patient_request.dart';
 export 'package:pfee_ambulatory_client/src/model/create_ambu_patient_response.dart';
 export 'package:pfee_ambulatory_client/src/model/create_exit_document_request.dart';
