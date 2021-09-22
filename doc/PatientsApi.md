@@ -9,6 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**patientsByCodeCodeGet**](PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
 [**patientsChangeStatusIdUserIdPatch**](PatientsApi.md#patientschangestatusiduseridpatch) | **patch** /patients/change-status/{id}/{userId} | 
 [**patientsIdUserIdDelete**](PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 [**patientsIdUserIdGet**](PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
@@ -16,6 +17,47 @@ Method | HTTP request | Description
 [**patientsUserIdGet**](PatientsApi.md#patientsuseridget) | **get** /patients/{userId} | 
 [**patientsUserIdPost**](PatientsApi.md#patientsuseridpost) | **post** /patients/{userId} | 
 
+
+# **patientsByCodeCodeGet**
+> FindOneCodePatientResponse patientsByCodeCodeGet(code)
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+
+var api_instance = new PatientsApi();
+var code = code_example; // String | 
+
+try { 
+    var result = api_instance.patientsByCodeCodeGet(code);
+    print(result);
+} catch (e) {
+    print('Exception when calling PatientsApi->patientsByCodeCodeGet: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **code** | **String**|  | 
+
+### Return type
+
+[**FindOneCodePatientResponse**](FindOneCodePatientResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patientsChangeStatusIdUserIdPatch**
 > ChangeStatusAmbuPatientResponse patientsChangeStatusIdUserIdPatch(id, userId, changeStatusAmbuPatientRequest)

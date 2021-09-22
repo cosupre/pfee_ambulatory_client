@@ -65,6 +65,7 @@ Class | Method | HTTP request | Description
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdGet**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidget) | **get** /patients/{patientId}/exit-documents/{id} | 
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdPatch**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidpatch) | **patch** /patients/{patientId}/exit-documents/{id} | 
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsPost**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentspost) | **post** /patients/{patientId}/exit-documents | 
+*PatientsApi* | [**patientsByCodeCodeGet**](doc/PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
 *PatientsApi* | [**patientsChangeStatusIdUserIdPatch**](doc/PatientsApi.md#patientschangestatusiduseridpatch) | **patch** /patients/change-status/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdDelete**](doc/PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdGet**](doc/PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
@@ -94,6 +95,7 @@ Class | Method | HTTP request | Description
  - [FindAllExitDocumentResponse](doc/FindAllExitDocumentResponse.md)
  - [FindAllUserResponse](doc/FindAllUserResponse.md)
  - [FindOneAmbuPatientResponse](doc/FindOneAmbuPatientResponse.md)
+ - [FindOneCodePatientResponse](doc/FindOneCodePatientResponse.md)
  - [FindOneExitDocumentResponse](doc/FindOneExitDocumentResponse.md)
  - [FindOneUserResponse](doc/FindOneUserResponse.md)
  - [UpdateAmbuPatientRequest](doc/UpdateAmbuPatientRequest.md)

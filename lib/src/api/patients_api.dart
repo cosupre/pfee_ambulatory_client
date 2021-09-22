@@ -14,6 +14,7 @@ import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_request.dar
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_ambu_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_one_code_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
 import 'package:built_collection/built_collection.dart';
 
@@ -24,6 +25,76 @@ class PatientsApi {
   final Serializers _serializers;
 
   const PatientsApi(this._dio, this._serializers);
+
+  /// 
+  ///
+  /// 
+  Future<Response<FindOneCodePatientResponse>> patientsByCodeCodeGet({ 
+    required String code,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/by-code/{code}'.replaceAll('{' r'code' '}', code.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    FindOneCodePatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(FindOneCodePatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as FindOneCodePatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<FindOneCodePatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
 
   /// 
   ///

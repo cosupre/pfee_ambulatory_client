@@ -26,6 +26,7 @@ export 'package:pfee_ambulatory_client/src/model/find_all_ambu_patient_response.
 export 'package:pfee_ambulatory_client/src/model/find_all_exit_document_response.dart';
 export 'package:pfee_ambulatory_client/src/model/find_all_user_response.dart';
 export 'package:pfee_ambulatory_client/src/model/find_one_ambu_patient_response.dart';
+export 'package:pfee_ambulatory_client/src/model/find_one_code_patient_response.dart';
 export 'package:pfee_ambulatory_client/src/model/find_one_exit_document_response.dart';
 export 'package:pfee_ambulatory_client/src/model/find_one_user_response.dart';
 export 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
