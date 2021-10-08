@@ -8,7 +8,15 @@ part of 'find_one_code_patient_response.dart';
 
 class _$FindOneCodePatientResponse extends FindOneCodePatientResponse {
   @override
+  final String? afterBlocStretcherId;
+  @override
+  final String? anaesthetistId;
+  @override
+  final String? beforeBlocStretcherId;
+  @override
   final DateTime birth;
+  @override
+  final String? blocRoomId;
   @override
   final String code;
   @override
@@ -17,17 +25,27 @@ class _$FindOneCodePatientResponse extends FindOneCodePatientResponse {
   final String lastName;
   @override
   final String operation;
+  @override
+  final String? surgeonId;
+  @override
+  final String? ucaRoomId;
 
   factory _$FindOneCodePatientResponse(
           [void Function(FindOneCodePatientResponseBuilder)? updates]) =>
       (new FindOneCodePatientResponseBuilder()..update(updates)).build();
 
   _$FindOneCodePatientResponse._(
-      {required this.birth,
+      {this.afterBlocStretcherId,
+      this.anaesthetistId,
+      this.beforeBlocStretcherId,
+      required this.birth,
+      this.blocRoomId,
       required this.code,
       required this.firstName,
       required this.lastName,
-      required this.operation})
+      required this.operation,
+      this.surgeonId,
+      this.ucaRoomId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         birth, 'FindOneCodePatientResponse', 'birth');
@@ -54,29 +72,59 @@ class _$FindOneCodePatientResponse extends FindOneCodePatientResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is FindOneCodePatientResponse &&
+        afterBlocStretcherId == other.afterBlocStretcherId &&
+        anaesthetistId == other.anaesthetistId &&
+        beforeBlocStretcherId == other.beforeBlocStretcherId &&
         birth == other.birth &&
+        blocRoomId == other.blocRoomId &&
         code == other.code &&
         firstName == other.firstName &&
         lastName == other.lastName &&
-        operation == other.operation;
+        operation == other.operation &&
+        surgeonId == other.surgeonId &&
+        ucaRoomId == other.ucaRoomId;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, birth.hashCode), code.hashCode), firstName.hashCode),
-            lastName.hashCode),
-        operation.hashCode));
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(0,
+                                                afterBlocStretcherId.hashCode),
+                                            anaesthetistId.hashCode),
+                                        beforeBlocStretcherId.hashCode),
+                                    birth.hashCode),
+                                blocRoomId.hashCode),
+                            code.hashCode),
+                        firstName.hashCode),
+                    lastName.hashCode),
+                operation.hashCode),
+            surgeonId.hashCode),
+        ucaRoomId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FindOneCodePatientResponse')
+          ..add('afterBlocStretcherId', afterBlocStretcherId)
+          ..add('anaesthetistId', anaesthetistId)
+          ..add('beforeBlocStretcherId', beforeBlocStretcherId)
           ..add('birth', birth)
+          ..add('blocRoomId', blocRoomId)
           ..add('code', code)
           ..add('firstName', firstName)
           ..add('lastName', lastName)
-          ..add('operation', operation))
+          ..add('operation', operation)
+          ..add('surgeonId', surgeonId)
+          ..add('ucaRoomId', ucaRoomId))
         .toString();
   }
 }
@@ -86,9 +134,28 @@ class FindOneCodePatientResponseBuilder
         Builder<FindOneCodePatientResponse, FindOneCodePatientResponseBuilder> {
   _$FindOneCodePatientResponse? _$v;
 
+  String? _afterBlocStretcherId;
+  String? get afterBlocStretcherId => _$this._afterBlocStretcherId;
+  set afterBlocStretcherId(String? afterBlocStretcherId) =>
+      _$this._afterBlocStretcherId = afterBlocStretcherId;
+
+  String? _anaesthetistId;
+  String? get anaesthetistId => _$this._anaesthetistId;
+  set anaesthetistId(String? anaesthetistId) =>
+      _$this._anaesthetistId = anaesthetistId;
+
+  String? _beforeBlocStretcherId;
+  String? get beforeBlocStretcherId => _$this._beforeBlocStretcherId;
+  set beforeBlocStretcherId(String? beforeBlocStretcherId) =>
+      _$this._beforeBlocStretcherId = beforeBlocStretcherId;
+
   DateTime? _birth;
   DateTime? get birth => _$this._birth;
   set birth(DateTime? birth) => _$this._birth = birth;
+
+  String? _blocRoomId;
+  String? get blocRoomId => _$this._blocRoomId;
+  set blocRoomId(String? blocRoomId) => _$this._blocRoomId = blocRoomId;
 
   String? _code;
   String? get code => _$this._code;
@@ -106,6 +173,14 @@ class FindOneCodePatientResponseBuilder
   String? get operation => _$this._operation;
   set operation(String? operation) => _$this._operation = operation;
 
+  String? _surgeonId;
+  String? get surgeonId => _$this._surgeonId;
+  set surgeonId(String? surgeonId) => _$this._surgeonId = surgeonId;
+
+  String? _ucaRoomId;
+  String? get ucaRoomId => _$this._ucaRoomId;
+  set ucaRoomId(String? ucaRoomId) => _$this._ucaRoomId = ucaRoomId;
+
   FindOneCodePatientResponseBuilder() {
     FindOneCodePatientResponse._initializeBuilder(this);
   }
@@ -113,11 +188,17 @@ class FindOneCodePatientResponseBuilder
   FindOneCodePatientResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _afterBlocStretcherId = $v.afterBlocStretcherId;
+      _anaesthetistId = $v.anaesthetistId;
+      _beforeBlocStretcherId = $v.beforeBlocStretcherId;
       _birth = $v.birth;
+      _blocRoomId = $v.blocRoomId;
       _code = $v.code;
       _firstName = $v.firstName;
       _lastName = $v.lastName;
       _operation = $v.operation;
+      _surgeonId = $v.surgeonId;
+      _ucaRoomId = $v.ucaRoomId;
       _$v = null;
     }
     return this;
@@ -138,8 +219,12 @@ class FindOneCodePatientResponseBuilder
   _$FindOneCodePatientResponse build() {
     final _$result = _$v ??
         new _$FindOneCodePatientResponse._(
+            afterBlocStretcherId: afterBlocStretcherId,
+            anaesthetistId: anaesthetistId,
+            beforeBlocStretcherId: beforeBlocStretcherId,
             birth: BuiltValueNullFieldError.checkNotNull(
                 birth, 'FindOneCodePatientResponse', 'birth'),
+            blocRoomId: blocRoomId,
             code: BuiltValueNullFieldError.checkNotNull(
                 code, 'FindOneCodePatientResponse', 'code'),
             firstName: BuiltValueNullFieldError.checkNotNull(
@@ -147,7 +232,9 @@ class FindOneCodePatientResponseBuilder
             lastName: BuiltValueNullFieldError.checkNotNull(
                 lastName, 'FindOneCodePatientResponse', 'lastName'),
             operation: BuiltValueNullFieldError.checkNotNull(
-                operation, 'FindOneCodePatientResponse', 'operation'));
+                operation, 'FindOneCodePatientResponse', 'operation'),
+            surgeonId: surgeonId,
+            ucaRoomId: ucaRoomId);
     replace(_$result);
     return _$result;
   }

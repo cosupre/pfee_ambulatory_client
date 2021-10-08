@@ -11,6 +11,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**patientsByCodeCodeGet**](PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
 [**patientsChangeStatusIdUserIdPatch**](PatientsApi.md#patientschangestatusiduseridpatch) | **patch** /patients/change-status/{id}/{userId} | 
+[**patientsIdStretcherDeliverUserIdPatch**](PatientsApi.md#patientsidstretcherdeliveruseridpatch) | **patch** /patients/{id}/stretcher-deliver/{userId} | 
+[**patientsIdStretcherTakeUserIdPatch**](PatientsApi.md#patientsidstretchertakeuseridpatch) | **patch** /patients/{id}/stretcher-take/{userId} | 
 [**patientsIdUserIdDelete**](PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 [**patientsIdUserIdGet**](PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
 [**patientsIdUserIdPatch**](PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 
@@ -100,6 +102,92 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patientsIdStretcherDeliverUserIdPatch**
+> ChangeStatusAmbuPatientResponse patientsIdStretcherDeliverUserIdPatch(id, userId)
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+
+var api_instance = new PatientsApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try { 
+    var result = api_instance.patientsIdStretcherDeliverUserIdPatch(id, userId);
+    print(result);
+} catch (e) {
+    print('Exception when calling PatientsApi->patientsIdStretcherDeliverUserIdPatch: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **userId** | [**String**](.md)|  | 
+
+### Return type
+
+[**ChangeStatusAmbuPatientResponse**](ChangeStatusAmbuPatientResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patientsIdStretcherTakeUserIdPatch**
+> ChangeStatusAmbuPatientResponse patientsIdStretcherTakeUserIdPatch(id, userId)
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+
+var api_instance = new PatientsApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var userId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try { 
+    var result = api_instance.patientsIdStretcherTakeUserIdPatch(id, userId);
+    print(result);
+} catch (e) {
+    print('Exception when calling PatientsApi->patientsIdStretcherTakeUserIdPatch: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+ **userId** | [**String**](.md)|  | 
+
+### Return type
+
+[**ChangeStatusAmbuPatientResponse**](ChangeStatusAmbuPatientResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

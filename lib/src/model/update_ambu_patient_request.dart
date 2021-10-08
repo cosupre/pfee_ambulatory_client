@@ -13,6 +13,9 @@ abstract class UpdateAmbuPatientRequest implements Built<UpdateAmbuPatientReques
     @BuiltValueField(wireName: r'attendantPhone')
     String? get attendantPhone;
 
+    @BuiltValueField(wireName: r'pedestrian')
+    bool get pedestrian;
+
     UpdateAmbuPatientRequest._();
 
     static void _initializeBuilder(UpdateAmbuPatientRequestBuilder b) => b;
@@ -40,6 +43,10 @@ class _$UpdateAmbuPatientRequestSerializer implements StructuredSerializer<Updat
                 ..add(serializers.serialize(object.attendantPhone,
                     specifiedType: const FullType(String)));
         }
+        result
+            ..add(r'pedestrian')
+            ..add(serializers.serialize(object.pedestrian,
+                specifiedType: const FullType(bool)));
         return result;
     }
 
@@ -57,6 +64,10 @@ class _$UpdateAmbuPatientRequestSerializer implements StructuredSerializer<Updat
                 case r'attendantPhone':
                     result.attendantPhone = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'pedestrian':
+                    result.pedestrian = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }

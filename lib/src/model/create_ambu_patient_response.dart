@@ -10,11 +10,23 @@ part 'create_ambu_patient_response.g.dart';
 
 
 abstract class CreateAmbuPatientResponse implements Built<CreateAmbuPatientResponse, CreateAmbuPatientResponseBuilder> {
+    @BuiltValueField(wireName: r'afterBlocStretcherId')
+    String? get afterBlocStretcherId;
+
+    @BuiltValueField(wireName: r'anaesthetistId')
+    String? get anaesthetistId;
+
     @BuiltValueField(wireName: r'attendantPhone')
     String get attendantPhone;
 
+    @BuiltValueField(wireName: r'beforeBlocStretcherId')
+    String? get beforeBlocStretcherId;
+
     @BuiltValueField(wireName: r'birth')
     DateTime get birth;
+
+    @BuiltValueField(wireName: r'blocRoomId')
+    String? get blocRoomId;
 
     @BuiltValueField(wireName: r'code')
     String get code;
@@ -31,8 +43,17 @@ abstract class CreateAmbuPatientResponse implements Built<CreateAmbuPatientRespo
     @BuiltValueField(wireName: r'operation')
     String get operation;
 
+    @BuiltValueField(wireName: r'pedestrian')
+    bool get pedestrian;
+
     @BuiltValueField(wireName: r'status')
     String get status;
+
+    @BuiltValueField(wireName: r'surgeonId')
+    String? get surgeonId;
+
+    @BuiltValueField(wireName: r'ucaRoomId')
+    String? get ucaRoomId;
 
     CreateAmbuPatientResponse._();
 
@@ -55,14 +76,38 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
     Iterable<Object?> serialize(Serializers serializers, CreateAmbuPatientResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
+        if (object.afterBlocStretcherId != null) {
+            result
+                ..add(r'afterBlocStretcherId')
+                ..add(serializers.serialize(object.afterBlocStretcherId,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.anaesthetistId != null) {
+            result
+                ..add(r'anaesthetistId')
+                ..add(serializers.serialize(object.anaesthetistId,
+                    specifiedType: const FullType(String)));
+        }
         result
             ..add(r'attendantPhone')
             ..add(serializers.serialize(object.attendantPhone,
                 specifiedType: const FullType(String)));
+        if (object.beforeBlocStretcherId != null) {
+            result
+                ..add(r'beforeBlocStretcherId')
+                ..add(serializers.serialize(object.beforeBlocStretcherId,
+                    specifiedType: const FullType(String)));
+        }
         result
             ..add(r'birth')
             ..add(serializers.serialize(object.birth,
                 specifiedType: const FullType(DateTime)));
+        if (object.blocRoomId != null) {
+            result
+                ..add(r'blocRoomId')
+                ..add(serializers.serialize(object.blocRoomId,
+                    specifiedType: const FullType(String)));
+        }
         result
             ..add(r'code')
             ..add(serializers.serialize(object.code,
@@ -86,9 +131,25 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
             ..add(serializers.serialize(object.operation,
                 specifiedType: const FullType(String)));
         result
+            ..add(r'pedestrian')
+            ..add(serializers.serialize(object.pedestrian,
+                specifiedType: const FullType(bool)));
+        result
             ..add(r'status')
             ..add(serializers.serialize(object.status,
                 specifiedType: const FullType(String)));
+        if (object.surgeonId != null) {
+            result
+                ..add(r'surgeonId')
+                ..add(serializers.serialize(object.surgeonId,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.ucaRoomId != null) {
+            result
+                ..add(r'ucaRoomId')
+                ..add(serializers.serialize(object.ucaRoomId,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
@@ -103,13 +164,29 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
             iterator.moveNext();
             final Object? value = iterator.current;
             switch (key) {
+                case r'afterBlocStretcherId':
+                    result.afterBlocStretcherId = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'anaesthetistId':
+                    result.anaesthetistId = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
                 case r'attendantPhone':
                     result.attendantPhone = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'beforeBlocStretcherId':
+                    result.beforeBlocStretcherId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'birth':
                     result.birth = serializers.deserialize(value,
                         specifiedType: const FullType(DateTime)) as DateTime;
+                    break;
+                case r'blocRoomId':
+                    result.blocRoomId = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'code':
                     result.code = serializers.deserialize(value,
@@ -131,8 +208,20 @@ class _$CreateAmbuPatientResponseSerializer implements StructuredSerializer<Crea
                     result.operation = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
+                case r'pedestrian':
+                    result.pedestrian = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
+                    break;
                 case r'status':
                     result.status = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'surgeonId':
+                    result.surgeonId = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'ucaRoomId':
+                    result.ucaRoomId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
             }

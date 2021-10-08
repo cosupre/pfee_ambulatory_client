@@ -67,6 +67,8 @@ Class | Method | HTTP request | Description
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsPost**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentspost) | **post** /patients/{patientId}/exit-documents | 
 *PatientsApi* | [**patientsByCodeCodeGet**](doc/PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
 *PatientsApi* | [**patientsChangeStatusIdUserIdPatch**](doc/PatientsApi.md#patientschangestatusiduseridpatch) | **patch** /patients/change-status/{id}/{userId} | 
+*PatientsApi* | [**patientsIdStretcherDeliverUserIdPatch**](doc/PatientsApi.md#patientsidstretcherdeliveruseridpatch) | **patch** /patients/{id}/stretcher-deliver/{userId} | 
+*PatientsApi* | [**patientsIdStretcherTakeUserIdPatch**](doc/PatientsApi.md#patientsidstretchertakeuseridpatch) | **patch** /patients/{id}/stretcher-take/{userId} | 
 *PatientsApi* | [**patientsIdUserIdDelete**](doc/PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdGet**](doc/PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsIdUserIdPatch**](doc/PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 

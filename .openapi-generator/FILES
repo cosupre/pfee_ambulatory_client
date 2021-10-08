@@ -58,4 +58,3 @@ lib/src/model/update_exit_document_request.dart
 lib/src/model/update_exit_document_response.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/find_one_code_patient_response_test.dart
