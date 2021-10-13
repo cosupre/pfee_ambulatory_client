@@ -16,10 +16,13 @@ import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_request.dar
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_exit_document_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_exit_document_response.dart';
+import 'package:pfee_ambulatory_client/src/model/create_token_request.dart';
+import 'package:pfee_ambulatory_client/src/model/create_token_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_user_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_exit_document_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_all_token_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_code_patient_response.dart';
@@ -41,10 +44,13 @@ part 'serializers.g.dart';
   CreateAmbuPatientResponse,
   CreateExitDocumentRequest,
   CreateExitDocumentResponse,
+  CreateTokenRequest,
+  CreateTokenResponse,
   CreateUserRequest,
   CreateUserResponse,
   FindAllAmbuPatientResponse,
   FindAllExitDocumentResponse,
+  FindAllTokenResponse,
   FindAllUserResponse,
   FindOneAmbuPatientResponse,
   FindOneCodePatientResponse,
@@ -63,6 +69,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllAmbuPatientResponse)]),
         () => ListBuilder<FindAllAmbuPatientResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(FindAllTokenResponse)]),
+        () => ListBuilder<FindAllTokenResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllUserResponse)]),

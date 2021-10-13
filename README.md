@@ -74,6 +74,9 @@ Class | Method | HTTP request | Description
 *PatientsApi* | [**patientsIdUserIdPatch**](doc/PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 
 *PatientsApi* | [**patientsUserIdGet**](doc/PatientsApi.md#patientsuseridget) | **get** /patients/{userId} | 
 *PatientsApi* | [**patientsUserIdPost**](doc/PatientsApi.md#patientsuseridpost) | **post** /patients/{userId} | 
+*TokensApi* | [**tokensIdUserIdDelete**](doc/TokensApi.md#tokensiduseriddelete) | **delete** /tokens/{id}/{userId} | 
+*TokensApi* | [**tokensUserIdGet**](doc/TokensApi.md#tokensuseridget) | **get** /tokens/{userId} | 
+*TokensApi* | [**tokensUserIdPost**](doc/TokensApi.md#tokensuseridpost) | **post** /tokens/{userId} | 
 *UsersApi* | [**usersChangeRoleIdPatch**](doc/UsersApi.md#userschangeroleidpatch) | **patch** /users/change-role/{id} | 
 *UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
 *UsersApi* | [**usersIdDelete**](doc/UsersApi.md#usersiddelete) | **delete** /users/{id} | 
@@ -91,10 +94,13 @@ Class | Method | HTTP request | Description
  - [CreateAmbuPatientResponse](doc/CreateAmbuPatientResponse.md)
  - [CreateExitDocumentRequest](doc/CreateExitDocumentRequest.md)
  - [CreateExitDocumentResponse](doc/CreateExitDocumentResponse.md)
+ - [CreateTokenRequest](doc/CreateTokenRequest.md)
+ - [CreateTokenResponse](doc/CreateTokenResponse.md)
  - [CreateUserRequest](doc/CreateUserRequest.md)
  - [CreateUserResponse](doc/CreateUserResponse.md)
  - [FindAllAmbuPatientResponse](doc/FindAllAmbuPatientResponse.md)
  - [FindAllExitDocumentResponse](doc/FindAllExitDocumentResponse.md)
+ - [FindAllTokenResponse](doc/FindAllTokenResponse.md)
  - [FindAllUserResponse](doc/FindAllUserResponse.md)
  - [FindOneAmbuPatientResponse](doc/FindOneAmbuPatientResponse.md)
  - [FindOneCodePatientResponse](doc/FindOneCodePatientResponse.md)
