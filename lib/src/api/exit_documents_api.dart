@@ -42,7 +42,12 @@ class ExitDocumentsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -113,7 +118,12 @@ class ExitDocumentsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -157,7 +167,12 @@ class ExitDocumentsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -229,7 +244,12 @@ class ExitDocumentsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -319,7 +339,12 @@ class ExitDocumentsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [

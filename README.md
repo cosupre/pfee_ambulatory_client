@@ -65,15 +65,22 @@ Class | Method | HTTP request | Description
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdGet**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidget) | **get** /patients/{patientId}/exit-documents/{id} | 
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsIdPatch**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentsidpatch) | **patch** /patients/{patientId}/exit-documents/{id} | 
 *ExitDocumentsApi* | [**patientsPatientIdExitDocumentsPost**](doc/ExitDocumentsApi.md#patientspatientidexitdocumentspost) | **post** /patients/{patientId}/exit-documents | 
-*PatientsApi* | [**patientsIdUserIdDelete**](doc/PatientsApi.md#patientsiduseriddelete) | **delete** /patients/{id}/{userId} | 
-*PatientsApi* | [**patientsIdUserIdGet**](doc/PatientsApi.md#patientsiduseridget) | **get** /patients/{id}/{userId} | 
-*PatientsApi* | [**patientsIdUserIdPatch**](doc/PatientsApi.md#patientsiduseridpatch) | **patch** /patients/{id}/{userId} | 
-*PatientsApi* | [**patientsUserIdGet**](doc/PatientsApi.md#patientsuseridget) | **get** /patients/{userId} | 
-*PatientsApi* | [**patientsUserIdPost**](doc/PatientsApi.md#patientsuseridpost) | **post** /patients/{userId} | 
-*UsersApi* | [**usersChangeRoleIdPatch**](doc/UsersApi.md#userschangeroleidpatch) | **patch** /users/change-role/{id} | 
+*PatientsApi* | [**patientsByCodeCodeGet**](doc/PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
+*PatientsApi* | [**patientsChangeStatusIdPatch**](doc/PatientsApi.md#patientschangestatusidpatch) | **patch** /patients/change-status/{id} | 
+*PatientsApi* | [**patientsGet**](doc/PatientsApi.md#patientsget) | **get** /patients | 
+*PatientsApi* | [**patientsIdDelete**](doc/PatientsApi.md#patientsiddelete) | **delete** /patients/{id} | 
+*PatientsApi* | [**patientsIdGet**](doc/PatientsApi.md#patientsidget) | **get** /patients/{id} | 
+*PatientsApi* | [**patientsIdPatch**](doc/PatientsApi.md#patientsidpatch) | **patch** /patients/{id} | 
+*PatientsApi* | [**patientsIdStretcherDeliverPatch**](doc/PatientsApi.md#patientsidstretcherdeliverpatch) | **patch** /patients/{id}/stretcher-deliver | 
+*PatientsApi* | [**patientsIdStretcherTakePatch**](doc/PatientsApi.md#patientsidstretchertakepatch) | **patch** /patients/{id}/stretcher-take | 
+*PatientsApi* | [**patientsPost**](doc/PatientsApi.md#patientspost) | **post** /patients | 
+*TokensApi* | [**tokensGet**](doc/TokensApi.md#tokensget) | **get** /tokens | 
+*TokensApi* | [**tokensIdDelete**](doc/TokensApi.md#tokensiddelete) | **delete** /tokens/{id} | 
+*TokensApi* | [**tokensPost**](doc/TokensApi.md#tokenspost) | **post** /tokens | 
+*UsersApi* | [**usersChangeRolePatch**](doc/UsersApi.md#userschangerolepatch) | **patch** /users/change-role | 
+*UsersApi* | [**usersDelete**](doc/UsersApi.md#usersdelete) | **delete** /users | 
 *UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
-*UsersApi* | [**usersIdDelete**](doc/UsersApi.md#usersiddelete) | **delete** /users/{id} | 
-*UsersApi* | [**usersIdGet**](doc/UsersApi.md#usersidget) | **get** /users/{id} | 
+*UsersApi* | [**usersInfoGet**](doc/UsersApi.md#usersinfoget) | **get** /users/info | 
 *UsersApi* | [**usersPost**](doc/UsersApi.md#userspost) | **post** /users | 
 
 
@@ -81,16 +88,22 @@ Class | Method | HTTP request | Description
 
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
  - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
+ - [ChangeStatusAmbuPatientRequest](doc/ChangeStatusAmbuPatientRequest.md)
+ - [ChangeStatusAmbuPatientResponse](doc/ChangeStatusAmbuPatientResponse.md)
  - [CreateAmbuPatientRequest](doc/CreateAmbuPatientRequest.md)
  - [CreateAmbuPatientResponse](doc/CreateAmbuPatientResponse.md)
  - [CreateExitDocumentRequest](doc/CreateExitDocumentRequest.md)
  - [CreateExitDocumentResponse](doc/CreateExitDocumentResponse.md)
+ - [CreateTokenRequest](doc/CreateTokenRequest.md)
+ - [CreateTokenResponse](doc/CreateTokenResponse.md)
  - [CreateUserRequest](doc/CreateUserRequest.md)
  - [CreateUserResponse](doc/CreateUserResponse.md)
  - [FindAllAmbuPatientResponse](doc/FindAllAmbuPatientResponse.md)
  - [FindAllExitDocumentResponse](doc/FindAllExitDocumentResponse.md)
+ - [FindAllTokenResponse](doc/FindAllTokenResponse.md)
  - [FindAllUserResponse](doc/FindAllUserResponse.md)
  - [FindOneAmbuPatientResponse](doc/FindOneAmbuPatientResponse.md)
+ - [FindOneCodePatientResponse](doc/FindOneCodePatientResponse.md)
  - [FindOneExitDocumentResponse](doc/FindOneExitDocumentResponse.md)
  - [FindOneUserResponse](doc/FindOneUserResponse.md)
  - [UpdateAmbuPatientRequest](doc/UpdateAmbuPatientRequest.md)
@@ -101,7 +114,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## oauth2
+
+- **Type**: HTTP basic authentication
 
 
 ## Author

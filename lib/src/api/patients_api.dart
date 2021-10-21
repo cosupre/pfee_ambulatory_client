@@ -9,10 +9,13 @@ import 'package:dio/dio.dart';
 
 import 'package:pfee_ambulatory_client/src/model/find_one_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_response.dart';
-import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_ambu_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
+import 'package:pfee_ambulatory_client/src/model/find_one_code_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
 import 'package:built_collection/built_collection.dart';
 
 class PatientsApi {
@@ -26,9 +29,8 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<void>> patientsIdUserIdDelete({ 
-    required String id,
-    required String userId,
+  Future<Response<FindOneCodePatientResponse>> patientsByCodeCodeGet({ 
+    required String code,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -36,14 +38,263 @@ class PatientsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{id}/{userId}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'userId' '}', userId.toString());
+    final _path = r'/patients/by-code/{code}'.replaceAll('{' r'code' '}', code.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    FindOneCodePatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(FindOneCodePatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as FindOneCodePatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<FindOneCodePatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<ChangeStatusAmbuPatientResponse>> patientsChangeStatusIdPatch({ 
+    required String id,
+    ChangeStatusAmbuPatientRequest? changeStatusAmbuPatientRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/change-status/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(ChangeStatusAmbuPatientRequest);
+      _bodyData = changeStatusAmbuPatientRequest == null ? null : _serializers.serialize(changeStatusAmbuPatientRequest, specifiedType: _type);
+
+    } catch(error) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+          queryParameters: _queryParameters,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    ChangeStatusAmbuPatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(ChangeStatusAmbuPatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as ChangeStatusAmbuPatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<ChangeStatusAmbuPatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<BuiltList<FindAllAmbuPatientResponse>>> patientsGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<FindAllAmbuPatientResponse> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(FindAllAmbuPatientResponse)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<FindAllAmbuPatientResponse>;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<BuiltList<FindAllAmbuPatientResponse>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<void>> patientsIdDelete({ 
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -70,9 +321,8 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<FindOneAmbuPatientResponse>> patientsIdUserIdGet({ 
+  Future<Response<FindOneAmbuPatientResponse>> patientsIdGet({ 
     required String id,
-    required String userId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -80,14 +330,19 @@ class PatientsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{id}/{userId}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'userId' '}', userId.toString());
+    final _path = r'/patients/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -141,9 +396,8 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<UpdateAmbuPatientResponse>> patientsIdUserIdPatch({ 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdPatch({ 
     required String id,
-    required String userId,
     UpdateAmbuPatientRequest? updateAmbuPatientRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -152,14 +406,19 @@ class PatientsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{id}/{userId}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'userId' '}', userId.toString());
+    final _path = r'/patients/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PATCH',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -232,8 +491,8 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<BuiltList<FindAllAmbuPatientResponse>>> patientsUserIdGet({ 
-    required String userId,
+  Future<Response<ChangeStatusAmbuPatientResponse>> patientsIdStretcherDeliverPatch({ 
+    required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -241,14 +500,19 @@ class PatientsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{userId}'.replaceAll('{' r'userId' '}', userId.toString());
+    final _path = r'/patients/{id}/stretcher-deliver'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
-      method: r'GET',
+      method: r'PATCH',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -269,14 +533,14 @@ class PatientsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<FindAllAmbuPatientResponse> _responseData;
+    ChangeStatusAmbuPatientResponse _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(FindAllAmbuPatientResponse)]);
+      const _responseType = FullType(ChangeStatusAmbuPatientResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<FindAllAmbuPatientResponse>;
+      ) as ChangeStatusAmbuPatientResponse;
 
     } catch (error) {
       throw DioError(
@@ -287,7 +551,7 @@ class PatientsApi {
       );
     }
 
-    return Response<BuiltList<FindAllAmbuPatientResponse>>(
+    return Response<ChangeStatusAmbuPatientResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -302,8 +566,82 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<CreateAmbuPatientResponse>> patientsUserIdPost({ 
-    required String userId,
+  Future<Response<ChangeStatusAmbuPatientResponse>> patientsIdStretcherTakePatch({ 
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{id}/stretcher-take'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    ChangeStatusAmbuPatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(ChangeStatusAmbuPatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as ChangeStatusAmbuPatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<ChangeStatusAmbuPatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<CreateAmbuPatientResponse>> patientsPost({ 
     CreateAmbuPatientRequest? createAmbuPatientRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -312,14 +650,19 @@ class PatientsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{userId}'.replaceAll('{' r'userId' '}', userId.toString());
+    final _path = r'/patients';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [

@@ -26,8 +26,7 @@ class UsersApi {
   /// 
   ///
   /// 
-  Future<Response<ChangeRoleUserResponse>> usersChangeRoleIdPatch({ 
-    required String id,
+  Future<Response<ChangeRoleUserResponse>> usersChangeRolePatch({ 
     ChangeRoleUserRequest? changeRoleUserRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -36,14 +35,19 @@ class UsersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/users/change-role/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/users/change-role';
     final _options = Options(
       method: r'PATCH',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -116,6 +120,53 @@ class UsersApi {
   /// 
   ///
   /// 
+  Future<Response<void>> usersDelete({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/users';
+    final _options = Options(
+      method: r'DELETE',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    return _response;
+  }
+
+  /// 
+  ///
+  /// 
   Future<Response<BuiltList<FindAllUserResponse>>> usersGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -131,7 +182,12 @@ class UsersApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -185,8 +241,7 @@ class UsersApi {
   /// 
   ///
   /// 
-  Future<Response<void>> usersIdDelete({ 
-    required String id,
+  Future<Response<FindOneUserResponse>> usersInfoGet({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -194,57 +249,19 @@ class UsersApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/users/{id}'.replaceAll('{' r'id' '}', id.toString());
-    final _options = Options(
-      method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: [
-        'application/json',
-      ].first,
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// 
-  ///
-  /// 
-  Future<Response<FindOneUserResponse>> usersIdGet({ 
-    required String id,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/users/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/users/info';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [
@@ -314,7 +331,12 @@ class UsersApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: [

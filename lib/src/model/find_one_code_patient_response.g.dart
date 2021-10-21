@@ -1,18 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'find_one_ambu_patient_response.dart';
+part of 'find_one_code_patient_response.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
+class _$FindOneCodePatientResponse extends FindOneCodePatientResponse {
   @override
   final String? afterBlocStretcherId;
   @override
   final String? anaesthetistId;
-  @override
-  final String attendantPhone;
   @override
   final String? beforeBlocStretcherId;
   @override
@@ -24,85 +22,65 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
   @override
   final String firstName;
   @override
-  final String? id;
-  @override
   final String lastName;
   @override
   final String operation;
-  @override
-  final bool pedestrian;
-  @override
-  final String status;
   @override
   final String? surgeonId;
   @override
   final String? ucaRoomId;
 
-  factory _$FindOneAmbuPatientResponse(
-          [void Function(FindOneAmbuPatientResponseBuilder)? updates]) =>
-      (new FindOneAmbuPatientResponseBuilder()..update(updates)).build();
+  factory _$FindOneCodePatientResponse(
+          [void Function(FindOneCodePatientResponseBuilder)? updates]) =>
+      (new FindOneCodePatientResponseBuilder()..update(updates)).build();
 
-  _$FindOneAmbuPatientResponse._(
+  _$FindOneCodePatientResponse._(
       {this.afterBlocStretcherId,
       this.anaesthetistId,
-      required this.attendantPhone,
       this.beforeBlocStretcherId,
       required this.birth,
       this.blocRoomId,
       required this.code,
       required this.firstName,
-      this.id,
       required this.lastName,
       required this.operation,
-      required this.pedestrian,
-      required this.status,
       this.surgeonId,
       this.ucaRoomId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        attendantPhone, 'FindOneAmbuPatientResponse', 'attendantPhone');
+        birth, 'FindOneCodePatientResponse', 'birth');
     BuiltValueNullFieldError.checkNotNull(
-        birth, 'FindOneAmbuPatientResponse', 'birth');
+        code, 'FindOneCodePatientResponse', 'code');
     BuiltValueNullFieldError.checkNotNull(
-        code, 'FindOneAmbuPatientResponse', 'code');
+        firstName, 'FindOneCodePatientResponse', 'firstName');
     BuiltValueNullFieldError.checkNotNull(
-        firstName, 'FindOneAmbuPatientResponse', 'firstName');
+        lastName, 'FindOneCodePatientResponse', 'lastName');
     BuiltValueNullFieldError.checkNotNull(
-        lastName, 'FindOneAmbuPatientResponse', 'lastName');
-    BuiltValueNullFieldError.checkNotNull(
-        operation, 'FindOneAmbuPatientResponse', 'operation');
-    BuiltValueNullFieldError.checkNotNull(
-        pedestrian, 'FindOneAmbuPatientResponse', 'pedestrian');
-    BuiltValueNullFieldError.checkNotNull(
-        status, 'FindOneAmbuPatientResponse', 'status');
+        operation, 'FindOneCodePatientResponse', 'operation');
   }
 
   @override
-  FindOneAmbuPatientResponse rebuild(
-          void Function(FindOneAmbuPatientResponseBuilder) updates) =>
+  FindOneCodePatientResponse rebuild(
+          void Function(FindOneCodePatientResponseBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  FindOneAmbuPatientResponseBuilder toBuilder() =>
-      new FindOneAmbuPatientResponseBuilder()..replace(this);
+  FindOneCodePatientResponseBuilder toBuilder() =>
+      new FindOneCodePatientResponseBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is FindOneAmbuPatientResponse &&
+    return other is FindOneCodePatientResponse &&
         afterBlocStretcherId == other.afterBlocStretcherId &&
         anaesthetistId == other.anaesthetistId &&
-        attendantPhone == other.attendantPhone &&
         beforeBlocStretcherId == other.beforeBlocStretcherId &&
         birth == other.birth &&
         blocRoomId == other.blocRoomId &&
         code == other.code &&
         firstName == other.firstName &&
-        id == other.id &&
         lastName == other.lastName &&
         operation == other.operation &&
-        pedestrian == other.pedestrian &&
-        status == other.status &&
         surgeonId == other.surgeonId &&
         ucaRoomId == other.ucaRoomId;
   }
@@ -119,59 +97,42 @@ class _$FindOneAmbuPatientResponse extends FindOneAmbuPatientResponse {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc(
-                                                $jc(
-                                                    $jc(
-                                                        $jc(
-                                                            $jc(
-                                                                0,
-                                                                afterBlocStretcherId
-                                                                    .hashCode),
-                                                            anaesthetistId
-                                                                .hashCode),
-                                                        attendantPhone
-                                                            .hashCode),
-                                                    beforeBlocStretcherId
-                                                        .hashCode),
-                                                birth.hashCode),
-                                            blocRoomId.hashCode),
-                                        code.hashCode),
-                                    firstName.hashCode),
-                                id.hashCode),
-                            lastName.hashCode),
-                        operation.hashCode),
-                    pedestrian.hashCode),
-                status.hashCode),
+                                            $jc(0,
+                                                afterBlocStretcherId.hashCode),
+                                            anaesthetistId.hashCode),
+                                        beforeBlocStretcherId.hashCode),
+                                    birth.hashCode),
+                                blocRoomId.hashCode),
+                            code.hashCode),
+                        firstName.hashCode),
+                    lastName.hashCode),
+                operation.hashCode),
             surgeonId.hashCode),
         ucaRoomId.hashCode));
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper('FindOneAmbuPatientResponse')
+    return (newBuiltValueToStringHelper('FindOneCodePatientResponse')
           ..add('afterBlocStretcherId', afterBlocStretcherId)
           ..add('anaesthetistId', anaesthetistId)
-          ..add('attendantPhone', attendantPhone)
           ..add('beforeBlocStretcherId', beforeBlocStretcherId)
           ..add('birth', birth)
           ..add('blocRoomId', blocRoomId)
           ..add('code', code)
           ..add('firstName', firstName)
-          ..add('id', id)
           ..add('lastName', lastName)
           ..add('operation', operation)
-          ..add('pedestrian', pedestrian)
-          ..add('status', status)
           ..add('surgeonId', surgeonId)
           ..add('ucaRoomId', ucaRoomId))
         .toString();
   }
 }
 
-class FindOneAmbuPatientResponseBuilder
+class FindOneCodePatientResponseBuilder
     implements
-        Builder<FindOneAmbuPatientResponse, FindOneAmbuPatientResponseBuilder> {
-  _$FindOneAmbuPatientResponse? _$v;
+        Builder<FindOneCodePatientResponse, FindOneCodePatientResponseBuilder> {
+  _$FindOneCodePatientResponse? _$v;
 
   String? _afterBlocStretcherId;
   String? get afterBlocStretcherId => _$this._afterBlocStretcherId;
@@ -182,11 +143,6 @@ class FindOneAmbuPatientResponseBuilder
   String? get anaesthetistId => _$this._anaesthetistId;
   set anaesthetistId(String? anaesthetistId) =>
       _$this._anaesthetistId = anaesthetistId;
-
-  String? _attendantPhone;
-  String? get attendantPhone => _$this._attendantPhone;
-  set attendantPhone(String? attendantPhone) =>
-      _$this._attendantPhone = attendantPhone;
 
   String? _beforeBlocStretcherId;
   String? get beforeBlocStretcherId => _$this._beforeBlocStretcherId;
@@ -209,10 +165,6 @@ class FindOneAmbuPatientResponseBuilder
   String? get firstName => _$this._firstName;
   set firstName(String? firstName) => _$this._firstName = firstName;
 
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
-
   String? _lastName;
   String? get lastName => _$this._lastName;
   set lastName(String? lastName) => _$this._lastName = lastName;
@@ -220,14 +172,6 @@ class FindOneAmbuPatientResponseBuilder
   String? _operation;
   String? get operation => _$this._operation;
   set operation(String? operation) => _$this._operation = operation;
-
-  bool? _pedestrian;
-  bool? get pedestrian => _$this._pedestrian;
-  set pedestrian(bool? pedestrian) => _$this._pedestrian = pedestrian;
-
-  String? _status;
-  String? get status => _$this._status;
-  set status(String? status) => _$this._status = status;
 
   String? _surgeonId;
   String? get surgeonId => _$this._surgeonId;
@@ -237,26 +181,22 @@ class FindOneAmbuPatientResponseBuilder
   String? get ucaRoomId => _$this._ucaRoomId;
   set ucaRoomId(String? ucaRoomId) => _$this._ucaRoomId = ucaRoomId;
 
-  FindOneAmbuPatientResponseBuilder() {
-    FindOneAmbuPatientResponse._initializeBuilder(this);
+  FindOneCodePatientResponseBuilder() {
+    FindOneCodePatientResponse._initializeBuilder(this);
   }
 
-  FindOneAmbuPatientResponseBuilder get _$this {
+  FindOneCodePatientResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _afterBlocStretcherId = $v.afterBlocStretcherId;
       _anaesthetistId = $v.anaesthetistId;
-      _attendantPhone = $v.attendantPhone;
       _beforeBlocStretcherId = $v.beforeBlocStretcherId;
       _birth = $v.birth;
       _blocRoomId = $v.blocRoomId;
       _code = $v.code;
       _firstName = $v.firstName;
-      _id = $v.id;
       _lastName = $v.lastName;
       _operation = $v.operation;
-      _pedestrian = $v.pedestrian;
-      _status = $v.status;
       _surgeonId = $v.surgeonId;
       _ucaRoomId = $v.ucaRoomId;
       _$v = null;
@@ -265,41 +205,34 @@ class FindOneAmbuPatientResponseBuilder
   }
 
   @override
-  void replace(FindOneAmbuPatientResponse other) {
+  void replace(FindOneCodePatientResponse other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$FindOneAmbuPatientResponse;
+    _$v = other as _$FindOneCodePatientResponse;
   }
 
   @override
-  void update(void Function(FindOneAmbuPatientResponseBuilder)? updates) {
+  void update(void Function(FindOneCodePatientResponseBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  _$FindOneAmbuPatientResponse build() {
+  _$FindOneCodePatientResponse build() {
     final _$result = _$v ??
-        new _$FindOneAmbuPatientResponse._(
+        new _$FindOneCodePatientResponse._(
             afterBlocStretcherId: afterBlocStretcherId,
             anaesthetistId: anaesthetistId,
-            attendantPhone: BuiltValueNullFieldError.checkNotNull(
-                attendantPhone, 'FindOneAmbuPatientResponse', 'attendantPhone'),
             beforeBlocStretcherId: beforeBlocStretcherId,
             birth: BuiltValueNullFieldError.checkNotNull(
-                birth, 'FindOneAmbuPatientResponse', 'birth'),
+                birth, 'FindOneCodePatientResponse', 'birth'),
             blocRoomId: blocRoomId,
             code: BuiltValueNullFieldError.checkNotNull(
-                code, 'FindOneAmbuPatientResponse', 'code'),
+                code, 'FindOneCodePatientResponse', 'code'),
             firstName: BuiltValueNullFieldError.checkNotNull(
-                firstName, 'FindOneAmbuPatientResponse', 'firstName'),
-            id: id,
+                firstName, 'FindOneCodePatientResponse', 'firstName'),
             lastName: BuiltValueNullFieldError.checkNotNull(
-                lastName, 'FindOneAmbuPatientResponse', 'lastName'),
+                lastName, 'FindOneCodePatientResponse', 'lastName'),
             operation: BuiltValueNullFieldError.checkNotNull(
-                operation, 'FindOneAmbuPatientResponse', 'operation'),
-            pedestrian: BuiltValueNullFieldError.checkNotNull(
-                pedestrian, 'FindOneAmbuPatientResponse', 'pedestrian'),
-            status: BuiltValueNullFieldError.checkNotNull(
-                status, 'FindOneAmbuPatientResponse', 'status'),
+                operation, 'FindOneCodePatientResponse', 'operation'),
             surgeonId: surgeonId,
             ucaRoomId: ucaRoomId);
     replace(_$result);

@@ -13,18 +13,25 @@ class _$CreateAmbuPatientRequest extends CreateAmbuPatientRequest {
   final String code;
   @override
   final String? id;
+  @override
+  final bool pedestrian;
 
   factory _$CreateAmbuPatientRequest(
           [void Function(CreateAmbuPatientRequestBuilder)? updates]) =>
       (new CreateAmbuPatientRequestBuilder()..update(updates)).build();
 
   _$CreateAmbuPatientRequest._(
-      {required this.attendantPhone, required this.code, this.id})
+      {required this.attendantPhone,
+      required this.code,
+      this.id,
+      required this.pedestrian})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         attendantPhone, 'CreateAmbuPatientRequest', 'attendantPhone');
     BuiltValueNullFieldError.checkNotNull(
         code, 'CreateAmbuPatientRequest', 'code');
+    BuiltValueNullFieldError.checkNotNull(
+        pedestrian, 'CreateAmbuPatientRequest', 'pedestrian');
   }
 
   @override
@@ -42,13 +49,15 @@ class _$CreateAmbuPatientRequest extends CreateAmbuPatientRequest {
     return other is CreateAmbuPatientRequest &&
         attendantPhone == other.attendantPhone &&
         code == other.code &&
-        id == other.id;
+        id == other.id &&
+        pedestrian == other.pedestrian;
   }
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, attendantPhone.hashCode), code.hashCode), id.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, attendantPhone.hashCode), code.hashCode), id.hashCode),
+        pedestrian.hashCode));
   }
 
   @override
@@ -56,7 +65,8 @@ class _$CreateAmbuPatientRequest extends CreateAmbuPatientRequest {
     return (newBuiltValueToStringHelper('CreateAmbuPatientRequest')
           ..add('attendantPhone', attendantPhone)
           ..add('code', code)
-          ..add('id', id))
+          ..add('id', id)
+          ..add('pedestrian', pedestrian))
         .toString();
   }
 }
@@ -79,6 +89,10 @@ class CreateAmbuPatientRequestBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
+  bool? _pedestrian;
+  bool? get pedestrian => _$this._pedestrian;
+  set pedestrian(bool? pedestrian) => _$this._pedestrian = pedestrian;
+
   CreateAmbuPatientRequestBuilder() {
     CreateAmbuPatientRequest._initializeBuilder(this);
   }
@@ -89,6 +103,7 @@ class CreateAmbuPatientRequestBuilder
       _attendantPhone = $v.attendantPhone;
       _code = $v.code;
       _id = $v.id;
+      _pedestrian = $v.pedestrian;
       _$v = null;
     }
     return this;
@@ -113,7 +128,9 @@ class CreateAmbuPatientRequestBuilder
                 attendantPhone, 'CreateAmbuPatientRequest', 'attendantPhone'),
             code: BuiltValueNullFieldError.checkNotNull(
                 code, 'CreateAmbuPatientRequest', 'code'),
-            id: id);
+            id: id,
+            pedestrian: BuiltValueNullFieldError.checkNotNull(
+                pedestrian, 'CreateAmbuPatientRequest', 'pedestrian'));
     replace(_$result);
     return _$result;
   }

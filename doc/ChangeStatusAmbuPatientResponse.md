@@ -1,4 +1,4 @@
-# pfee_ambulatory_client.model.CreateAmbuPatientResponse
+# pfee_ambulatory_client.model.ChangeStatusAmbuPatientResponse
 
 ## Load the model package
 ```dart
@@ -12,13 +12,9 @@ Name | Type | Description | Notes
 **anaesthetistId** | **String** |  | [optional] 
 **attendantPhone** | **String** |  | 
 **beforeBlocStretcherId** | **String** |  | [optional] 
-**birth** | [**DateTime**](DateTime.md) |  | 
 **blocRoomId** | **String** |  | [optional] 
 **code** | **String** |  | 
-**firstName** | **String** |  | 
 **id** | **String** |  | [optional] 
-**lastName** | **String** |  | 
-**operation** | **String** |  | 
 **pedestrian** | **bool** |  | 
 **status** | **String** |  | 
 **surgeonId** | **String** |  | [optional] 

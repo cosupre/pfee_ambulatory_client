@@ -8,9 +8,17 @@ part of 'create_ambu_patient_response.dart';
 
 class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
   @override
+  final String? afterBlocStretcherId;
+  @override
+  final String? anaesthetistId;
+  @override
   final String attendantPhone;
   @override
+  final String? beforeBlocStretcherId;
+  @override
   final DateTime birth;
+  @override
+  final String? blocRoomId;
   @override
   final String code;
   @override
@@ -21,19 +29,35 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
   final String lastName;
   @override
   final String operation;
+  @override
+  final bool pedestrian;
+  @override
+  final String status;
+  @override
+  final String? surgeonId;
+  @override
+  final String? ucaRoomId;
 
   factory _$CreateAmbuPatientResponse(
           [void Function(CreateAmbuPatientResponseBuilder)? updates]) =>
       (new CreateAmbuPatientResponseBuilder()..update(updates)).build();
 
   _$CreateAmbuPatientResponse._(
-      {required this.attendantPhone,
+      {this.afterBlocStretcherId,
+      this.anaesthetistId,
+      required this.attendantPhone,
+      this.beforeBlocStretcherId,
       required this.birth,
+      this.blocRoomId,
       required this.code,
       required this.firstName,
       this.id,
       required this.lastName,
-      required this.operation})
+      required this.operation,
+      required this.pedestrian,
+      required this.status,
+      this.surgeonId,
+      this.ucaRoomId})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         attendantPhone, 'CreateAmbuPatientResponse', 'attendantPhone');
@@ -47,6 +71,10 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
         lastName, 'CreateAmbuPatientResponse', 'lastName');
     BuiltValueNullFieldError.checkNotNull(
         operation, 'CreateAmbuPatientResponse', 'operation');
+    BuiltValueNullFieldError.checkNotNull(
+        pedestrian, 'CreateAmbuPatientResponse', 'pedestrian');
+    BuiltValueNullFieldError.checkNotNull(
+        status, 'CreateAmbuPatientResponse', 'status');
   }
 
   @override
@@ -62,13 +90,21 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is CreateAmbuPatientResponse &&
+        afterBlocStretcherId == other.afterBlocStretcherId &&
+        anaesthetistId == other.anaesthetistId &&
         attendantPhone == other.attendantPhone &&
+        beforeBlocStretcherId == other.beforeBlocStretcherId &&
         birth == other.birth &&
+        blocRoomId == other.blocRoomId &&
         code == other.code &&
         firstName == other.firstName &&
         id == other.id &&
         lastName == other.lastName &&
-        operation == other.operation;
+        operation == other.operation &&
+        pedestrian == other.pedestrian &&
+        status == other.status &&
+        surgeonId == other.surgeonId &&
+        ucaRoomId == other.ucaRoomId;
   }
 
   @override
@@ -77,24 +113,57 @@ class _$CreateAmbuPatientResponse extends CreateAmbuPatientResponse {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, attendantPhone.hashCode), birth.hashCode),
-                        code.hashCode),
-                    firstName.hashCode),
-                id.hashCode),
-            lastName.hashCode),
-        operation.hashCode));
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                0,
+                                                                afterBlocStretcherId
+                                                                    .hashCode),
+                                                            anaesthetistId
+                                                                .hashCode),
+                                                        attendantPhone
+                                                            .hashCode),
+                                                    beforeBlocStretcherId
+                                                        .hashCode),
+                                                birth.hashCode),
+                                            blocRoomId.hashCode),
+                                        code.hashCode),
+                                    firstName.hashCode),
+                                id.hashCode),
+                            lastName.hashCode),
+                        operation.hashCode),
+                    pedestrian.hashCode),
+                status.hashCode),
+            surgeonId.hashCode),
+        ucaRoomId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateAmbuPatientResponse')
+          ..add('afterBlocStretcherId', afterBlocStretcherId)
+          ..add('anaesthetistId', anaesthetistId)
           ..add('attendantPhone', attendantPhone)
+          ..add('beforeBlocStretcherId', beforeBlocStretcherId)
           ..add('birth', birth)
+          ..add('blocRoomId', blocRoomId)
           ..add('code', code)
           ..add('firstName', firstName)
           ..add('id', id)
           ..add('lastName', lastName)
-          ..add('operation', operation))
+          ..add('operation', operation)
+          ..add('pedestrian', pedestrian)
+          ..add('status', status)
+          ..add('surgeonId', surgeonId)
+          ..add('ucaRoomId', ucaRoomId))
         .toString();
   }
 }
@@ -104,14 +173,33 @@ class CreateAmbuPatientResponseBuilder
         Builder<CreateAmbuPatientResponse, CreateAmbuPatientResponseBuilder> {
   _$CreateAmbuPatientResponse? _$v;
 
+  String? _afterBlocStretcherId;
+  String? get afterBlocStretcherId => _$this._afterBlocStretcherId;
+  set afterBlocStretcherId(String? afterBlocStretcherId) =>
+      _$this._afterBlocStretcherId = afterBlocStretcherId;
+
+  String? _anaesthetistId;
+  String? get anaesthetistId => _$this._anaesthetistId;
+  set anaesthetistId(String? anaesthetistId) =>
+      _$this._anaesthetistId = anaesthetistId;
+
   String? _attendantPhone;
   String? get attendantPhone => _$this._attendantPhone;
   set attendantPhone(String? attendantPhone) =>
       _$this._attendantPhone = attendantPhone;
 
+  String? _beforeBlocStretcherId;
+  String? get beforeBlocStretcherId => _$this._beforeBlocStretcherId;
+  set beforeBlocStretcherId(String? beforeBlocStretcherId) =>
+      _$this._beforeBlocStretcherId = beforeBlocStretcherId;
+
   DateTime? _birth;
   DateTime? get birth => _$this._birth;
   set birth(DateTime? birth) => _$this._birth = birth;
+
+  String? _blocRoomId;
+  String? get blocRoomId => _$this._blocRoomId;
+  set blocRoomId(String? blocRoomId) => _$this._blocRoomId = blocRoomId;
 
   String? _code;
   String? get code => _$this._code;
@@ -133,6 +221,22 @@ class CreateAmbuPatientResponseBuilder
   String? get operation => _$this._operation;
   set operation(String? operation) => _$this._operation = operation;
 
+  bool? _pedestrian;
+  bool? get pedestrian => _$this._pedestrian;
+  set pedestrian(bool? pedestrian) => _$this._pedestrian = pedestrian;
+
+  String? _status;
+  String? get status => _$this._status;
+  set status(String? status) => _$this._status = status;
+
+  String? _surgeonId;
+  String? get surgeonId => _$this._surgeonId;
+  set surgeonId(String? surgeonId) => _$this._surgeonId = surgeonId;
+
+  String? _ucaRoomId;
+  String? get ucaRoomId => _$this._ucaRoomId;
+  set ucaRoomId(String? ucaRoomId) => _$this._ucaRoomId = ucaRoomId;
+
   CreateAmbuPatientResponseBuilder() {
     CreateAmbuPatientResponse._initializeBuilder(this);
   }
@@ -140,13 +244,21 @@ class CreateAmbuPatientResponseBuilder
   CreateAmbuPatientResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _afterBlocStretcherId = $v.afterBlocStretcherId;
+      _anaesthetistId = $v.anaesthetistId;
       _attendantPhone = $v.attendantPhone;
+      _beforeBlocStretcherId = $v.beforeBlocStretcherId;
       _birth = $v.birth;
+      _blocRoomId = $v.blocRoomId;
       _code = $v.code;
       _firstName = $v.firstName;
       _id = $v.id;
       _lastName = $v.lastName;
       _operation = $v.operation;
+      _pedestrian = $v.pedestrian;
+      _status = $v.status;
+      _surgeonId = $v.surgeonId;
+      _ucaRoomId = $v.ucaRoomId;
       _$v = null;
     }
     return this;
@@ -167,10 +279,14 @@ class CreateAmbuPatientResponseBuilder
   _$CreateAmbuPatientResponse build() {
     final _$result = _$v ??
         new _$CreateAmbuPatientResponse._(
+            afterBlocStretcherId: afterBlocStretcherId,
+            anaesthetistId: anaesthetistId,
             attendantPhone: BuiltValueNullFieldError.checkNotNull(
                 attendantPhone, 'CreateAmbuPatientResponse', 'attendantPhone'),
+            beforeBlocStretcherId: beforeBlocStretcherId,
             birth: BuiltValueNullFieldError.checkNotNull(
                 birth, 'CreateAmbuPatientResponse', 'birth'),
+            blocRoomId: blocRoomId,
             code: BuiltValueNullFieldError.checkNotNull(
                 code, 'CreateAmbuPatientResponse', 'code'),
             firstName: BuiltValueNullFieldError.checkNotNull(
@@ -179,7 +295,13 @@ class CreateAmbuPatientResponseBuilder
             lastName: BuiltValueNullFieldError.checkNotNull(
                 lastName, 'CreateAmbuPatientResponse', 'lastName'),
             operation: BuiltValueNullFieldError.checkNotNull(
-                operation, 'CreateAmbuPatientResponse', 'operation'));
+                operation, 'CreateAmbuPatientResponse', 'operation'),
+            pedestrian: BuiltValueNullFieldError.checkNotNull(
+                pedestrian, 'CreateAmbuPatientResponse', 'pedestrian'),
+            status: BuiltValueNullFieldError.checkNotNull(
+                status, 'CreateAmbuPatientResponse', 'status'),
+            surgeonId: surgeonId,
+            ucaRoomId: ucaRoomId);
     replace(_$result);
     return _$result;
   }

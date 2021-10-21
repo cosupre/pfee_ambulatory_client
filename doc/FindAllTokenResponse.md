@@ -1,4 +1,4 @@
-# pfee_ambulatory_client.model.UpdateAmbuPatientRequest
+# pfee_ambulatory_client.model.FindAllTokenResponse
 
 ## Load the model package
 ```dart
@@ -8,8 +8,8 @@ import 'package:pfee_ambulatory_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attendantPhone** | **String** |  | [optional] 
-**pedestrian** | **bool** |  | 
+**id** | **String** |  | [optional] 
+**token** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -9,12 +9,18 @@ part of 'update_ambu_patient_request.dart';
 class _$UpdateAmbuPatientRequest extends UpdateAmbuPatientRequest {
   @override
   final String? attendantPhone;
+  @override
+  final bool pedestrian;
 
   factory _$UpdateAmbuPatientRequest(
           [void Function(UpdateAmbuPatientRequestBuilder)? updates]) =>
       (new UpdateAmbuPatientRequestBuilder()..update(updates)).build();
 
-  _$UpdateAmbuPatientRequest._({this.attendantPhone}) : super._();
+  _$UpdateAmbuPatientRequest._({this.attendantPhone, required this.pedestrian})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        pedestrian, 'UpdateAmbuPatientRequest', 'pedestrian');
+  }
 
   @override
   UpdateAmbuPatientRequest rebuild(
@@ -29,18 +35,20 @@ class _$UpdateAmbuPatientRequest extends UpdateAmbuPatientRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is UpdateAmbuPatientRequest &&
-        attendantPhone == other.attendantPhone;
+        attendantPhone == other.attendantPhone &&
+        pedestrian == other.pedestrian;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, attendantPhone.hashCode));
+    return $jf($jc($jc(0, attendantPhone.hashCode), pedestrian.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('UpdateAmbuPatientRequest')
-          ..add('attendantPhone', attendantPhone))
+          ..add('attendantPhone', attendantPhone)
+          ..add('pedestrian', pedestrian))
         .toString();
   }
 }
@@ -55,6 +63,10 @@ class UpdateAmbuPatientRequestBuilder
   set attendantPhone(String? attendantPhone) =>
       _$this._attendantPhone = attendantPhone;
 
+  bool? _pedestrian;
+  bool? get pedestrian => _$this._pedestrian;
+  set pedestrian(bool? pedestrian) => _$this._pedestrian = pedestrian;
+
   UpdateAmbuPatientRequestBuilder() {
     UpdateAmbuPatientRequest._initializeBuilder(this);
   }
@@ -63,6 +75,7 @@ class UpdateAmbuPatientRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _attendantPhone = $v.attendantPhone;
+      _pedestrian = $v.pedestrian;
       _$v = null;
     }
     return this;
@@ -81,8 +94,11 @@ class UpdateAmbuPatientRequestBuilder
 
   @override
   _$UpdateAmbuPatientRequest build() {
-    final _$result =
-        _$v ?? new _$UpdateAmbuPatientRequest._(attendantPhone: attendantPhone);
+    final _$result = _$v ??
+        new _$UpdateAmbuPatientRequest._(
+            attendantPhone: attendantPhone,
+            pedestrian: BuiltValueNullFieldError.checkNotNull(
+                pedestrian, 'UpdateAmbuPatientRequest', 'pedestrian'));
     replace(_$result);
     return _$result;
   }

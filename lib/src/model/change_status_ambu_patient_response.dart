@@ -5,11 +5,11 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'find_all_ambu_patient_response.g.dart';
+part 'change_status_ambu_patient_response.g.dart';
 
 
 
-abstract class FindAllAmbuPatientResponse implements Built<FindAllAmbuPatientResponse, FindAllAmbuPatientResponseBuilder> {
+abstract class ChangeStatusAmbuPatientResponse implements Built<ChangeStatusAmbuPatientResponse, ChangeStatusAmbuPatientResponseBuilder> {
     @BuiltValueField(wireName: r'afterBlocStretcherId')
     String? get afterBlocStretcherId;
 
@@ -22,26 +22,14 @@ abstract class FindAllAmbuPatientResponse implements Built<FindAllAmbuPatientRes
     @BuiltValueField(wireName: r'beforeBlocStretcherId')
     String? get beforeBlocStretcherId;
 
-    @BuiltValueField(wireName: r'birth')
-    DateTime get birth;
-
     @BuiltValueField(wireName: r'blocRoomId')
     String? get blocRoomId;
 
     @BuiltValueField(wireName: r'code')
     String get code;
 
-    @BuiltValueField(wireName: r'firstName')
-    String get firstName;
-
     @BuiltValueField(wireName: r'id')
     String? get id;
-
-    @BuiltValueField(wireName: r'lastName')
-    String get lastName;
-
-    @BuiltValueField(wireName: r'operation')
-    String get operation;
 
     @BuiltValueField(wireName: r'pedestrian')
     bool get pedestrian;
@@ -55,25 +43,25 @@ abstract class FindAllAmbuPatientResponse implements Built<FindAllAmbuPatientRes
     @BuiltValueField(wireName: r'ucaRoomId')
     String? get ucaRoomId;
 
-    FindAllAmbuPatientResponse._();
+    ChangeStatusAmbuPatientResponse._();
 
-    static void _initializeBuilder(FindAllAmbuPatientResponseBuilder b) => b;
+    static void _initializeBuilder(ChangeStatusAmbuPatientResponseBuilder b) => b;
 
-    factory FindAllAmbuPatientResponse([void updates(FindAllAmbuPatientResponseBuilder b)]) = _$FindAllAmbuPatientResponse;
+    factory ChangeStatusAmbuPatientResponse([void updates(ChangeStatusAmbuPatientResponseBuilder b)]) = _$ChangeStatusAmbuPatientResponse;
 
     @BuiltValueSerializer(custom: true)
-    static Serializer<FindAllAmbuPatientResponse> get serializer => _$FindAllAmbuPatientResponseSerializer();
+    static Serializer<ChangeStatusAmbuPatientResponse> get serializer => _$ChangeStatusAmbuPatientResponseSerializer();
 }
 
-class _$FindAllAmbuPatientResponseSerializer implements StructuredSerializer<FindAllAmbuPatientResponse> {
+class _$ChangeStatusAmbuPatientResponseSerializer implements StructuredSerializer<ChangeStatusAmbuPatientResponse> {
     @override
-    final Iterable<Type> types = const [FindAllAmbuPatientResponse, _$FindAllAmbuPatientResponse];
+    final Iterable<Type> types = const [ChangeStatusAmbuPatientResponse, _$ChangeStatusAmbuPatientResponse];
 
     @override
-    final String wireName = r'FindAllAmbuPatientResponse';
+    final String wireName = r'ChangeStatusAmbuPatientResponse';
 
     @override
-    Iterable<Object?> serialize(Serializers serializers, FindAllAmbuPatientResponse object,
+    Iterable<Object?> serialize(Serializers serializers, ChangeStatusAmbuPatientResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
         if (object.afterBlocStretcherId != null) {
@@ -98,10 +86,6 @@ class _$FindAllAmbuPatientResponseSerializer implements StructuredSerializer<Fin
                 ..add(serializers.serialize(object.beforeBlocStretcherId,
                     specifiedType: const FullType(String)));
         }
-        result
-            ..add(r'birth')
-            ..add(serializers.serialize(object.birth,
-                specifiedType: const FullType(DateTime)));
         if (object.blocRoomId != null) {
             result
                 ..add(r'blocRoomId')
@@ -112,24 +96,12 @@ class _$FindAllAmbuPatientResponseSerializer implements StructuredSerializer<Fin
             ..add(r'code')
             ..add(serializers.serialize(object.code,
                 specifiedType: const FullType(String)));
-        result
-            ..add(r'firstName')
-            ..add(serializers.serialize(object.firstName,
-                specifiedType: const FullType(String)));
         if (object.id != null) {
             result
                 ..add(r'id')
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        result
-            ..add(r'lastName')
-            ..add(serializers.serialize(object.lastName,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'operation')
-            ..add(serializers.serialize(object.operation,
-                specifiedType: const FullType(String)));
         result
             ..add(r'pedestrian')
             ..add(serializers.serialize(object.pedestrian,
@@ -154,9 +126,9 @@ class _$FindAllAmbuPatientResponseSerializer implements StructuredSerializer<Fin
     }
 
     @override
-    FindAllAmbuPatientResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
+    ChangeStatusAmbuPatientResponse deserialize(Serializers serializers, Iterable<Object?> serialized,
         {FullType specifiedType = FullType.unspecified}) {
-        final result = FindAllAmbuPatientResponseBuilder();
+        final result = ChangeStatusAmbuPatientResponseBuilder();
 
         final iterator = serialized.iterator;
         while (iterator.moveNext()) {
@@ -180,10 +152,6 @@ class _$FindAllAmbuPatientResponseSerializer implements StructuredSerializer<Fin
                     result.beforeBlocStretcherId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'birth':
-                    result.birth = serializers.deserialize(value,
-                        specifiedType: const FullType(DateTime)) as DateTime;
-                    break;
                 case r'blocRoomId':
                     result.blocRoomId = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
@@ -192,20 +160,8 @@ class _$FindAllAmbuPatientResponseSerializer implements StructuredSerializer<Fin
                     result.code = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
-                case r'firstName':
-                    result.firstName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
                 case r'id':
                     result.id = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'lastName':
-                    result.lastName = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'operation':
-                    result.operation = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'pedestrian':

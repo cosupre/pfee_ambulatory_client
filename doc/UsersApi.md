@@ -9,31 +9,33 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**usersChangeRoleIdPatch**](UsersApi.md#userschangeroleidpatch) | **patch** /users/change-role/{id} | 
+[**usersChangeRolePatch**](UsersApi.md#userschangerolepatch) | **patch** /users/change-role | 
+[**usersDelete**](UsersApi.md#usersdelete) | **delete** /users | 
 [**usersGet**](UsersApi.md#usersget) | **get** /users | 
-[**usersIdDelete**](UsersApi.md#usersiddelete) | **delete** /users/{id} | 
-[**usersIdGet**](UsersApi.md#usersidget) | **get** /users/{id} | 
+[**usersInfoGet**](UsersApi.md#usersinfoget) | **get** /users/info | 
 [**usersPost**](UsersApi.md#userspost) | **post** /users | 
 
 
-# **usersChangeRoleIdPatch**
-> ChangeRoleUserResponse usersChangeRoleIdPatch(id, changeRoleUserRequest)
+# **usersChangeRolePatch**
+> ChangeRoleUserResponse usersChangeRolePatch(changeRoleUserRequest)
 
 
 
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new UsersApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 var changeRoleUserRequest = new ChangeRoleUserRequest(); // ChangeRoleUserRequest | 
 
 try { 
-    var result = api_instance.usersChangeRoleIdPatch(id, changeRoleUserRequest);
+    var result = api_instance.usersChangeRolePatch(changeRoleUserRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling UsersApi->usersChangeRoleIdPatch: $e\n');
+    print('Exception when calling UsersApi->usersChangeRolePatch: $e\n');
 }
 ```
 
@@ -41,7 +43,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
  **changeRoleUserRequest** | [**ChangeRoleUserRequest**](ChangeRoleUserRequest.md)|  | [optional] 
 
 ### Return type
@@ -50,12 +51,51 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usersDelete**
+> usersDelete()
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
+
+var api_instance = new UsersApi();
+
+try { 
+    api_instance.usersDelete();
+} catch (e) {
+    print('Exception when calling UsersApi->usersDelete: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -67,6 +107,9 @@ No authorization required
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new UsersApi();
 
@@ -87,7 +130,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -96,71 +139,30 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **usersIdDelete**
-> usersIdDelete(id)
+# **usersInfoGet**
+> FindOneUserResponse usersInfoGet()
 
 
 
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new UsersApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try { 
-    api_instance.usersIdDelete(id);
-} catch (e) {
-    print('Exception when calling UsersApi->usersIdDelete: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **usersIdGet**
-> FindOneUserResponse usersIdGet(id)
-
-
-
-### Example 
-```dart
-import 'package:pfee_ambulatory_client/api.dart';
-
-var api_instance = new UsersApi();
-var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-
-try { 
-    var result = api_instance.usersIdGet(id);
+    var result = api_instance.usersInfoGet();
     print(result);
 } catch (e) {
-    print('Exception when calling UsersApi->usersIdGet: $e\n');
+    print('Exception when calling UsersApi->usersInfoGet: $e\n');
 }
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | [**String**](.md)|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -168,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -185,6 +187,9 @@ No authorization required
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new UsersApi();
 var createUserRequest = new CreateUserRequest(); // CreateUserRequest | 
@@ -209,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 

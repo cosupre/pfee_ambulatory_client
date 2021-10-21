@@ -1,4 +1,4 @@
-# pfee_ambulatory_client.model.CreateAmbuPatientResponse
+# pfee_ambulatory_client.model.FindOneCodePatientResponse
 
 ## Load the model package
 ```dart
@@ -10,17 +10,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **afterBlocStretcherId** | **String** |  | [optional] 
 **anaesthetistId** | **String** |  | [optional] 
-**attendantPhone** | **String** |  | 
 **beforeBlocStretcherId** | **String** |  | [optional] 
 **birth** | [**DateTime**](DateTime.md) |  | 
 **blocRoomId** | **String** |  | [optional] 
 **code** | **String** |  | 
 **firstName** | **String** |  | 
-**id** | **String** |  | [optional] 
 **lastName** | **String** |  | 
 **operation** | **String** |  | 
-**pedestrian** | **bool** |  | 
-**status** | **String** |  | 
 **surgeonId** | **String** |  | [optional] 
 **ucaRoomId** | **String** |  | [optional] 
 

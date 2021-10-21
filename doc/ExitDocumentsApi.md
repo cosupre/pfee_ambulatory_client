@@ -24,6 +24,9 @@ Method | HTTP request | Description
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new ExitDocumentsApi();
 var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -48,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -65,6 +68,9 @@ No authorization required
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new ExitDocumentsApi();
 var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -90,7 +96,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -107,6 +113,9 @@ No authorization required
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new ExitDocumentsApi();
 var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -133,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -150,6 +159,9 @@ No authorization required
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new ExitDocumentsApi();
 var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -178,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -195,6 +207,9 @@ No authorization required
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new ExitDocumentsApi();
 var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -221,7 +236,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
