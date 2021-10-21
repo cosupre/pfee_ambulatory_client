@@ -47,7 +47,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -123,7 +123,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -216,7 +216,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -291,7 +291,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -339,7 +339,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -415,7 +415,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -509,7 +509,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -584,7 +584,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -659,7 +659,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],

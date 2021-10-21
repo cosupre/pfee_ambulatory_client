@@ -44,7 +44,7 @@ class UsersApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -137,7 +137,7 @@ class UsersApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -184,7 +184,7 @@ class UsersApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -258,7 +258,7 @@ class UsersApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -333,7 +333,7 @@ class UsersApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],

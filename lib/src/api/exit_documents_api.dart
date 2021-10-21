@@ -44,7 +44,7 @@ class ExitDocumentsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -98,7 +98,7 @@ class ExitDocumentsApi {
     );
   }
 
-  /// 
+  ///
   ///
   /// 
   Future<Response<void>> patientsPatientIdExitDocumentsIdDelete({ 
@@ -120,7 +120,7 @@ class ExitDocumentsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -169,7 +169,7 @@ class ExitDocumentsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -246,7 +246,7 @@ class ExitDocumentsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -341,7 +341,7 @@ class ExitDocumentsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],

@@ -40,7 +40,7 @@ class TokensApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -115,7 +115,7 @@ class TokensApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
@@ -163,7 +163,7 @@ class TokensApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'http',
+            'type': 'oauth',
             'name': 'oauth2',
           },
         ],
