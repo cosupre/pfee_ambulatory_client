@@ -98,7 +98,7 @@ class ExitDocumentsApi {
     );
   }
 
-  ///
+  /// 
   ///
   /// 
   Future<Response<void>> patientsPatientIdExitDocumentsIdDelete({ 
