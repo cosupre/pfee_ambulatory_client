@@ -12,6 +12,7 @@ import 'package:pfee_ambulatory_client/src/api/exit_documents_api.dart';
 import 'package:pfee_ambulatory_client/src/api/patients_api.dart';
 import 'package:pfee_ambulatory_client/src/api/tokens_api.dart';
 import 'package:pfee_ambulatory_client/src/api/users_api.dart';
+import 'package:pfee_ambulatory_client/src/api/visio_rooms_api.dart';
 
 class PfeeAmbulatoryClient {
   static const String basePath = r'http://localhost';
@@ -82,5 +83,11 @@ class PfeeAmbulatoryClient {
   /// by doing that all interceptors will not be executed
   UsersApi getUsersApi() {
     return UsersApi(dio, serializers);
+  }
+
+  /// Get VisioRoomsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  VisioRoomsApi getVisioRoomsApi() {
+    return VisioRoomsApi(dio, serializers);
   }
 }

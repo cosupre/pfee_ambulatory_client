@@ -7,26 +7,207 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';
-import 'package:pfee_ambulatory_client/src/model/update_exit_document_response.dart';
-import 'package:pfee_ambulatory_client/src/model/create_exit_document_request.dart';
-import 'package:pfee_ambulatory_client/src/model/find_one_exit_document_response.dart';
-import 'package:pfee_ambulatory_client/src/model/create_exit_document_response.dart';
-import 'package:pfee_ambulatory_client/src/model/find_all_exit_document_response.dart';
-import 'package:built_collection/built_collection.dart';
+import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/find_all_ice_candidate_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_by_patient_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/create_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/create_visio_room_request.dart';
 
-class ExitDocumentsApi {
+class VisioRoomsApi {
 
   final Dio _dio;
 
   final Serializers _serializers;
 
-  const ExitDocumentsApi(this._dio, this._serializers);
+  const VisioRoomsApi(this._dio, this._serializers);
 
   /// 
   ///
   /// 
-  Future<Response<BuiltList<FindAllExitDocumentResponse>>> patientsPatientIdExitDocumentsGet({ 
+  Future<Response<AddAnswerVisioRoomResponse>> patientsPatientIdVisioRoomAddAnswerPatch({ 
+    required String patientId,
+    AddAnswerVisioRoomRequest? addAnswerVisioRoomRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{patientId}/visio-room/add-answer'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(AddAnswerVisioRoomRequest);
+      _bodyData = addAnswerVisioRoomRequest == null ? null : _serializers.serialize(addAnswerVisioRoomRequest, specifiedType: _type);
+
+    } catch(error) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+          queryParameters: _queryParameters,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    AddAnswerVisioRoomResponse _responseData;
+
+    try {
+      const _responseType = FullType(AddAnswerVisioRoomResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as AddAnswerVisioRoomResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<AddAnswerVisioRoomResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<AddIceCandidateVisioRoomResponse>> patientsPatientIdVisioRoomAddCandidatePost({ 
+    required String patientId,
+    AddIceCandidateVisioRoomRequest? addIceCandidateVisioRoomRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{patientId}/visio-room/add-candidate'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(AddIceCandidateVisioRoomRequest);
+      _bodyData = addIceCandidateVisioRoomRequest == null ? null : _serializers.serialize(addIceCandidateVisioRoomRequest, specifiedType: _type);
+
+    } catch(error) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+          queryParameters: _queryParameters,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    AddIceCandidateVisioRoomResponse _responseData;
+
+    try {
+      const _responseType = FullType(AddIceCandidateVisioRoomResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as AddIceCandidateVisioRoomResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<AddIceCandidateVisioRoomResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<FindAllIceCandidateVisioRoomResponse>> patientsPatientIdVisioRoomCandidatesGet({ 
     required String patientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -35,19 +216,14 @@ class ExitDocumentsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/exit-documents'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/{patientId}/visio-room/candidates'.replaceAll('{' r'patientId' '}', patientId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: [
@@ -68,14 +244,14 @@ class ExitDocumentsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<FindAllExitDocumentResponse> _responseData;
+    FindAllIceCandidateVisioRoomResponse _responseData;
 
     try {
-      const _responseType = FullType(BuiltList, [FullType(FindAllExitDocumentResponse)]);
+      const _responseType = FullType(FindAllIceCandidateVisioRoomResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as BuiltList<FindAllExitDocumentResponse>;
+      ) as FindAllIceCandidateVisioRoomResponse;
 
     } catch (error) {
       throw DioError(
@@ -86,7 +262,7 @@ class ExitDocumentsApi {
       );
     }
 
-    return Response<BuiltList<FindAllExitDocumentResponse>>(
+    return Response<FindAllIceCandidateVisioRoomResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -101,8 +277,7 @@ class ExitDocumentsApi {
   /// 
   ///
   /// 
-  Future<Response<void>> patientsPatientIdExitDocumentsIdDelete({ 
-    required String id,
+  Future<Response<void>> patientsPatientIdVisioRoomDelete({ 
     required String patientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -111,7 +286,7 @@ class ExitDocumentsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/exit-documents/{id}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/{patientId}/visio-room'.replaceAll('{' r'patientId' '}', patientId.toString());
     final _options = Options(
       method: r'DELETE',
       headers: <String, dynamic>{
@@ -150,8 +325,7 @@ class ExitDocumentsApi {
   /// 
   ///
   /// 
-  Future<Response<FindOneExitDocumentResponse>> patientsPatientIdExitDocumentsIdGet({ 
-    required String id,
+  Future<Response<FindByPatientVisioRoomResponse>> patientsPatientIdVisioRoomGet({ 
     required String patientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -160,7 +334,7 @@ class ExitDocumentsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/exit-documents/{id}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/{patientId}/visio-room'.replaceAll('{' r'patientId' '}', patientId.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -193,14 +367,14 @@ class ExitDocumentsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    FindOneExitDocumentResponse _responseData;
+    FindByPatientVisioRoomResponse _responseData;
 
     try {
-      const _responseType = FullType(FindOneExitDocumentResponse);
+      const _responseType = FullType(FindByPatientVisioRoomResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as FindOneExitDocumentResponse;
+      ) as FindByPatientVisioRoomResponse;
 
     } catch (error) {
       throw DioError(
@@ -211,7 +385,7 @@ class ExitDocumentsApi {
       );
     }
 
-    return Response<FindOneExitDocumentResponse>(
+    return Response<FindByPatientVisioRoomResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -226,10 +400,9 @@ class ExitDocumentsApi {
   /// 
   ///
   /// 
-  Future<Response<UpdateExitDocumentResponse>> patientsPatientIdExitDocumentsIdPatch({ 
-    required String id,
+  Future<Response<CreateVisioRoomResponse>> patientsPatientIdVisioRoomPost({ 
     required String patientId,
-    UpdateExitDocumentRequest? updateExitDocumentRequest,
+    CreateVisioRoomRequest? createVisioRoomRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -237,102 +410,7 @@ class ExitDocumentsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/exit-documents/{id}'.replaceAll('{' r'id' '}', id.toString()).replaceAll('{' r'patientId' '}', patientId.toString());
-    final _options = Options(
-      method: r'PATCH',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth',
-            'name': 'oauth2',
-          },
-        ],
-        ...?extra,
-      },
-      contentType: [
-        'application/json',
-      ].first,
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-    };
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(UpdateExitDocumentRequest);
-      _bodyData = updateExitDocumentRequest == null ? null : _serializers.serialize(updateExitDocumentRequest, specifiedType: _type);
-
-    } catch(error) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-          queryParameters: _queryParameters,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      );
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    UpdateExitDocumentResponse _responseData;
-
-    try {
-      const _responseType = FullType(UpdateExitDocumentResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as UpdateExitDocumentResponse;
-
-    } catch (error) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      );
-    }
-
-    return Response<UpdateExitDocumentResponse>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// 
-  ///
-  /// 
-  Future<Response<CreateExitDocumentResponse>> patientsPatientIdExitDocumentsPost({ 
-    required String patientId,
-    CreateExitDocumentRequest? createExitDocumentRequest,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/patients/{patientId}/exit-documents'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/{patientId}/visio-room'.replaceAll('{' r'patientId' '}', patientId.toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -359,8 +437,8 @@ class ExitDocumentsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(CreateExitDocumentRequest);
-      _bodyData = createExitDocumentRequest == null ? null : _serializers.serialize(createExitDocumentRequest, specifiedType: _type);
+      const _type = FullType(CreateVisioRoomRequest);
+      _bodyData = createVisioRoomRequest == null ? null : _serializers.serialize(createVisioRoomRequest, specifiedType: _type);
 
     } catch(error) {
       throw DioError(
@@ -384,14 +462,14 @@ class ExitDocumentsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CreateExitDocumentResponse _responseData;
+    CreateVisioRoomResponse _responseData;
 
     try {
-      const _responseType = FullType(CreateExitDocumentResponse);
+      const _responseType = FullType(CreateVisioRoomResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as CreateExitDocumentResponse;
+      ) as CreateVisioRoomResponse;
 
     } catch (error) {
       throw DioError(
@@ -402,7 +480,7 @@ class ExitDocumentsApi {
       );
     }
 
-    return Response<CreateExitDocumentResponse>(
+    return Response<CreateVisioRoomResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

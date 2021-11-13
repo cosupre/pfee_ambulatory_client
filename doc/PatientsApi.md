@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**patientsIdDelete**](PatientsApi.md#patientsiddelete) | **delete** /patients/{id} | 
 [**patientsIdGet**](PatientsApi.md#patientsidget) | **get** /patients/{id} | 
 [**patientsIdPatch**](PatientsApi.md#patientsidpatch) | **patch** /patients/{id} | 
+[**patientsIdStretcherCancelPatch**](PatientsApi.md#patientsidstretchercancelpatch) | **patch** /patients/{id}/stretcher-cancel | 
 [**patientsIdStretcherDeliverPatch**](PatientsApi.md#patientsidstretcherdeliverpatch) | **patch** /patients/{id}/stretcher-deliver | 
 [**patientsIdStretcherTakePatch**](PatientsApi.md#patientsidstretchertakepatch) | **patch** /patients/{id}/stretcher-take | 
 [**patientsPost**](PatientsApi.md#patientspost) | **post** /patients | 
@@ -279,6 +280,50 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patientsIdStretcherCancelPatch**
+> ChangeStatusAmbuPatientResponse patientsIdStretcherCancelPatch(id)
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
+
+var api_instance = new PatientsApi();
+var id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try { 
+    var result = api_instance.patientsIdStretcherCancelPatch(id);
+    print(result);
+} catch (e) {
+    print('Exception when calling PatientsApi->patientsIdStretcherCancelPatch: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | [**String**](.md)|  | 
+
+### Return type
+
+[**ChangeStatusAmbuPatientResponse**](ChangeStatusAmbuPatientResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

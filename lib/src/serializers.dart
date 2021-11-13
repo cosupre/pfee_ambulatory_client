@@ -3,10 +3,15 @@
 //
 
 import 'package:built_collection/built_collection.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
 import 'package:built_value/iso_8601_date_time_serializer.dart';
 
+import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_request.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
@@ -19,10 +24,15 @@ import 'package:pfee_ambulatory_client/src/model/create_token_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_token_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_user_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_user_response.dart';
+import 'package:pfee_ambulatory_client/src/model/create_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/create_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_exit_document_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_all_ice_candidate_visio_room_candidate_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_all_ice_candidate_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_token_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_user_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_by_patient_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_code_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_exit_document_response.dart';
@@ -35,6 +45,10 @@ import 'package:pfee_ambulatory_client/src/model/update_exit_document_response.d
 part 'serializers.g.dart';
 
 @SerializersFor([
+  AddAnswerVisioRoomRequest,
+  AddAnswerVisioRoomResponse,
+  AddIceCandidateVisioRoomRequest,
+  AddIceCandidateVisioRoomResponse,
   ChangeRoleUserRequest,
   ChangeRoleUserResponse,
   ChangeStatusAmbuPatientRequest,
@@ -47,10 +61,15 @@ part 'serializers.g.dart';
   CreateTokenResponse,
   CreateUserRequest,
   CreateUserResponse,
+  CreateVisioRoomRequest,
+  CreateVisioRoomResponse,
   FindAllAmbuPatientResponse,
   FindAllExitDocumentResponse,
+  FindAllIceCandidateVisioRoomCandidateResponse,
+  FindAllIceCandidateVisioRoomResponse,
   FindAllTokenResponse,
   FindAllUserResponse,
+  FindByPatientVisioRoomResponse,
   FindOneAmbuPatientResponse,
   FindOneCodePatientResponse,
   FindOneExitDocumentResponse,

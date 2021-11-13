@@ -71,6 +71,7 @@ Class | Method | HTTP request | Description
 *PatientsApi* | [**patientsIdDelete**](doc/PatientsApi.md#patientsiddelete) | **delete** /patients/{id} | 
 *PatientsApi* | [**patientsIdGet**](doc/PatientsApi.md#patientsidget) | **get** /patients/{id} | 
 *PatientsApi* | [**patientsIdPatch**](doc/PatientsApi.md#patientsidpatch) | **patch** /patients/{id} | 
+*PatientsApi* | [**patientsIdStretcherCancelPatch**](doc/PatientsApi.md#patientsidstretchercancelpatch) | **patch** /patients/{id}/stretcher-cancel | 
 *PatientsApi* | [**patientsIdStretcherDeliverPatch**](doc/PatientsApi.md#patientsidstretcherdeliverpatch) | **patch** /patients/{id}/stretcher-deliver | 
 *PatientsApi* | [**patientsIdStretcherTakePatch**](doc/PatientsApi.md#patientsidstretchertakepatch) | **patch** /patients/{id}/stretcher-take | 
 *PatientsApi* | [**patientsPost**](doc/PatientsApi.md#patientspost) | **post** /patients | 
@@ -82,10 +83,20 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
 *UsersApi* | [**usersInfoGet**](doc/UsersApi.md#usersinfoget) | **get** /users/info | 
 *UsersApi* | [**usersPost**](doc/UsersApi.md#userspost) | **post** /users | 
+*VisioRoomsApi* | [**patientsPatientIdVisioRoomAddAnswerPatch**](doc/VisioRoomsApi.md#patientspatientidvisioroomaddanswerpatch) | **patch** /patients/{patientId}/visio-room/add-answer | 
+*VisioRoomsApi* | [**patientsPatientIdVisioRoomAddCandidatePost**](doc/VisioRoomsApi.md#patientspatientidvisioroomaddcandidatepost) | **post** /patients/{patientId}/visio-room/add-candidate | 
+*VisioRoomsApi* | [**patientsPatientIdVisioRoomCandidatesGet**](doc/VisioRoomsApi.md#patientspatientidvisioroomcandidatesget) | **get** /patients/{patientId}/visio-room/candidates | 
+*VisioRoomsApi* | [**patientsPatientIdVisioRoomDelete**](doc/VisioRoomsApi.md#patientspatientidvisioroomdelete) | **delete** /patients/{patientId}/visio-room | 
+*VisioRoomsApi* | [**patientsPatientIdVisioRoomGet**](doc/VisioRoomsApi.md#patientspatientidvisioroomget) | **get** /patients/{patientId}/visio-room | 
+*VisioRoomsApi* | [**patientsPatientIdVisioRoomPost**](doc/VisioRoomsApi.md#patientspatientidvisioroompost) | **post** /patients/{patientId}/visio-room | 
 
 
 ## Documentation For Models
 
+ - [AddAnswerVisioRoomRequest](doc/AddAnswerVisioRoomRequest.md)
+ - [AddAnswerVisioRoomResponse](doc/AddAnswerVisioRoomResponse.md)
+ - [AddIceCandidateVisioRoomRequest](doc/AddIceCandidateVisioRoomRequest.md)
+ - [AddIceCandidateVisioRoomResponse](doc/AddIceCandidateVisioRoomResponse.md)
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
  - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
  - [ChangeStatusAmbuPatientRequest](doc/ChangeStatusAmbuPatientRequest.md)
@@ -98,10 +109,15 @@ Class | Method | HTTP request | Description
  - [CreateTokenResponse](doc/CreateTokenResponse.md)
  - [CreateUserRequest](doc/CreateUserRequest.md)
  - [CreateUserResponse](doc/CreateUserResponse.md)
+ - [CreateVisioRoomRequest](doc/CreateVisioRoomRequest.md)
+ - [CreateVisioRoomResponse](doc/CreateVisioRoomResponse.md)
  - [FindAllAmbuPatientResponse](doc/FindAllAmbuPatientResponse.md)
  - [FindAllExitDocumentResponse](doc/FindAllExitDocumentResponse.md)
+ - [FindAllIceCandidateVisioRoomCandidateResponse](doc/FindAllIceCandidateVisioRoomCandidateResponse.md)
+ - [FindAllIceCandidateVisioRoomResponse](doc/FindAllIceCandidateVisioRoomResponse.md)
  - [FindAllTokenResponse](doc/FindAllTokenResponse.md)
  - [FindAllUserResponse](doc/FindAllUserResponse.md)
+ - [FindByPatientVisioRoomResponse](doc/FindByPatientVisioRoomResponse.md)
  - [FindOneAmbuPatientResponse](doc/FindOneAmbuPatientResponse.md)
  - [FindOneCodePatientResponse](doc/FindOneCodePatientResponse.md)
  - [FindOneExitDocumentResponse](doc/FindOneExitDocumentResponse.md)
