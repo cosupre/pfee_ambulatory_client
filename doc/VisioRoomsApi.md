@@ -195,9 +195,6 @@ void (empty response body)
 ### Example 
 ```dart
 import 'package:pfee_ambulatory_client/api.dart';
-// TODO Configure HTTP basic authorization: oauth2
-//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
-//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new VisioRoomsApi();
 var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -222,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
