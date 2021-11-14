@@ -8,33 +8,21 @@ part of 'update_visio_room_request.dart';
 
 class _$UpdateVisioRoomRequest extends UpdateVisioRoomRequest {
   @override
-  final String answerSdp;
+  final String? answerSdp;
   @override
-  final String answerType;
+  final String? answerType;
   @override
-  final String offerSdp;
+  final String? offerSdp;
   @override
-  final String offerType;
+  final String? offerType;
 
   factory _$UpdateVisioRoomRequest(
           [void Function(UpdateVisioRoomRequestBuilder)? updates]) =>
       (new UpdateVisioRoomRequestBuilder()..update(updates)).build();
 
   _$UpdateVisioRoomRequest._(
-      {required this.answerSdp,
-      required this.answerType,
-      required this.offerSdp,
-      required this.offerType})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        answerSdp, 'UpdateVisioRoomRequest', 'answerSdp');
-    BuiltValueNullFieldError.checkNotNull(
-        answerType, 'UpdateVisioRoomRequest', 'answerType');
-    BuiltValueNullFieldError.checkNotNull(
-        offerSdp, 'UpdateVisioRoomRequest', 'offerSdp');
-    BuiltValueNullFieldError.checkNotNull(
-        offerType, 'UpdateVisioRoomRequest', 'offerType');
-  }
+      {this.answerSdp, this.answerType, this.offerSdp, this.offerType})
+      : super._();
 
   @override
   UpdateVisioRoomRequest rebuild(
@@ -125,14 +113,10 @@ class UpdateVisioRoomRequestBuilder
   _$UpdateVisioRoomRequest build() {
     final _$result = _$v ??
         new _$UpdateVisioRoomRequest._(
-            answerSdp: BuiltValueNullFieldError.checkNotNull(
-                answerSdp, 'UpdateVisioRoomRequest', 'answerSdp'),
-            answerType: BuiltValueNullFieldError.checkNotNull(
-                answerType, 'UpdateVisioRoomRequest', 'answerType'),
-            offerSdp: BuiltValueNullFieldError.checkNotNull(
-                offerSdp, 'UpdateVisioRoomRequest', 'offerSdp'),
-            offerType: BuiltValueNullFieldError.checkNotNull(
-                offerType, 'UpdateVisioRoomRequest', 'offerType'));
+            answerSdp: answerSdp,
+            answerType: answerType,
+            offerSdp: offerSdp,
+            offerType: offerType);
     replace(_$result);
     return _$result;
   }
