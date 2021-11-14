@@ -11,16 +11,16 @@ part 'update_visio_room_request.g.dart';
 
 abstract class UpdateVisioRoomRequest implements Built<UpdateVisioRoomRequest, UpdateVisioRoomRequestBuilder> {
     @BuiltValueField(wireName: r'answerSdp')
-    String get answerSdp;
+    String? get answerSdp;
 
     @BuiltValueField(wireName: r'answerType')
-    String get answerType;
+    String? get answerType;
 
     @BuiltValueField(wireName: r'offerSdp')
-    String get offerSdp;
+    String? get offerSdp;
 
     @BuiltValueField(wireName: r'offerType')
-    String get offerType;
+    String? get offerType;
 
     UpdateVisioRoomRequest._();
 
@@ -43,22 +43,30 @@ class _$UpdateVisioRoomRequestSerializer implements StructuredSerializer<UpdateV
     Iterable<Object?> serialize(Serializers serializers, UpdateVisioRoomRequest object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
-        result
-            ..add(r'answerSdp')
-            ..add(serializers.serialize(object.answerSdp,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'answerType')
-            ..add(serializers.serialize(object.answerType,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'offerSdp')
-            ..add(serializers.serialize(object.offerSdp,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'offerType')
-            ..add(serializers.serialize(object.offerType,
-                specifiedType: const FullType(String)));
+        if (object.answerSdp != null) {
+            result
+                ..add(r'answerSdp')
+                ..add(serializers.serialize(object.answerSdp,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.answerType != null) {
+            result
+                ..add(r'answerType')
+                ..add(serializers.serialize(object.answerType,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.offerSdp != null) {
+            result
+                ..add(r'offerSdp')
+                ..add(serializers.serialize(object.offerSdp,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.offerType != null) {
+            result
+                ..add(r'offerType')
+                ..add(serializers.serialize(object.offerType,
+                    specifiedType: const FullType(String)));
+        }
         return result;
     }
 
