@@ -15,9 +15,9 @@ class _$AddIceCandidateVisioRoomResponse
   @override
   final String? id;
   @override
-  final String offerSdp;
+  final String? offerSdp;
   @override
-  final String offerType;
+  final String? offerType;
   @override
   final String? patientId;
 
@@ -29,15 +29,10 @@ class _$AddIceCandidateVisioRoomResponse
       {this.answerSdp,
       this.answerType,
       this.id,
-      required this.offerSdp,
-      required this.offerType,
+      this.offerSdp,
+      this.offerType,
       this.patientId})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        offerSdp, 'AddIceCandidateVisioRoomResponse', 'offerSdp');
-    BuiltValueNullFieldError.checkNotNull(
-        offerType, 'AddIceCandidateVisioRoomResponse', 'offerType');
-  }
+      : super._();
 
   @override
   AddIceCandidateVisioRoomResponse rebuild(
@@ -151,10 +146,8 @@ class AddIceCandidateVisioRoomResponseBuilder
             answerSdp: answerSdp,
             answerType: answerType,
             id: id,
-            offerSdp: BuiltValueNullFieldError.checkNotNull(
-                offerSdp, 'AddIceCandidateVisioRoomResponse', 'offerSdp'),
-            offerType: BuiltValueNullFieldError.checkNotNull(
-                offerType, 'AddIceCandidateVisioRoomResponse', 'offerType'),
+            offerSdp: offerSdp,
+            offerType: offerType,
             patientId: patientId);
     replace(_$result);
     return _$result;

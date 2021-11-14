@@ -14,9 +14,9 @@ class _$FindByPatientVisioRoomResponse extends FindByPatientVisioRoomResponse {
   @override
   final String? id;
   @override
-  final String offerSdp;
+  final String? offerSdp;
   @override
-  final String offerType;
+  final String? offerType;
   @override
   final String? patientId;
 
@@ -28,15 +28,10 @@ class _$FindByPatientVisioRoomResponse extends FindByPatientVisioRoomResponse {
       {this.answerSdp,
       this.answerType,
       this.id,
-      required this.offerSdp,
-      required this.offerType,
+      this.offerSdp,
+      this.offerType,
       this.patientId})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        offerSdp, 'FindByPatientVisioRoomResponse', 'offerSdp');
-    BuiltValueNullFieldError.checkNotNull(
-        offerType, 'FindByPatientVisioRoomResponse', 'offerType');
-  }
+      : super._();
 
   @override
   FindByPatientVisioRoomResponse rebuild(
@@ -150,10 +145,8 @@ class FindByPatientVisioRoomResponseBuilder
             answerSdp: answerSdp,
             answerType: answerType,
             id: id,
-            offerSdp: BuiltValueNullFieldError.checkNotNull(
-                offerSdp, 'FindByPatientVisioRoomResponse', 'offerSdp'),
-            offerType: BuiltValueNullFieldError.checkNotNull(
-                offerType, 'FindByPatientVisioRoomResponse', 'offerType'),
+            offerSdp: offerSdp,
+            offerType: offerType,
             patientId: patientId);
     replace(_$result);
     return _$result;

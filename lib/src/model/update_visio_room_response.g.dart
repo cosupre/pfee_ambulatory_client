@@ -14,9 +14,9 @@ class _$UpdateVisioRoomResponse extends UpdateVisioRoomResponse {
   @override
   final String? id;
   @override
-  final String offerSdp;
+  final String? offerSdp;
   @override
-  final String offerType;
+  final String? offerType;
   @override
   final String? patientId;
 
@@ -28,15 +28,10 @@ class _$UpdateVisioRoomResponse extends UpdateVisioRoomResponse {
       {this.answerSdp,
       this.answerType,
       this.id,
-      required this.offerSdp,
-      required this.offerType,
+      this.offerSdp,
+      this.offerType,
       this.patientId})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        offerSdp, 'UpdateVisioRoomResponse', 'offerSdp');
-    BuiltValueNullFieldError.checkNotNull(
-        offerType, 'UpdateVisioRoomResponse', 'offerType');
-  }
+      : super._();
 
   @override
   UpdateVisioRoomResponse rebuild(
@@ -149,10 +144,8 @@ class UpdateVisioRoomResponseBuilder
             answerSdp: answerSdp,
             answerType: answerType,
             id: id,
-            offerSdp: BuiltValueNullFieldError.checkNotNull(
-                offerSdp, 'UpdateVisioRoomResponse', 'offerSdp'),
-            offerType: BuiltValueNullFieldError.checkNotNull(
-                offerType, 'UpdateVisioRoomResponse', 'offerType'),
+            offerSdp: offerSdp,
+            offerType: offerType,
             patientId: patientId);
     replace(_$result);
     return _$result;

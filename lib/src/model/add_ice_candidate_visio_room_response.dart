@@ -20,10 +20,10 @@ abstract class AddIceCandidateVisioRoomResponse implements Built<AddIceCandidate
     String? get id;
 
     @BuiltValueField(wireName: r'offerSdp')
-    String get offerSdp;
+    String? get offerSdp;
 
     @BuiltValueField(wireName: r'offerType')
-    String get offerType;
+    String? get offerType;
 
     @BuiltValueField(wireName: r'patientId')
     String? get patientId;
@@ -67,14 +67,18 @@ class _$AddIceCandidateVisioRoomResponseSerializer implements StructuredSerializ
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        result
-            ..add(r'offerSdp')
-            ..add(serializers.serialize(object.offerSdp,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'offerType')
-            ..add(serializers.serialize(object.offerType,
-                specifiedType: const FullType(String)));
+        if (object.offerSdp != null) {
+            result
+                ..add(r'offerSdp')
+                ..add(serializers.serialize(object.offerSdp,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.offerType != null) {
+            result
+                ..add(r'offerType')
+                ..add(serializers.serialize(object.offerType,
+                    specifiedType: const FullType(String)));
+        }
         if (object.patientId != null) {
             result
                 ..add(r'patientId')
