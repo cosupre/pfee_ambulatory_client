@@ -9,16 +9,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**patientsPatientIdVisioRoomAddAnswerPatch**](VisioRoomsApi.md#patientspatientidvisioroomaddanswerpatch) | **patch** /patients/{patientId}/visio-room/add-answer | 
-[**patientsPatientIdVisioRoomAddCandidatePost**](VisioRoomsApi.md#patientspatientidvisioroomaddcandidatepost) | **post** /patients/{patientId}/visio-room/add-candidate | 
-[**patientsPatientIdVisioRoomCandidatesGet**](VisioRoomsApi.md#patientspatientidvisioroomcandidatesget) | **get** /patients/{patientId}/visio-room/candidates | 
-[**patientsPatientIdVisioRoomDelete**](VisioRoomsApi.md#patientspatientidvisioroomdelete) | **delete** /patients/{patientId}/visio-room | 
-[**patientsPatientIdVisioRoomGet**](VisioRoomsApi.md#patientspatientidvisioroomget) | **get** /patients/{patientId}/visio-room | 
-[**patientsPatientIdVisioRoomPost**](VisioRoomsApi.md#patientspatientidvisioroompost) | **post** /patients/{patientId}/visio-room | 
+[**patientsByCodePatientCodeVisioRoomAddAnswerPatch**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddanswerpatch) | **patch** /patients/by-code/{patientCode}/visio-room/add-answer | 
+[**patientsByCodePatientCodeVisioRoomAddCandidatePost**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddcandidatepost) | **post** /patients/by-code/{patientCode}/visio-room/add-candidate | 
+[**patientsByCodePatientCodeVisioRoomCandidatesGet**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomcandidatesget) | **get** /patients/by-code/{patientCode}/visio-room/candidates | 
+[**patientsByCodePatientCodeVisioRoomDelete**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomdelete) | **delete** /patients/by-code/{patientCode}/visio-room | 
+[**patientsByCodePatientCodeVisioRoomGet**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomget) | **get** /patients/by-code/{patientCode}/visio-room | 
+[**patientsByCodePatientCodeVisioRoomPost**](VisioRoomsApi.md#patientsbycodepatientcodevisioroompost) | **post** /patients/by-code/{patientCode}/visio-room | 
 
 
-# **patientsPatientIdVisioRoomAddAnswerPatch**
-> AddAnswerVisioRoomResponse patientsPatientIdVisioRoomAddAnswerPatch(patientId, addAnswerVisioRoomRequest)
+# **patientsByCodePatientCodeVisioRoomAddAnswerPatch**
+> AddAnswerVisioRoomResponse patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, addAnswerVisioRoomRequest)
 
 
 
@@ -27,14 +27,14 @@ Method | HTTP request | Description
 import 'package:pfee_ambulatory_client/api.dart';
 
 var api_instance = new VisioRoomsApi();
-var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var patientCode = patientCode_example; // String | 
 var addAnswerVisioRoomRequest = new AddAnswerVisioRoomRequest(); // AddAnswerVisioRoomRequest | 
 
 try { 
-    var result = api_instance.patientsPatientIdVisioRoomAddAnswerPatch(patientId, addAnswerVisioRoomRequest);
+    var result = api_instance.patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, addAnswerVisioRoomRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsPatientIdVisioRoomAddAnswerPatch: $e\n');
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomAddAnswerPatch: $e\n');
 }
 ```
 
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patientId** | [**String**](.md)|  | 
+ **patientCode** | **String**|  | 
  **addAnswerVisioRoomRequest** | [**AddAnswerVisioRoomRequest**](AddAnswerVisioRoomRequest.md)|  | [optional] 
 
 ### Return type
@@ -60,8 +60,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patientsPatientIdVisioRoomAddCandidatePost**
-> AddIceCandidateVisioRoomResponse patientsPatientIdVisioRoomAddCandidatePost(patientId, addIceCandidateVisioRoomRequest)
+# **patientsByCodePatientCodeVisioRoomAddCandidatePost**
+> AddIceCandidateVisioRoomResponse patientsByCodePatientCodeVisioRoomAddCandidatePost(patientCode, addIceCandidateVisioRoomRequest)
 
 
 
@@ -70,14 +70,14 @@ No authorization required
 import 'package:pfee_ambulatory_client/api.dart';
 
 var api_instance = new VisioRoomsApi();
-var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var patientCode = patientCode_example; // String | 
 var addIceCandidateVisioRoomRequest = new AddIceCandidateVisioRoomRequest(); // AddIceCandidateVisioRoomRequest | 
 
 try { 
-    var result = api_instance.patientsPatientIdVisioRoomAddCandidatePost(patientId, addIceCandidateVisioRoomRequest);
+    var result = api_instance.patientsByCodePatientCodeVisioRoomAddCandidatePost(patientCode, addIceCandidateVisioRoomRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsPatientIdVisioRoomAddCandidatePost: $e\n');
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomAddCandidatePost: $e\n');
 }
 ```
 
@@ -85,7 +85,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patientId** | [**String**](.md)|  | 
+ **patientCode** | **String**|  | 
  **addIceCandidateVisioRoomRequest** | [**AddIceCandidateVisioRoomRequest**](AddIceCandidateVisioRoomRequest.md)|  | [optional] 
 
 ### Return type
@@ -103,8 +103,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patientsPatientIdVisioRoomCandidatesGet**
-> FindAllIceCandidateVisioRoomResponse patientsPatientIdVisioRoomCandidatesGet(patientId)
+# **patientsByCodePatientCodeVisioRoomCandidatesGet**
+> FindAllIceCandidateVisioRoomResponse patientsByCodePatientCodeVisioRoomCandidatesGet(patientCode)
 
 
 
@@ -113,13 +113,13 @@ No authorization required
 import 'package:pfee_ambulatory_client/api.dart';
 
 var api_instance = new VisioRoomsApi();
-var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var patientCode = patientCode_example; // String | 
 
 try { 
-    var result = api_instance.patientsPatientIdVisioRoomCandidatesGet(patientId);
+    var result = api_instance.patientsByCodePatientCodeVisioRoomCandidatesGet(patientCode);
     print(result);
 } catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsPatientIdVisioRoomCandidatesGet: $e\n');
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomCandidatesGet: $e\n');
 }
 ```
 
@@ -127,7 +127,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patientId** | [**String**](.md)|  | 
+ **patientCode** | **String**|  | 
 
 ### Return type
 
@@ -144,8 +144,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patientsPatientIdVisioRoomDelete**
-> patientsPatientIdVisioRoomDelete(patientId)
+# **patientsByCodePatientCodeVisioRoomDelete**
+> patientsByCodePatientCodeVisioRoomDelete(patientCode)
 
 
 
@@ -157,12 +157,12 @@ import 'package:pfee_ambulatory_client/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new VisioRoomsApi();
-var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var patientCode = patientCode_example; // String | 
 
 try { 
-    api_instance.patientsPatientIdVisioRoomDelete(patientId);
+    api_instance.patientsByCodePatientCodeVisioRoomDelete(patientCode);
 } catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsPatientIdVisioRoomDelete: $e\n');
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomDelete: $e\n');
 }
 ```
 
@@ -170,7 +170,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patientId** | [**String**](.md)|  | 
+ **patientCode** | **String**|  | 
 
 ### Return type
 
@@ -187,8 +187,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patientsPatientIdVisioRoomGet**
-> FindByPatientVisioRoomResponse patientsPatientIdVisioRoomGet(patientId)
+# **patientsByCodePatientCodeVisioRoomGet**
+> FindByPatientVisioRoomResponse patientsByCodePatientCodeVisioRoomGet(patientCode)
 
 
 
@@ -197,13 +197,13 @@ void (empty response body)
 import 'package:pfee_ambulatory_client/api.dart';
 
 var api_instance = new VisioRoomsApi();
-var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var patientCode = patientCode_example; // String | 
 
 try { 
-    var result = api_instance.patientsPatientIdVisioRoomGet(patientId);
+    var result = api_instance.patientsByCodePatientCodeVisioRoomGet(patientCode);
     print(result);
 } catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsPatientIdVisioRoomGet: $e\n');
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomGet: $e\n');
 }
 ```
 
@@ -211,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patientId** | [**String**](.md)|  | 
+ **patientCode** | **String**|  | 
 
 ### Return type
 
@@ -228,8 +228,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patientsPatientIdVisioRoomPost**
-> CreateVisioRoomResponse patientsPatientIdVisioRoomPost(patientId, createVisioRoomRequest)
+# **patientsByCodePatientCodeVisioRoomPost**
+> CreateVisioRoomResponse patientsByCodePatientCodeVisioRoomPost(patientCode, createVisioRoomRequest)
 
 
 
@@ -241,14 +241,14 @@ import 'package:pfee_ambulatory_client/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
 
 var api_instance = new VisioRoomsApi();
-var patientId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+var patientCode = patientCode_example; // String | 
 var createVisioRoomRequest = new CreateVisioRoomRequest(); // CreateVisioRoomRequest | 
 
 try { 
-    var result = api_instance.patientsPatientIdVisioRoomPost(patientId, createVisioRoomRequest);
+    var result = api_instance.patientsByCodePatientCodeVisioRoomPost(patientCode, createVisioRoomRequest);
     print(result);
 } catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsPatientIdVisioRoomPost: $e\n');
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomPost: $e\n');
 }
 ```
 
@@ -256,7 +256,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **patientId** | [**String**](.md)|  | 
+ **patientCode** | **String**|  | 
  **createVisioRoomRequest** | [**CreateVisioRoomRequest**](CreateVisioRoomRequest.md)|  | [optional] 
 
 ### Return type

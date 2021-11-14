@@ -27,8 +27,8 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<AddAnswerVisioRoomResponse>> patientsPatientIdVisioRoomAddAnswerPatch({ 
-    required String patientId,
+  Future<Response<AddAnswerVisioRoomResponse>> patientsByCodePatientCodeVisioRoomAddAnswerPatch({ 
+    required String patientCode,
     AddAnswerVisioRoomRequest? addAnswerVisioRoomRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -37,7 +37,7 @@ class VisioRoomsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/visio-room/add-answer'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/by-code/{patientCode}/visio-room/add-answer'.replaceAll('{' r'patientCode' '}', patientCode.toString());
     final _options = Options(
       method: r'PATCH',
       headers: <String, dynamic>{
@@ -117,8 +117,8 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<AddIceCandidateVisioRoomResponse>> patientsPatientIdVisioRoomAddCandidatePost({ 
-    required String patientId,
+  Future<Response<AddIceCandidateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomAddCandidatePost({ 
+    required String patientCode,
     AddIceCandidateVisioRoomRequest? addIceCandidateVisioRoomRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -127,7 +127,7 @@ class VisioRoomsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/visio-room/add-candidate'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/by-code/{patientCode}/visio-room/add-candidate'.replaceAll('{' r'patientCode' '}', patientCode.toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -207,8 +207,8 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<FindAllIceCandidateVisioRoomResponse>> patientsPatientIdVisioRoomCandidatesGet({ 
-    required String patientId,
+  Future<Response<FindAllIceCandidateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomCandidatesGet({ 
+    required String patientCode,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -216,7 +216,7 @@ class VisioRoomsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/visio-room/candidates'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/by-code/{patientCode}/visio-room/candidates'.replaceAll('{' r'patientCode' '}', patientCode.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -277,8 +277,8 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<void>> patientsPatientIdVisioRoomDelete({ 
-    required String patientId,
+  Future<Response<void>> patientsByCodePatientCodeVisioRoomDelete({ 
+    required String patientCode,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -286,7 +286,7 @@ class VisioRoomsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/visio-room'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/by-code/{patientCode}/visio-room'.replaceAll('{' r'patientCode' '}', patientCode.toString());
     final _options = Options(
       method: r'DELETE',
       headers: <String, dynamic>{
@@ -325,8 +325,8 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<FindByPatientVisioRoomResponse>> patientsPatientIdVisioRoomGet({ 
-    required String patientId,
+  Future<Response<FindByPatientVisioRoomResponse>> patientsByCodePatientCodeVisioRoomGet({ 
+    required String patientCode,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -334,7 +334,7 @@ class VisioRoomsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/visio-room'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/by-code/{patientCode}/visio-room'.replaceAll('{' r'patientCode' '}', patientCode.toString());
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -395,8 +395,8 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<CreateVisioRoomResponse>> patientsPatientIdVisioRoomPost({ 
-    required String patientId,
+  Future<Response<CreateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomPost({ 
+    required String patientCode,
     CreateVisioRoomRequest? createVisioRoomRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -405,7 +405,7 @@ class VisioRoomsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/patients/{patientId}/visio-room'.replaceAll('{' r'patientId' '}', patientId.toString());
+    final _path = r'/patients/by-code/{patientCode}/visio-room'.replaceAll('{' r'patientCode' '}', patientCode.toString());
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{

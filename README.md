@@ -83,12 +83,12 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
 *UsersApi* | [**usersInfoGet**](doc/UsersApi.md#usersinfoget) | **get** /users/info | 
 *UsersApi* | [**usersPost**](doc/UsersApi.md#userspost) | **post** /users | 
-*VisioRoomsApi* | [**patientsPatientIdVisioRoomAddAnswerPatch**](doc/VisioRoomsApi.md#patientspatientidvisioroomaddanswerpatch) | **patch** /patients/{patientId}/visio-room/add-answer | 
-*VisioRoomsApi* | [**patientsPatientIdVisioRoomAddCandidatePost**](doc/VisioRoomsApi.md#patientspatientidvisioroomaddcandidatepost) | **post** /patients/{patientId}/visio-room/add-candidate | 
-*VisioRoomsApi* | [**patientsPatientIdVisioRoomCandidatesGet**](doc/VisioRoomsApi.md#patientspatientidvisioroomcandidatesget) | **get** /patients/{patientId}/visio-room/candidates | 
-*VisioRoomsApi* | [**patientsPatientIdVisioRoomDelete**](doc/VisioRoomsApi.md#patientspatientidvisioroomdelete) | **delete** /patients/{patientId}/visio-room | 
-*VisioRoomsApi* | [**patientsPatientIdVisioRoomGet**](doc/VisioRoomsApi.md#patientspatientidvisioroomget) | **get** /patients/{patientId}/visio-room | 
-*VisioRoomsApi* | [**patientsPatientIdVisioRoomPost**](doc/VisioRoomsApi.md#patientspatientidvisioroompost) | **post** /patients/{patientId}/visio-room | 
+*VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomAddAnswerPatch**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddanswerpatch) | **patch** /patients/by-code/{patientCode}/visio-room/add-answer | 
+*VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomAddCandidatePost**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddcandidatepost) | **post** /patients/by-code/{patientCode}/visio-room/add-candidate | 
+*VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomCandidatesGet**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomcandidatesget) | **get** /patients/by-code/{patientCode}/visio-room/candidates | 
+*VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomDelete**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomdelete) | **delete** /patients/by-code/{patientCode}/visio-room | 
+*VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomGet**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomget) | **get** /patients/by-code/{patientCode}/visio-room | 
+*VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomPost**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroompost) | **post** /patients/by-code/{patientCode}/visio-room | 
 
 
 ## Documentation For Models
