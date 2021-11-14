@@ -27,96 +27,6 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<UpdateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomAddAnswerPatch({ 
-    required String patientCode,
-    UpdateVisioRoomRequest? updateVisioRoomRequest,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/patients/by-code/{patientCode}/visio-room/add-answer'.replaceAll('{' r'patientCode' '}', patientCode.toString());
-    final _options = Options(
-      method: r'PATCH',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: [
-        'application/json',
-      ].first,
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-    };
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(UpdateVisioRoomRequest);
-      _bodyData = updateVisioRoomRequest == null ? null : _serializers.serialize(updateVisioRoomRequest, specifiedType: _type);
-
-    } catch(error) {
-      throw DioError(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-          queryParameters: _queryParameters,
-        ),
-        type: DioErrorType.other,
-        error: error,
-      );
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    UpdateVisioRoomResponse _responseData;
-
-    try {
-      const _responseType = FullType(UpdateVisioRoomResponse);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as UpdateVisioRoomResponse;
-
-    } catch (error) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      );
-    }
-
-    return Response<UpdateVisioRoomResponse>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// 
-  ///
-  /// 
   Future<Response<AddIceCandidateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomAddCandidatePost({ 
     required String patientCode,
     AddIceCandidateVisioRoomRequest? addIceCandidateVisioRoomRequest,
@@ -381,6 +291,96 @@ class VisioRoomsApi {
     }
 
     return Response<FindByPatientVisioRoomResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<UpdateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomPatch({ 
+    required String patientCode,
+    UpdateVisioRoomRequest? updateVisioRoomRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/by-code/{patientCode}/visio-room'.replaceAll('{' r'patientCode' '}', patientCode.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(UpdateVisioRoomRequest);
+      _bodyData = updateVisioRoomRequest == null ? null : _serializers.serialize(updateVisioRoomRequest, specifiedType: _type);
+
+    } catch(error) {
+      throw DioError(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+          queryParameters: _queryParameters,
+        ),
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    UpdateVisioRoomResponse _responseData;
+
+    try {
+      const _responseType = FullType(UpdateVisioRoomResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as UpdateVisioRoomResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<UpdateVisioRoomResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

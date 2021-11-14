@@ -9,56 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**patientsByCodePatientCodeVisioRoomAddAnswerPatch**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddanswerpatch) | **patch** /patients/by-code/{patientCode}/visio-room/add-answer | 
 [**patientsByCodePatientCodeVisioRoomAddCandidatePost**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddcandidatepost) | **post** /patients/by-code/{patientCode}/visio-room/add-candidate | 
 [**patientsByCodePatientCodeVisioRoomCandidatesGet**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomcandidatesget) | **get** /patients/by-code/{patientCode}/visio-room/candidates | 
 [**patientsByCodePatientCodeVisioRoomDelete**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomdelete) | **delete** /patients/by-code/{patientCode}/visio-room | 
 [**patientsByCodePatientCodeVisioRoomGet**](VisioRoomsApi.md#patientsbycodepatientcodevisioroomget) | **get** /patients/by-code/{patientCode}/visio-room | 
+[**patientsByCodePatientCodeVisioRoomPatch**](VisioRoomsApi.md#patientsbycodepatientcodevisioroompatch) | **patch** /patients/by-code/{patientCode}/visio-room | 
 [**patientsByCodePatientCodeVisioRoomPost**](VisioRoomsApi.md#patientsbycodepatientcodevisioroompost) | **post** /patients/by-code/{patientCode}/visio-room | 
 
-
-# **patientsByCodePatientCodeVisioRoomAddAnswerPatch**
-> UpdateVisioRoomResponse patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, updateVisioRoomRequest)
-
-
-
-### Example 
-```dart
-import 'package:pfee_ambulatory_client/api.dart';
-
-var api_instance = new VisioRoomsApi();
-var patientCode = patientCode_example; // String | 
-var updateVisioRoomRequest = new UpdateVisioRoomRequest(); // UpdateVisioRoomRequest | 
-
-try { 
-    var result = api_instance.patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, updateVisioRoomRequest);
-    print(result);
-} catch (e) {
-    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomAddAnswerPatch: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **patientCode** | **String**|  | 
- **updateVisioRoomRequest** | [**UpdateVisioRoomRequest**](UpdateVisioRoomRequest.md)|  | [optional] 
-
-### Return type
-
-[**UpdateVisioRoomResponse**](UpdateVisioRoomResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patientsByCodePatientCodeVisioRoomAddCandidatePost**
 > AddIceCandidateVisioRoomResponse patientsByCodePatientCodeVisioRoomAddCandidatePost(patientCode, addIceCandidateVisioRoomRequest)
@@ -224,6 +181,49 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patientsByCodePatientCodeVisioRoomPatch**
+> UpdateVisioRoomResponse patientsByCodePatientCodeVisioRoomPatch(patientCode, updateVisioRoomRequest)
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+
+var api_instance = new VisioRoomsApi();
+var patientCode = patientCode_example; // String | 
+var updateVisioRoomRequest = new UpdateVisioRoomRequest(); // UpdateVisioRoomRequest | 
+
+try { 
+    var result = api_instance.patientsByCodePatientCodeVisioRoomPatch(patientCode, updateVisioRoomRequest);
+    print(result);
+} catch (e) {
+    print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomPatch: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **patientCode** | **String**|  | 
+ **updateVisioRoomRequest** | [**UpdateVisioRoomRequest**](UpdateVisioRoomRequest.md)|  | [optional] 
+
+### Return type
+
+[**UpdateVisioRoomResponse**](UpdateVisioRoomResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
