@@ -93,8 +93,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AddAnswerVisioRoomRequest](doc/AddAnswerVisioRoomRequest.md)
- - [AddAnswerVisioRoomResponse](doc/AddAnswerVisioRoomResponse.md)
  - [AddIceCandidateVisioRoomRequest](doc/AddIceCandidateVisioRoomRequest.md)
  - [AddIceCandidateVisioRoomResponse](doc/AddIceCandidateVisioRoomResponse.md)
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
@@ -126,6 +124,8 @@ Class | Method | HTTP request | Description
  - [UpdateAmbuPatientResponse](doc/UpdateAmbuPatientResponse.md)
  - [UpdateExitDocumentRequest](doc/UpdateExitDocumentRequest.md)
  - [UpdateExitDocumentResponse](doc/UpdateExitDocumentResponse.md)
+ - [UpdateVisioRoomRequest](doc/UpdateVisioRoomRequest.md)
+ - [UpdateVisioRoomResponse](doc/UpdateVisioRoomResponse.md)
 
 
 ## Documentation For Authorization

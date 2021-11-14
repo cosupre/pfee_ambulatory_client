@@ -7,8 +7,6 @@ part of 'serializers.dart';
 // **************************************************************************
 
 Serializers _$serializers = (new Serializers().toBuilder()
-      ..add(AddAnswerVisioRoomRequest.serializer)
-      ..add(AddAnswerVisioRoomResponse.serializer)
       ..add(AddIceCandidateVisioRoomRequest.serializer)
       ..add(AddIceCandidateVisioRoomResponse.serializer)
       ..add(ChangeRoleUserRequest.serializer)
@@ -40,6 +38,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UpdateAmbuPatientResponse.serializer)
       ..add(UpdateExitDocumentRequest.serializer)
       ..add(UpdateExitDocumentResponse.serializer)
+      ..add(UpdateVisioRoomRequest.serializer)
+      ..add(UpdateVisioRoomResponse.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(FindAllIceCandidateVisioRoomCandidateResponse)

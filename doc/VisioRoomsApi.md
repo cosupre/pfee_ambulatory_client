@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **patientsByCodePatientCodeVisioRoomAddAnswerPatch**
-> AddAnswerVisioRoomResponse patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, addAnswerVisioRoomRequest)
+> UpdateVisioRoomResponse patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, updateVisioRoomRequest)
 
 
 
@@ -28,10 +28,10 @@ import 'package:pfee_ambulatory_client/api.dart';
 
 var api_instance = new VisioRoomsApi();
 var patientCode = patientCode_example; // String | 
-var addAnswerVisioRoomRequest = new AddAnswerVisioRoomRequest(); // AddAnswerVisioRoomRequest | 
+var updateVisioRoomRequest = new UpdateVisioRoomRequest(); // UpdateVisioRoomRequest | 
 
 try { 
-    var result = api_instance.patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, addAnswerVisioRoomRequest);
+    var result = api_instance.patientsByCodePatientCodeVisioRoomAddAnswerPatch(patientCode, updateVisioRoomRequest);
     print(result);
 } catch (e) {
     print('Exception when calling VisioRoomsApi->patientsByCodePatientCodeVisioRoomAddAnswerPatch: $e\n');
@@ -43,11 +43,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **patientCode** | **String**|  | 
- **addAnswerVisioRoomRequest** | [**AddAnswerVisioRoomRequest**](AddAnswerVisioRoomRequest.md)|  | [optional] 
+ **updateVisioRoomRequest** | [**UpdateVisioRoomRequest**](UpdateVisioRoomRequest.md)|  | [optional] 
 
 ### Return type
 
-[**AddAnswerVisioRoomResponse**](AddAnswerVisioRoomResponse.md)
+[**UpdateVisioRoomResponse**](UpdateVisioRoomResponse.md)
 
 ### Authorization
 

@@ -8,12 +8,12 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_request.dart';
-import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/update_visio_room_request.dart';
 import 'package:pfee_ambulatory_client/src/model/find_all_ice_candidate_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_by_patient_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_visio_room_response.dart';
-import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_response.dart';
+import 'package:pfee_ambulatory_client/src/model/update_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_visio_room_request.dart';
 
 class VisioRoomsApi {
@@ -27,9 +27,9 @@ class VisioRoomsApi {
   /// 
   ///
   /// 
-  Future<Response<AddAnswerVisioRoomResponse>> patientsByCodePatientCodeVisioRoomAddAnswerPatch({ 
+  Future<Response<UpdateVisioRoomResponse>> patientsByCodePatientCodeVisioRoomAddAnswerPatch({ 
     required String patientCode,
-    AddAnswerVisioRoomRequest? addAnswerVisioRoomRequest,
+    UpdateVisioRoomRequest? updateVisioRoomRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -59,8 +59,8 @@ class VisioRoomsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(AddAnswerVisioRoomRequest);
-      _bodyData = addAnswerVisioRoomRequest == null ? null : _serializers.serialize(addAnswerVisioRoomRequest, specifiedType: _type);
+      const _type = FullType(UpdateVisioRoomRequest);
+      _bodyData = updateVisioRoomRequest == null ? null : _serializers.serialize(updateVisioRoomRequest, specifiedType: _type);
 
     } catch(error) {
       throw DioError(
@@ -84,14 +84,14 @@ class VisioRoomsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    AddAnswerVisioRoomResponse _responseData;
+    UpdateVisioRoomResponse _responseData;
 
     try {
-      const _responseType = FullType(AddAnswerVisioRoomResponse);
+      const _responseType = FullType(UpdateVisioRoomResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as AddAnswerVisioRoomResponse;
+      ) as UpdateVisioRoomResponse;
 
     } catch (error) {
       throw DioError(
@@ -102,7 +102,7 @@ class VisioRoomsApi {
       );
     }
 
-    return Response<AddAnswerVisioRoomResponse>(
+    return Response<UpdateVisioRoomResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

@@ -9,23 +9,12 @@ part of 'create_visio_room_request.dart';
 class _$CreateVisioRoomRequest extends CreateVisioRoomRequest {
   @override
   final String? id;
-  @override
-  final String offerSdp;
-  @override
-  final String offerType;
 
   factory _$CreateVisioRoomRequest(
           [void Function(CreateVisioRoomRequestBuilder)? updates]) =>
       (new CreateVisioRoomRequestBuilder()..update(updates)).build();
 
-  _$CreateVisioRoomRequest._(
-      {this.id, required this.offerSdp, required this.offerType})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        offerSdp, 'CreateVisioRoomRequest', 'offerSdp');
-    BuiltValueNullFieldError.checkNotNull(
-        offerType, 'CreateVisioRoomRequest', 'offerType');
-  }
+  _$CreateVisioRoomRequest._({this.id}) : super._();
 
   @override
   CreateVisioRoomRequest rebuild(
@@ -39,24 +28,18 @@ class _$CreateVisioRoomRequest extends CreateVisioRoomRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CreateVisioRoomRequest &&
-        id == other.id &&
-        offerSdp == other.offerSdp &&
-        offerType == other.offerType;
+    return other is CreateVisioRoomRequest && id == other.id;
   }
 
   @override
   int get hashCode {
-    return $jf(
-        $jc($jc($jc(0, id.hashCode), offerSdp.hashCode), offerType.hashCode));
+    return $jf($jc(0, id.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateVisioRoomRequest')
-          ..add('id', id)
-          ..add('offerSdp', offerSdp)
-          ..add('offerType', offerType))
+          ..add('id', id))
         .toString();
   }
 }
@@ -69,14 +52,6 @@ class CreateVisioRoomRequestBuilder
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
 
-  String? _offerSdp;
-  String? get offerSdp => _$this._offerSdp;
-  set offerSdp(String? offerSdp) => _$this._offerSdp = offerSdp;
-
-  String? _offerType;
-  String? get offerType => _$this._offerType;
-  set offerType(String? offerType) => _$this._offerType = offerType;
-
   CreateVisioRoomRequestBuilder() {
     CreateVisioRoomRequest._initializeBuilder(this);
   }
@@ -85,8 +60,6 @@ class CreateVisioRoomRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _id = $v.id;
-      _offerSdp = $v.offerSdp;
-      _offerType = $v.offerType;
       _$v = null;
     }
     return this;
@@ -105,13 +78,7 @@ class CreateVisioRoomRequestBuilder
 
   @override
   _$CreateVisioRoomRequest build() {
-    final _$result = _$v ??
-        new _$CreateVisioRoomRequest._(
-            id: id,
-            offerSdp: BuiltValueNullFieldError.checkNotNull(
-                offerSdp, 'CreateVisioRoomRequest', 'offerSdp'),
-            offerType: BuiltValueNullFieldError.checkNotNull(
-                offerType, 'CreateVisioRoomRequest', 'offerType'));
+    final _$result = _$v ?? new _$CreateVisioRoomRequest._(id: id);
     replace(_$result);
     return _$result;
   }

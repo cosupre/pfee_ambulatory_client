@@ -3,13 +3,10 @@
 //
 
 import 'package:built_collection/built_collection.dart';
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
 import 'package:built_value/iso_8601_date_time_serializer.dart';
 
-import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_request.dart';
-import 'package:pfee_ambulatory_client/src/model/add_answer_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_request.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_request.dart';
@@ -41,12 +38,12 @@ import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dar
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';
 import 'package:pfee_ambulatory_client/src/model/update_exit_document_response.dart';
+import 'package:pfee_ambulatory_client/src/model/update_visio_room_request.dart';
+import 'package:pfee_ambulatory_client/src/model/update_visio_room_response.dart';
 
 part 'serializers.g.dart';
 
 @SerializersFor([
-  AddAnswerVisioRoomRequest,
-  AddAnswerVisioRoomResponse,
   AddIceCandidateVisioRoomRequest,
   AddIceCandidateVisioRoomResponse,
   ChangeRoleUserRequest,
@@ -78,6 +75,8 @@ part 'serializers.g.dart';
   UpdateAmbuPatientResponse,
   UpdateExitDocumentRequest,
   UpdateExitDocumentResponse,
+  UpdateVisioRoomRequest,
+  UpdateVisioRoomResponse,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(

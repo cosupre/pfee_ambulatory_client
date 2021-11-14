@@ -1,8 +1,6 @@
 .gitignore
 README.md
 analysis_options.yaml
-doc/AddAnswerVisioRoomRequest.md
-doc/AddAnswerVisioRoomResponse.md
 doc/AddIceCandidateVisioRoomRequest.md
 doc/AddIceCandidateVisioRoomResponse.md
 doc/ChangeRoleUserRequest.md
@@ -37,6 +35,8 @@ doc/UpdateAmbuPatientRequest.md
 doc/UpdateAmbuPatientResponse.md
 doc/UpdateExitDocumentRequest.md
 doc/UpdateExitDocumentResponse.md
+doc/UpdateVisioRoomRequest.md
+doc/UpdateVisioRoomResponse.md
 doc/UsersApi.md
 doc/VisioRoomsApi.md
 lib/pfee_ambulatory_client.dart
@@ -51,8 +51,6 @@ lib/src/auth/api_key_auth.dart
 lib/src/auth/auth.dart
 lib/src/auth/basic_auth.dart
 lib/src/auth/oauth.dart
-lib/src/model/add_answer_visio_room_request.dart
-lib/src/model/add_answer_visio_room_response.dart
 lib/src/model/add_ice_candidate_visio_room_request.dart
 lib/src/model/add_ice_candidate_visio_room_response.dart
 lib/src/model/change_role_user_request.dart
@@ -84,5 +82,7 @@ lib/src/model/update_ambu_patient_request.dart
 lib/src/model/update_ambu_patient_response.dart
 lib/src/model/update_exit_document_request.dart
 lib/src/model/update_exit_document_response.dart
+lib/src/model/update_visio_room_request.dart
+lib/src/model/update_visio_room_response.dart
 lib/src/serializers.dart
 pubspec.yaml

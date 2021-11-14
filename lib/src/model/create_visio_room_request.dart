@@ -13,12 +13,6 @@ abstract class CreateVisioRoomRequest implements Built<CreateVisioRoomRequest, C
     @BuiltValueField(wireName: r'id')
     String? get id;
 
-    @BuiltValueField(wireName: r'offerSdp')
-    String get offerSdp;
-
-    @BuiltValueField(wireName: r'offerType')
-    String get offerType;
-
     CreateVisioRoomRequest._();
 
     static void _initializeBuilder(CreateVisioRoomRequestBuilder b) => b;
@@ -46,14 +40,6 @@ class _$CreateVisioRoomRequestSerializer implements StructuredSerializer<CreateV
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
-        result
-            ..add(r'offerSdp')
-            ..add(serializers.serialize(object.offerSdp,
-                specifiedType: const FullType(String)));
-        result
-            ..add(r'offerType')
-            ..add(serializers.serialize(object.offerType,
-                specifiedType: const FullType(String)));
         return result;
     }
 
@@ -70,14 +56,6 @@ class _$CreateVisioRoomRequestSerializer implements StructuredSerializer<CreateV
             switch (key) {
                 case r'id':
                     result.id = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'offerSdp':
-                    result.offerSdp = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'offerType':
-                    result.offerType = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
             }
