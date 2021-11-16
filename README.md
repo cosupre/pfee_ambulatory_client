@@ -75,6 +75,14 @@ Class | Method | HTTP request | Description
 *PatientsApi* | [**patientsIdStretcherDeliverPatch**](doc/PatientsApi.md#patientsidstretcherdeliverpatch) | **patch** /patients/{id}/stretcher-deliver | 
 *PatientsApi* | [**patientsIdStretcherTakePatch**](doc/PatientsApi.md#patientsidstretchertakepatch) | **patch** /patients/{id}/stretcher-take | 
 *PatientsApi* | [**patientsPost**](doc/PatientsApi.md#patientspost) | **post** /patients | 
+*RoomsApi* | [**roomsGet**](doc/RoomsApi.md#roomsget) | **get** /rooms | 
+*RoomsApi* | [**roomsIdDelete**](doc/RoomsApi.md#roomsiddelete) | **delete** /rooms/{id} | 
+*RoomsApi* | [**roomsIdGet**](doc/RoomsApi.md#roomsidget) | **get** /rooms/{id} | 
+*RoomsApi* | [**roomsIdPatch**](doc/RoomsApi.md#roomsidpatch) | **patch** /rooms/{id} | 
+*RoomsApi* | [**roomsIdPatientsGet**](doc/RoomsApi.md#roomsidpatientsget) | **get** /rooms/{id}/patients | 
+*RoomsApi* | [**roomsIdPatientsPatientIdDelete**](doc/RoomsApi.md#roomsidpatientspatientiddelete) | **delete** /rooms/{id}/patients/{patientId} | 
+*RoomsApi* | [**roomsIdPatientsPatientIdPost**](doc/RoomsApi.md#roomsidpatientspatientidpost) | **post** /rooms/{id}/patients/{patientId} | 
+*RoomsApi* | [**roomsPost**](doc/RoomsApi.md#roomspost) | **post** /rooms | 
 *TokensApi* | [**tokensGet**](doc/TokensApi.md#tokensget) | **get** /tokens | 
 *TokensApi* | [**tokensIdDelete**](doc/TokensApi.md#tokensiddelete) | **delete** /tokens/{id} | 
 *TokensApi* | [**tokensPost**](doc/TokensApi.md#tokenspost) | **post** /tokens | 
@@ -95,6 +103,7 @@ Class | Method | HTTP request | Description
 
  - [AddIceCandidateVisioRoomRequest](doc/AddIceCandidateVisioRoomRequest.md)
  - [AddIceCandidateVisioRoomResponse](doc/AddIceCandidateVisioRoomResponse.md)
+ - [AddRoomPatientResponse](doc/AddRoomPatientResponse.md)
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
  - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
  - [ChangeStatusAmbuPatientRequest](doc/ChangeStatusAmbuPatientRequest.md)
@@ -103,6 +112,8 @@ Class | Method | HTTP request | Description
  - [CreateAmbuPatientResponse](doc/CreateAmbuPatientResponse.md)
  - [CreateExitDocumentRequest](doc/CreateExitDocumentRequest.md)
  - [CreateExitDocumentResponse](doc/CreateExitDocumentResponse.md)
+ - [CreateRoomRequest](doc/CreateRoomRequest.md)
+ - [CreateRoomResponse](doc/CreateRoomResponse.md)
  - [CreateTokenRequest](doc/CreateTokenRequest.md)
  - [CreateTokenResponse](doc/CreateTokenResponse.md)
  - [CreateUserRequest](doc/CreateUserRequest.md)
@@ -113,17 +124,23 @@ Class | Method | HTTP request | Description
  - [FindAllExitDocumentResponse](doc/FindAllExitDocumentResponse.md)
  - [FindAllIceCandidateVisioRoomCandidateResponse](doc/FindAllIceCandidateVisioRoomCandidateResponse.md)
  - [FindAllIceCandidateVisioRoomResponse](doc/FindAllIceCandidateVisioRoomResponse.md)
+ - [FindAllRoomPatientsResponse](doc/FindAllRoomPatientsResponse.md)
+ - [FindAllRoomResponse](doc/FindAllRoomResponse.md)
  - [FindAllTokenResponse](doc/FindAllTokenResponse.md)
  - [FindAllUserResponse](doc/FindAllUserResponse.md)
  - [FindByPatientVisioRoomResponse](doc/FindByPatientVisioRoomResponse.md)
  - [FindOneAmbuPatientResponse](doc/FindOneAmbuPatientResponse.md)
  - [FindOneCodePatientResponse](doc/FindOneCodePatientResponse.md)
  - [FindOneExitDocumentResponse](doc/FindOneExitDocumentResponse.md)
+ - [FindOneRoomResponse](doc/FindOneRoomResponse.md)
  - [FindOneUserResponse](doc/FindOneUserResponse.md)
+ - [RemoveRoomPatientResponse](doc/RemoveRoomPatientResponse.md)
  - [UpdateAmbuPatientRequest](doc/UpdateAmbuPatientRequest.md)
  - [UpdateAmbuPatientResponse](doc/UpdateAmbuPatientResponse.md)
  - [UpdateExitDocumentRequest](doc/UpdateExitDocumentRequest.md)
  - [UpdateExitDocumentResponse](doc/UpdateExitDocumentResponse.md)
+ - [UpdateRoomRequest](doc/UpdateRoomRequest.md)
+ - [UpdateRoomResponse](doc/UpdateRoomResponse.md)
  - [UpdateVisioRoomRequest](doc/UpdateVisioRoomRequest.md)
  - [UpdateVisioRoomResponse](doc/UpdateVisioRoomResponse.md)
 
