@@ -11,6 +11,7 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_request.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/add_room_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/ambu_patient_status_entity.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_request.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
@@ -42,6 +43,7 @@ import 'package:pfee_ambulatory_client/src/model/find_one_exit_document_response
 import 'package:pfee_ambulatory_client/src/model/find_one_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/remove_room_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/stat_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';
@@ -57,6 +59,7 @@ part 'serializers.g.dart';
   AddIceCandidateVisioRoomRequest,
   AddIceCandidateVisioRoomResponse,
   AddRoomPatientResponse,
+  AmbuPatientStatusEntity,
   ChangeRoleUserRequest,
   ChangeRoleUserResponse,
   ChangeStatusAmbuPatientRequest,
@@ -88,6 +91,7 @@ part 'serializers.g.dart';
   FindOneRoomResponse,
   FindOneUserResponse,
   RemoveRoomPatientResponse,
+  StatResponse,
   UpdateAmbuPatientRequest,
   UpdateAmbuPatientResponse,
   UpdateExitDocumentRequest,
@@ -113,6 +117,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllRoomPatientsResponse)]),
         () => ListBuilder<FindAllRoomPatientsResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(StatResponse)]),
+        () => ListBuilder<StatResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllTokenResponse)]),

@@ -4,6 +4,7 @@ analysis_options.yaml
 doc/AddIceCandidateVisioRoomRequest.md
 doc/AddIceCandidateVisioRoomResponse.md
 doc/AddRoomPatientResponse.md
+doc/AmbuPatientStatusEntity.md
 doc/ChangeRoleUserRequest.md
 doc/ChangeRoleUserResponse.md
 doc/ChangeStatusAmbuPatientRequest.md
@@ -38,6 +39,8 @@ doc/FindOneUserResponse.md
 doc/PatientsApi.md
 doc/RemoveRoomPatientResponse.md
 doc/RoomsApi.md
+doc/StatResponse.md
+doc/StatsApi.md
 doc/TokensApi.md
 doc/UpdateAmbuPatientRequest.md
 doc/UpdateAmbuPatientResponse.md
@@ -54,6 +57,7 @@ lib/src/api.dart
 lib/src/api/exit_documents_api.dart
 lib/src/api/patients_api.dart
 lib/src/api/rooms_api.dart
+lib/src/api/stats_api.dart
 lib/src/api/tokens_api.dart
 lib/src/api/users_api.dart
 lib/src/api/visio_rooms_api.dart
@@ -65,6 +69,7 @@ lib/src/auth/oauth.dart
 lib/src/model/add_ice_candidate_visio_room_request.dart
 lib/src/model/add_ice_candidate_visio_room_response.dart
 lib/src/model/add_room_patient_response.dart
+lib/src/model/ambu_patient_status_entity.dart
 lib/src/model/change_role_user_request.dart
 lib/src/model/change_role_user_response.dart
 lib/src/model/change_status_ambu_patient_request.dart
@@ -96,6 +101,7 @@ lib/src/model/find_one_exit_document_response.dart
 lib/src/model/find_one_room_response.dart
 lib/src/model/find_one_user_response.dart
 lib/src/model/remove_room_patient_response.dart
+lib/src/model/stat_response.dart
 lib/src/model/update_ambu_patient_request.dart
 lib/src/model/update_ambu_patient_response.dart
 lib/src/model/update_exit_document_request.dart
@@ -106,3 +112,6 @@ lib/src/model/update_visio_room_request.dart
 lib/src/model/update_visio_room_response.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/ambu_patient_status_entity_test.dart
+test/stat_response_test.dart
+test/stats_api_test.dart

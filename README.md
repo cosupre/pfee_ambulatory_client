@@ -83,6 +83,9 @@ Class | Method | HTTP request | Description
 *RoomsApi* | [**roomsIdPatientsPatientIdDelete**](doc/RoomsApi.md#roomsidpatientspatientiddelete) | **delete** /rooms/{id}/patients/{patientId} | 
 *RoomsApi* | [**roomsIdPatientsPatientIdPost**](doc/RoomsApi.md#roomsidpatientspatientidpost) | **post** /rooms/{id}/patients/{patientId} | 
 *RoomsApi* | [**roomsPost**](doc/RoomsApi.md#roomspost) | **post** /rooms | 
+*StatsApi* | [**statsAnaesthetistIdGet**](doc/StatsApi.md#statsanaesthetistidget) | **get** /stats/anaesthetist/{id} | 
+*StatsApi* | [**statsGet**](doc/StatsApi.md#statsget) | **get** /stats | 
+*StatsApi* | [**statsSurgeonIdGet**](doc/StatsApi.md#statssurgeonidget) | **get** /stats/surgeon/{id} | 
 *TokensApi* | [**tokensGet**](doc/TokensApi.md#tokensget) | **get** /tokens | 
 *TokensApi* | [**tokensIdDelete**](doc/TokensApi.md#tokensiddelete) | **delete** /tokens/{id} | 
 *TokensApi* | [**tokensPost**](doc/TokensApi.md#tokenspost) | **post** /tokens | 
@@ -104,6 +107,7 @@ Class | Method | HTTP request | Description
  - [AddIceCandidateVisioRoomRequest](doc/AddIceCandidateVisioRoomRequest.md)
  - [AddIceCandidateVisioRoomResponse](doc/AddIceCandidateVisioRoomResponse.md)
  - [AddRoomPatientResponse](doc/AddRoomPatientResponse.md)
+ - [AmbuPatientStatusEntity](doc/AmbuPatientStatusEntity.md)
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
  - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
  - [ChangeStatusAmbuPatientRequest](doc/ChangeStatusAmbuPatientRequest.md)
@@ -135,6 +139,7 @@ Class | Method | HTTP request | Description
  - [FindOneRoomResponse](doc/FindOneRoomResponse.md)
  - [FindOneUserResponse](doc/FindOneUserResponse.md)
  - [RemoveRoomPatientResponse](doc/RemoveRoomPatientResponse.md)
+ - [StatResponse](doc/StatResponse.md)
  - [UpdateAmbuPatientRequest](doc/UpdateAmbuPatientRequest.md)
  - [UpdateAmbuPatientResponse](doc/UpdateAmbuPatientResponse.md)
  - [UpdateExitDocumentRequest](doc/UpdateExitDocumentRequest.md)
