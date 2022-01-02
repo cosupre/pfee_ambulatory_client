@@ -23,6 +23,7 @@ class StatsApi {
   /// 
   Future<Response<BuiltList<StatResponse>>> statsAnaesthetistIdGet({ 
     required String id,
+    String? operation,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -52,6 +53,7 @@ class StatsApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      if (operation != null) r'operation': operation,
     };
 
     final _response = await _dio.request<Object>(
@@ -172,8 +174,83 @@ class StatsApi {
   /// 
   ///
   /// 
+  Future<Response<BuiltList<String>>> statsOperationsGet({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/stats/operations';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<String> _responseData;
+
+    try {
+      const _responseType = FullType(BuiltList, [FullType(String)]);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as BuiltList<String>;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<BuiltList<String>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
   Future<Response<BuiltList<StatResponse>>> statsSurgeonIdGet({ 
     required String id,
+    String? operation,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -203,6 +280,7 @@ class StatsApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      if (operation != null) r'operation': operation,
     };
 
     final _response = await _dio.request<Object>(

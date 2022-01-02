@@ -121,6 +121,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<StatResponse>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(String)]),
+        () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllTokenResponse)]),
         () => ListBuilder<FindAllTokenResponse>(),
       )

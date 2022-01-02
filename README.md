@@ -85,6 +85,7 @@ Class | Method | HTTP request | Description
 *RoomsApi* | [**roomsPost**](doc/RoomsApi.md#roomspost) | **post** /rooms | 
 *StatsApi* | [**statsAnaesthetistIdGet**](doc/StatsApi.md#statsanaesthetistidget) | **get** /stats/anaesthetist/{id} | 
 *StatsApi* | [**statsGet**](doc/StatsApi.md#statsget) | **get** /stats | 
+*StatsApi* | [**statsOperationsGet**](doc/StatsApi.md#statsoperationsget) | **get** /stats/operations | 
 *StatsApi* | [**statsSurgeonIdGet**](doc/StatsApi.md#statssurgeonidget) | **get** /stats/surgeon/{id} | 
 *TokensApi* | [**tokensGet**](doc/TokensApi.md#tokensget) | **get** /tokens | 
 *TokensApi* | [**tokensIdDelete**](doc/TokensApi.md#tokensiddelete) | **delete** /tokens/{id} | 
