@@ -12,7 +12,7 @@ class _$StatResponse extends StatResponse {
   @override
   final int count;
   @override
-  final AmbuPatientStatusEntity status;
+  final String status;
   @override
   final double totalTime;
 
@@ -80,9 +80,9 @@ class StatResponseBuilder
   int? get count => _$this._count;
   set count(int? count) => _$this._count = count;
 
-  AmbuPatientStatusEntity? _status;
-  AmbuPatientStatusEntity? get status => _$this._status;
-  set status(AmbuPatientStatusEntity? status) => _$this._status = status;
+  String? _status;
+  String? get status => _$this._status;
+  set status(String? status) => _$this._status = status;
 
   double? _totalTime;
   double? get totalTime => _$this._totalTime;

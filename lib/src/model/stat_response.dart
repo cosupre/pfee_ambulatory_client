@@ -2,7 +2,6 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
-import 'package:pfee_ambulatory_client/src/model/ambu_patient_status_entity.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +17,7 @@ abstract class StatResponse implements Built<StatResponse, StatResponseBuilder> 
     int get count;
 
     @BuiltValueField(wireName: r'status')
-    AmbuPatientStatusEntity get status;
+    String get status;
 
     @BuiltValueField(wireName: r'totalTime')
     double get totalTime;
@@ -55,7 +54,7 @@ class _$StatResponseSerializer implements StructuredSerializer<StatResponse> {
         result
             ..add(r'status')
             ..add(serializers.serialize(object.status,
-                specifiedType: const FullType(AmbuPatientStatusEntity)));
+                specifiedType: const FullType(String)));
         result
             ..add(r'totalTime')
             ..add(serializers.serialize(object.totalTime,
@@ -83,8 +82,8 @@ class _$StatResponseSerializer implements StructuredSerializer<StatResponse> {
                         specifiedType: const FullType(int)) as int;
                     break;
                 case r'status':
-                    result.status.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(AmbuPatientStatusEntity)) as AmbuPatientStatusEntity);
+                    result.status = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
                     break;
                 case r'totalTime':
                     result.totalTime = serializers.deserialize(value,

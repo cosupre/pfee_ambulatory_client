@@ -107,7 +107,6 @@ Class | Method | HTTP request | Description
  - [AddIceCandidateVisioRoomRequest](doc/AddIceCandidateVisioRoomRequest.md)
  - [AddIceCandidateVisioRoomResponse](doc/AddIceCandidateVisioRoomResponse.md)
  - [AddRoomPatientResponse](doc/AddRoomPatientResponse.md)
- - [AmbuPatientStatusEntity](doc/AmbuPatientStatusEntity.md)
  - [ChangeRoleUserRequest](doc/ChangeRoleUserRequest.md)
  - [ChangeRoleUserResponse](doc/ChangeRoleUserResponse.md)
  - [ChangeStatusAmbuPatientRequest](doc/ChangeStatusAmbuPatientRequest.md)

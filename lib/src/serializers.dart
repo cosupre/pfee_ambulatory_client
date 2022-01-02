@@ -11,7 +11,6 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_request.dart';
 import 'package:pfee_ambulatory_client/src/model/add_ice_candidate_visio_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/add_room_patient_response.dart';
-import 'package:pfee_ambulatory_client/src/model/ambu_patient_status_entity.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_request.dart';
 import 'package:pfee_ambulatory_client/src/model/change_role_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_request.dart';
@@ -59,7 +58,6 @@ part 'serializers.g.dart';
   AddIceCandidateVisioRoomRequest,
   AddIceCandidateVisioRoomResponse,
   AddRoomPatientResponse,
-  AmbuPatientStatusEntity,
   ChangeRoleUserRequest,
   ChangeRoleUserResponse,
   ChangeStatusAmbuPatientRequest,
