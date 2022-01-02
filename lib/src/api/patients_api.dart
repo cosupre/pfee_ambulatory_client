@@ -7,8 +7,8 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:pfee_ambulatory_client/src/model/find_one_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/find_one_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/change_status_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/create_ambu_patient_response.dart';
@@ -47,7 +47,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -123,7 +123,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -216,7 +216,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -273,6 +273,156 @@ class PatientsApi {
   /// 
   ///
   /// 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdAnaesthetistAssignPatch({ 
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{id}/anaesthetist-assign'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    UpdateAmbuPatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(UpdateAmbuPatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as UpdateAmbuPatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<UpdateAmbuPatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdAnaesthetistRemovePatch({ 
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{id}/anaesthetist-remove'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    UpdateAmbuPatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(UpdateAmbuPatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as UpdateAmbuPatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<UpdateAmbuPatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
   Future<Response<void>> patientsIdDelete({ 
     required String id,
     CancelToken? cancelToken,
@@ -291,7 +441,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -339,7 +489,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -415,7 +565,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -491,7 +641,7 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<ChangeStatusAmbuPatientResponse>> patientsIdStretcherCancelPatch({ 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdStretcherCancelPatch({ 
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -509,7 +659,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -533,14 +683,14 @@ class PatientsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ChangeStatusAmbuPatientResponse _responseData;
+    UpdateAmbuPatientResponse _responseData;
 
     try {
-      const _responseType = FullType(ChangeStatusAmbuPatientResponse);
+      const _responseType = FullType(UpdateAmbuPatientResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as ChangeStatusAmbuPatientResponse;
+      ) as UpdateAmbuPatientResponse;
 
     } catch (error) {
       throw DioError(
@@ -551,7 +701,7 @@ class PatientsApi {
       );
     }
 
-    return Response<ChangeStatusAmbuPatientResponse>(
+    return Response<UpdateAmbuPatientResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -566,7 +716,7 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<ChangeStatusAmbuPatientResponse>> patientsIdStretcherDeliverPatch({ 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdStretcherDeliverPatch({ 
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -584,7 +734,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -608,14 +758,14 @@ class PatientsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ChangeStatusAmbuPatientResponse _responseData;
+    UpdateAmbuPatientResponse _responseData;
 
     try {
-      const _responseType = FullType(ChangeStatusAmbuPatientResponse);
+      const _responseType = FullType(UpdateAmbuPatientResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as ChangeStatusAmbuPatientResponse;
+      ) as UpdateAmbuPatientResponse;
 
     } catch (error) {
       throw DioError(
@@ -626,7 +776,7 @@ class PatientsApi {
       );
     }
 
-    return Response<ChangeStatusAmbuPatientResponse>(
+    return Response<UpdateAmbuPatientResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -641,7 +791,7 @@ class PatientsApi {
   /// 
   ///
   /// 
-  Future<Response<ChangeStatusAmbuPatientResponse>> patientsIdStretcherTakePatch({ 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdStretcherTakePatch({ 
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -659,7 +809,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],
@@ -683,14 +833,14 @@ class PatientsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    ChangeStatusAmbuPatientResponse _responseData;
+    UpdateAmbuPatientResponse _responseData;
 
     try {
-      const _responseType = FullType(ChangeStatusAmbuPatientResponse);
+      const _responseType = FullType(UpdateAmbuPatientResponse);
       _responseData = _serializers.deserialize(
         _response.data!,
         specifiedType: _responseType,
-      ) as ChangeStatusAmbuPatientResponse;
+      ) as UpdateAmbuPatientResponse;
 
     } catch (error) {
       throw DioError(
@@ -701,7 +851,157 @@ class PatientsApi {
       );
     }
 
-    return Response<ChangeStatusAmbuPatientResponse>(
+    return Response<UpdateAmbuPatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdSurgeonAssignPatch({ 
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{id}/surgeon-assign'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    UpdateAmbuPatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(UpdateAmbuPatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as UpdateAmbuPatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<UpdateAmbuPatientResponse>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 
+  ///
+  /// 
+  Future<Response<UpdateAmbuPatientResponse>> patientsIdSurgeonRemovePatch({ 
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/patients/{id}/surgeon-remove'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'PATCH',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'name': 'oauth2',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: [
+        'application/json',
+      ].first,
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    UpdateAmbuPatientResponse _responseData;
+
+    try {
+      const _responseType = FullType(UpdateAmbuPatientResponse);
+      _responseData = _serializers.deserialize(
+        _response.data!,
+        specifiedType: _responseType,
+      ) as UpdateAmbuPatientResponse;
+
+    } catch (error) {
+      throw DioError(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioErrorType.other,
+        error: error,
+      );
+    }
+
+    return Response<UpdateAmbuPatientResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -734,7 +1034,7 @@ class PatientsApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
-            'type': 'oauth',
+            'type': 'http',
             'name': 'oauth2',
           },
         ],

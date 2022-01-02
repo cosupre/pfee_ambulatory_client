@@ -68,12 +68,16 @@ Class | Method | HTTP request | Description
 *PatientsApi* | [**patientsByCodeCodeGet**](doc/PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
 *PatientsApi* | [**patientsChangeStatusIdPatch**](doc/PatientsApi.md#patientschangestatusidpatch) | **patch** /patients/change-status/{id} | 
 *PatientsApi* | [**patientsGet**](doc/PatientsApi.md#patientsget) | **get** /patients | 
+*PatientsApi* | [**patientsIdAnaesthetistAssignPatch**](doc/PatientsApi.md#patientsidanaesthetistassignpatch) | **patch** /patients/{id}/anaesthetist-assign | 
+*PatientsApi* | [**patientsIdAnaesthetistRemovePatch**](doc/PatientsApi.md#patientsidanaesthetistremovepatch) | **patch** /patients/{id}/anaesthetist-remove | 
 *PatientsApi* | [**patientsIdDelete**](doc/PatientsApi.md#patientsiddelete) | **delete** /patients/{id} | 
 *PatientsApi* | [**patientsIdGet**](doc/PatientsApi.md#patientsidget) | **get** /patients/{id} | 
 *PatientsApi* | [**patientsIdPatch**](doc/PatientsApi.md#patientsidpatch) | **patch** /patients/{id} | 
 *PatientsApi* | [**patientsIdStretcherCancelPatch**](doc/PatientsApi.md#patientsidstretchercancelpatch) | **patch** /patients/{id}/stretcher-cancel | 
 *PatientsApi* | [**patientsIdStretcherDeliverPatch**](doc/PatientsApi.md#patientsidstretcherdeliverpatch) | **patch** /patients/{id}/stretcher-deliver | 
 *PatientsApi* | [**patientsIdStretcherTakePatch**](doc/PatientsApi.md#patientsidstretchertakepatch) | **patch** /patients/{id}/stretcher-take | 
+*PatientsApi* | [**patientsIdSurgeonAssignPatch**](doc/PatientsApi.md#patientsidsurgeonassignpatch) | **patch** /patients/{id}/surgeon-assign | 
+*PatientsApi* | [**patientsIdSurgeonRemovePatch**](doc/PatientsApi.md#patientsidsurgeonremovepatch) | **patch** /patients/{id}/surgeon-remove | 
 *PatientsApi* | [**patientsPost**](doc/PatientsApi.md#patientspost) | **post** /patients | 
 *RoomsApi* | [**roomsGet**](doc/RoomsApi.md#roomsget) | **get** /rooms | 
 *RoomsApi* | [**roomsIdDelete**](doc/RoomsApi.md#roomsiddelete) | **delete** /rooms/{id} | 
