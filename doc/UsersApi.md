@@ -9,12 +9,54 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**usersAnaesthetistsGet**](UsersApi.md#usersanaesthetistsget) | **get** /users/anaesthetists | 
 [**usersChangeRolePatch**](UsersApi.md#userschangerolepatch) | **patch** /users/change-role | 
 [**usersDelete**](UsersApi.md#usersdelete) | **delete** /users | 
 [**usersGet**](UsersApi.md#usersget) | **get** /users | 
 [**usersInfoGet**](UsersApi.md#usersinfoget) | **get** /users/info | 
 [**usersPost**](UsersApi.md#userspost) | **post** /users | 
+[**usersSurgeonsGet**](UsersApi.md#userssurgeonsget) | **get** /users/surgeons | 
 
+
+# **usersAnaesthetistsGet**
+> BuiltList<FindOneUserResponse> usersAnaesthetistsGet()
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
+
+var api_instance = new UsersApi();
+
+try { 
+    var result = api_instance.usersAnaesthetistsGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling UsersApi->usersAnaesthetistsGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList<FindOneUserResponse>**](FindOneUserResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **usersChangeRolePatch**
 > ChangeRoleUserResponse usersChangeRolePatch(changeRoleUserRequest)
@@ -219,6 +261,46 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **usersSurgeonsGet**
+> BuiltList<FindOneUserResponse> usersSurgeonsGet()
+
+
+
+### Example 
+```dart
+import 'package:pfee_ambulatory_client/api.dart';
+// TODO Configure HTTP basic authorization: oauth2
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('oauth2').password = 'YOUR_PASSWORD';
+
+var api_instance = new UsersApi();
+
+try { 
+    var result = api_instance.usersSurgeonsGet();
+    print(result);
+} catch (e) {
+    print('Exception when calling UsersApi->usersSurgeonsGet: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**BuiltList<FindOneUserResponse>**](FindOneUserResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

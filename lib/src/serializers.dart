@@ -132,6 +132,10 @@ Serializers serializers = (_$serializers.toBuilder()
         const FullType(BuiltList, [FullType(FindAllUserResponse)]),
         () => ListBuilder<FindAllUserResponse>(),
       )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(FindOneUserResponse)]),
+        () => ListBuilder<FindOneUserResponse>(),
+      )
       ..add(Iso8601DateTimeSerializer()))
     .build();
 

@@ -94,11 +94,13 @@ Class | Method | HTTP request | Description
 *TokensApi* | [**tokensGet**](doc/TokensApi.md#tokensget) | **get** /tokens | 
 *TokensApi* | [**tokensIdDelete**](doc/TokensApi.md#tokensiddelete) | **delete** /tokens/{id} | 
 *TokensApi* | [**tokensPost**](doc/TokensApi.md#tokenspost) | **post** /tokens | 
+*UsersApi* | [**usersAnaesthetistsGet**](doc/UsersApi.md#usersanaesthetistsget) | **get** /users/anaesthetists | 
 *UsersApi* | [**usersChangeRolePatch**](doc/UsersApi.md#userschangerolepatch) | **patch** /users/change-role | 
 *UsersApi* | [**usersDelete**](doc/UsersApi.md#usersdelete) | **delete** /users | 
 *UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
 *UsersApi* | [**usersInfoGet**](doc/UsersApi.md#usersinfoget) | **get** /users/info | 
 *UsersApi* | [**usersPost**](doc/UsersApi.md#userspost) | **post** /users | 
+*UsersApi* | [**usersSurgeonsGet**](doc/UsersApi.md#userssurgeonsget) | **get** /users/surgeons | 
 *VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomAddCandidatePost**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddcandidatepost) | **post** /patients/by-code/{patientCode}/visio-room/add-candidate | 
 *VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomCandidatesGet**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomcandidatesget) | **get** /patients/by-code/{patientCode}/visio-room/candidates | 
 *VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomDelete**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomdelete) | **delete** /patients/by-code/{patientCode}/visio-room | 
