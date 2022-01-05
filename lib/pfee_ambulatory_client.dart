@@ -11,6 +11,7 @@ export 'package:pfee_ambulatory_client/src/serializers.dart';
 export 'package:pfee_ambulatory_client/src/api/exit_documents_api.dart';
 export 'package:pfee_ambulatory_client/src/api/patients_api.dart';
 export 'package:pfee_ambulatory_client/src/api/rooms_api.dart';
+export 'package:pfee_ambulatory_client/src/api/stats_api.dart';
 export 'package:pfee_ambulatory_client/src/api/tokens_api.dart';
 export 'package:pfee_ambulatory_client/src/api/users_api.dart';
 export 'package:pfee_ambulatory_client/src/api/visio_rooms_api.dart';
@@ -49,6 +50,8 @@ export 'package:pfee_ambulatory_client/src/model/find_one_exit_document_response
 export 'package:pfee_ambulatory_client/src/model/find_one_room_response.dart';
 export 'package:pfee_ambulatory_client/src/model/find_one_user_response.dart';
 export 'package:pfee_ambulatory_client/src/model/remove_room_patient_response.dart';
+export 'package:pfee_ambulatory_client/src/model/send_sms_request.dart';
+export 'package:pfee_ambulatory_client/src/model/stat_response.dart';
 export 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
 export 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
 export 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';

@@ -8,7 +8,11 @@ part of 'find_one_user_response.dart';
 
 class _$FindOneUserResponse extends FindOneUserResponse {
   @override
+  final String firstname;
+  @override
   final String? id;
+  @override
+  final String lastname;
   @override
   final String role;
 
@@ -16,7 +20,16 @@ class _$FindOneUserResponse extends FindOneUserResponse {
           [void Function(FindOneUserResponseBuilder)? updates]) =>
       (new FindOneUserResponseBuilder()..update(updates)).build();
 
-  _$FindOneUserResponse._({this.id, required this.role}) : super._() {
+  _$FindOneUserResponse._(
+      {required this.firstname,
+      this.id,
+      required this.lastname,
+      required this.role})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        firstname, 'FindOneUserResponse', 'firstname');
+    BuiltValueNullFieldError.checkNotNull(
+        lastname, 'FindOneUserResponse', 'lastname');
     BuiltValueNullFieldError.checkNotNull(role, 'FindOneUserResponse', 'role');
   }
 
@@ -32,18 +45,26 @@ class _$FindOneUserResponse extends FindOneUserResponse {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is FindOneUserResponse && id == other.id && role == other.role;
+    return other is FindOneUserResponse &&
+        firstname == other.firstname &&
+        id == other.id &&
+        lastname == other.lastname &&
+        role == other.role;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, id.hashCode), role.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, firstname.hashCode), id.hashCode), lastname.hashCode),
+        role.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FindOneUserResponse')
+          ..add('firstname', firstname)
           ..add('id', id)
+          ..add('lastname', lastname)
           ..add('role', role))
         .toString();
   }
@@ -53,9 +74,17 @@ class FindOneUserResponseBuilder
     implements Builder<FindOneUserResponse, FindOneUserResponseBuilder> {
   _$FindOneUserResponse? _$v;
 
+  String? _firstname;
+  String? get firstname => _$this._firstname;
+  set firstname(String? firstname) => _$this._firstname = firstname;
+
   String? _id;
   String? get id => _$this._id;
   set id(String? id) => _$this._id = id;
+
+  String? _lastname;
+  String? get lastname => _$this._lastname;
+  set lastname(String? lastname) => _$this._lastname = lastname;
 
   String? _role;
   String? get role => _$this._role;
@@ -68,7 +97,9 @@ class FindOneUserResponseBuilder
   FindOneUserResponseBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _firstname = $v.firstname;
       _id = $v.id;
+      _lastname = $v.lastname;
       _role = $v.role;
       _$v = null;
     }
@@ -90,7 +121,11 @@ class FindOneUserResponseBuilder
   _$FindOneUserResponse build() {
     final _$result = _$v ??
         new _$FindOneUserResponse._(
+            firstname: BuiltValueNullFieldError.checkNotNull(
+                firstname, 'FindOneUserResponse', 'firstname'),
             id: id,
+            lastname: BuiltValueNullFieldError.checkNotNull(
+                lastname, 'FindOneUserResponse', 'lastname'),
             role: BuiltValueNullFieldError.checkNotNull(
                 role, 'FindOneUserResponse', 'role'));
     replace(_$result);

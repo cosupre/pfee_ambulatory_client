@@ -68,12 +68,17 @@ Class | Method | HTTP request | Description
 *PatientsApi* | [**patientsByCodeCodeGet**](doc/PatientsApi.md#patientsbycodecodeget) | **get** /patients/by-code/{code} | 
 *PatientsApi* | [**patientsChangeStatusIdPatch**](doc/PatientsApi.md#patientschangestatusidpatch) | **patch** /patients/change-status/{id} | 
 *PatientsApi* | [**patientsGet**](doc/PatientsApi.md#patientsget) | **get** /patients | 
+*PatientsApi* | [**patientsIdAnaesthetistAssignPatch**](doc/PatientsApi.md#patientsidanaesthetistassignpatch) | **patch** /patients/{id}/anaesthetist-assign | 
+*PatientsApi* | [**patientsIdAnaesthetistRemovePatch**](doc/PatientsApi.md#patientsidanaesthetistremovepatch) | **patch** /patients/{id}/anaesthetist-remove | 
 *PatientsApi* | [**patientsIdDelete**](doc/PatientsApi.md#patientsiddelete) | **delete** /patients/{id} | 
 *PatientsApi* | [**patientsIdGet**](doc/PatientsApi.md#patientsidget) | **get** /patients/{id} | 
 *PatientsApi* | [**patientsIdPatch**](doc/PatientsApi.md#patientsidpatch) | **patch** /patients/{id} | 
+*PatientsApi* | [**patientsIdSendAttendantSmsPost**](doc/PatientsApi.md#patientsidsendattendantsmspost) | **post** /patients/{id}/send-attendant-sms | 
 *PatientsApi* | [**patientsIdStretcherCancelPatch**](doc/PatientsApi.md#patientsidstretchercancelpatch) | **patch** /patients/{id}/stretcher-cancel | 
 *PatientsApi* | [**patientsIdStretcherDeliverPatch**](doc/PatientsApi.md#patientsidstretcherdeliverpatch) | **patch** /patients/{id}/stretcher-deliver | 
 *PatientsApi* | [**patientsIdStretcherTakePatch**](doc/PatientsApi.md#patientsidstretchertakepatch) | **patch** /patients/{id}/stretcher-take | 
+*PatientsApi* | [**patientsIdSurgeonAssignPatch**](doc/PatientsApi.md#patientsidsurgeonassignpatch) | **patch** /patients/{id}/surgeon-assign | 
+*PatientsApi* | [**patientsIdSurgeonRemovePatch**](doc/PatientsApi.md#patientsidsurgeonremovepatch) | **patch** /patients/{id}/surgeon-remove | 
 *PatientsApi* | [**patientsPost**](doc/PatientsApi.md#patientspost) | **post** /patients | 
 *RoomsApi* | [**roomsGet**](doc/RoomsApi.md#roomsget) | **get** /rooms | 
 *RoomsApi* | [**roomsIdDelete**](doc/RoomsApi.md#roomsiddelete) | **delete** /rooms/{id} | 
@@ -83,14 +88,20 @@ Class | Method | HTTP request | Description
 *RoomsApi* | [**roomsIdPatientsPatientIdDelete**](doc/RoomsApi.md#roomsidpatientspatientiddelete) | **delete** /rooms/{id}/patients/{patientId} | 
 *RoomsApi* | [**roomsIdPatientsPatientIdPost**](doc/RoomsApi.md#roomsidpatientspatientidpost) | **post** /rooms/{id}/patients/{patientId} | 
 *RoomsApi* | [**roomsPost**](doc/RoomsApi.md#roomspost) | **post** /rooms | 
+*StatsApi* | [**statsAnaesthetistIdGet**](doc/StatsApi.md#statsanaesthetistidget) | **get** /stats/anaesthetist/{id} | 
+*StatsApi* | [**statsGet**](doc/StatsApi.md#statsget) | **get** /stats | 
+*StatsApi* | [**statsOperationsGet**](doc/StatsApi.md#statsoperationsget) | **get** /stats/operations | 
+*StatsApi* | [**statsSurgeonIdGet**](doc/StatsApi.md#statssurgeonidget) | **get** /stats/surgeon/{id} | 
 *TokensApi* | [**tokensGet**](doc/TokensApi.md#tokensget) | **get** /tokens | 
 *TokensApi* | [**tokensIdDelete**](doc/TokensApi.md#tokensiddelete) | **delete** /tokens/{id} | 
 *TokensApi* | [**tokensPost**](doc/TokensApi.md#tokenspost) | **post** /tokens | 
+*UsersApi* | [**usersAnaesthetistsGet**](doc/UsersApi.md#usersanaesthetistsget) | **get** /users/anaesthetists | 
 *UsersApi* | [**usersChangeRolePatch**](doc/UsersApi.md#userschangerolepatch) | **patch** /users/change-role | 
 *UsersApi* | [**usersDelete**](doc/UsersApi.md#usersdelete) | **delete** /users | 
 *UsersApi* | [**usersGet**](doc/UsersApi.md#usersget) | **get** /users | 
 *UsersApi* | [**usersInfoGet**](doc/UsersApi.md#usersinfoget) | **get** /users/info | 
 *UsersApi* | [**usersPost**](doc/UsersApi.md#userspost) | **post** /users | 
+*UsersApi* | [**usersSurgeonsGet**](doc/UsersApi.md#userssurgeonsget) | **get** /users/surgeons | 
 *VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomAddCandidatePost**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomaddcandidatepost) | **post** /patients/by-code/{patientCode}/visio-room/add-candidate | 
 *VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomCandidatesGet**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomcandidatesget) | **get** /patients/by-code/{patientCode}/visio-room/candidates | 
 *VisioRoomsApi* | [**patientsByCodePatientCodeVisioRoomDelete**](doc/VisioRoomsApi.md#patientsbycodepatientcodevisioroomdelete) | **delete** /patients/by-code/{patientCode}/visio-room | 
@@ -135,6 +146,8 @@ Class | Method | HTTP request | Description
  - [FindOneRoomResponse](doc/FindOneRoomResponse.md)
  - [FindOneUserResponse](doc/FindOneUserResponse.md)
  - [RemoveRoomPatientResponse](doc/RemoveRoomPatientResponse.md)
+ - [SendSmsRequest](doc/SendSmsRequest.md)
+ - [StatResponse](doc/StatResponse.md)
  - [UpdateAmbuPatientRequest](doc/UpdateAmbuPatientRequest.md)
  - [UpdateAmbuPatientResponse](doc/UpdateAmbuPatientResponse.md)
  - [UpdateExitDocumentRequest](doc/UpdateExitDocumentRequest.md)

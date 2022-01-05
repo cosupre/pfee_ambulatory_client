@@ -41,6 +41,8 @@ import 'package:pfee_ambulatory_client/src/model/find_one_exit_document_response
 import 'package:pfee_ambulatory_client/src/model/find_one_room_response.dart';
 import 'package:pfee_ambulatory_client/src/model/find_one_user_response.dart';
 import 'package:pfee_ambulatory_client/src/model/remove_room_patient_response.dart';
+import 'package:pfee_ambulatory_client/src/model/send_sms_request.dart';
+import 'package:pfee_ambulatory_client/src/model/stat_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_request.dart';
 import 'package:pfee_ambulatory_client/src/model/update_ambu_patient_response.dart';
 import 'package:pfee_ambulatory_client/src/model/update_exit_document_request.dart';
@@ -87,6 +89,8 @@ part 'serializers.g.dart';
   FindOneRoomResponse,
   FindOneUserResponse,
   RemoveRoomPatientResponse,
+  SendSmsRequest,
+  StatResponse,
   UpdateAmbuPatientRequest,
   UpdateAmbuPatientResponse,
   UpdateExitDocumentRequest,
@@ -114,12 +118,24 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<FindAllRoomPatientsResponse>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(StatResponse)]),
+        () => ListBuilder<StatResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(String)]),
+        () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllTokenResponse)]),
         () => ListBuilder<FindAllTokenResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(FindAllUserResponse)]),
         () => ListBuilder<FindAllUserResponse>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(FindOneUserResponse)]),
+        () => ListBuilder<FindOneUserResponse>(),
       )
       ..add(Iso8601DateTimeSerializer()))
     .build();

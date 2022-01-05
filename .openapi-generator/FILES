@@ -38,6 +38,9 @@ doc/FindOneUserResponse.md
 doc/PatientsApi.md
 doc/RemoveRoomPatientResponse.md
 doc/RoomsApi.md
+doc/SendSmsRequest.md
+doc/StatResponse.md
+doc/StatsApi.md
 doc/TokensApi.md
 doc/UpdateAmbuPatientRequest.md
 doc/UpdateAmbuPatientResponse.md
@@ -54,6 +57,7 @@ lib/src/api.dart
 lib/src/api/exit_documents_api.dart
 lib/src/api/patients_api.dart
 lib/src/api/rooms_api.dart
+lib/src/api/stats_api.dart
 lib/src/api/tokens_api.dart
 lib/src/api/users_api.dart
 lib/src/api/visio_rooms_api.dart
@@ -96,6 +100,8 @@ lib/src/model/find_one_exit_document_response.dart
 lib/src/model/find_one_room_response.dart
 lib/src/model/find_one_user_response.dart
 lib/src/model/remove_room_patient_response.dart
+lib/src/model/send_sms_request.dart
+lib/src/model/stat_response.dart
 lib/src/model/update_ambu_patient_request.dart
 lib/src/model/update_ambu_patient_response.dart
 lib/src/model/update_exit_document_request.dart
@@ -106,13 +112,4 @@ lib/src/model/update_visio_room_request.dart
 lib/src/model/update_visio_room_response.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/add_room_patient_response_test.dart
-test/create_room_request_test.dart
-test/create_room_response_test.dart
-test/find_all_room_patients_response_test.dart
-test/find_all_room_response_test.dart
-test/find_one_room_response_test.dart
-test/remove_room_patient_response_test.dart
-test/rooms_api_test.dart
-test/update_room_request_test.dart
-test/update_room_response_test.dart
+test/send_sms_request_test.dart

@@ -11,6 +11,7 @@ import 'package:pfee_ambulatory_client/src/auth/oauth.dart';
 import 'package:pfee_ambulatory_client/src/api/exit_documents_api.dart';
 import 'package:pfee_ambulatory_client/src/api/patients_api.dart';
 import 'package:pfee_ambulatory_client/src/api/rooms_api.dart';
+import 'package:pfee_ambulatory_client/src/api/stats_api.dart';
 import 'package:pfee_ambulatory_client/src/api/tokens_api.dart';
 import 'package:pfee_ambulatory_client/src/api/users_api.dart';
 import 'package:pfee_ambulatory_client/src/api/visio_rooms_api.dart';
@@ -78,6 +79,12 @@ class PfeeAmbulatoryClient {
   /// by doing that all interceptors will not be executed
   RoomsApi getRoomsApi() {
     return RoomsApi(dio, serializers);
+  }
+
+  /// Get StatsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  StatsApi getStatsApi() {
+    return StatsApi(dio, serializers);
   }
 
   /// Get TokensApi instance, base route and serializer can be overridden by a given but be careful,

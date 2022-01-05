@@ -10,8 +10,14 @@ part 'find_one_user_response.g.dart';
 
 
 abstract class FindOneUserResponse implements Built<FindOneUserResponse, FindOneUserResponseBuilder> {
+    @BuiltValueField(wireName: r'firstname')
+    String get firstname;
+
     @BuiltValueField(wireName: r'id')
     String? get id;
+
+    @BuiltValueField(wireName: r'lastname')
+    String get lastname;
 
     @BuiltValueField(wireName: r'role')
     String get role;
@@ -37,12 +43,20 @@ class _$FindOneUserResponseSerializer implements StructuredSerializer<FindOneUse
     Iterable<Object?> serialize(Serializers serializers, FindOneUserResponse object,
         {FullType specifiedType = FullType.unspecified}) {
         final result = <Object?>[];
+        result
+            ..add(r'firstname')
+            ..add(serializers.serialize(object.firstname,
+                specifiedType: const FullType(String)));
         if (object.id != null) {
             result
                 ..add(r'id')
                 ..add(serializers.serialize(object.id,
                     specifiedType: const FullType(String)));
         }
+        result
+            ..add(r'lastname')
+            ..add(serializers.serialize(object.lastname,
+                specifiedType: const FullType(String)));
         result
             ..add(r'role')
             ..add(serializers.serialize(object.role,
@@ -61,8 +75,16 @@ class _$FindOneUserResponseSerializer implements StructuredSerializer<FindOneUse
             iterator.moveNext();
             final Object? value = iterator.current;
             switch (key) {
+                case r'firstname':
+                    result.firstname = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
                 case r'id':
                     result.id = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'lastname':
+                    result.lastname = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
                     break;
                 case r'role':
