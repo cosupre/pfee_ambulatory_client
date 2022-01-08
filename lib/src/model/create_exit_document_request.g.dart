@@ -13,13 +13,15 @@ class _$CreateExitDocumentRequest extends CreateExitDocumentRequest {
   final String? id;
   @override
   final String name;
+  @override
+  final bool? validated;
 
   factory _$CreateExitDocumentRequest(
           [void Function(CreateExitDocumentRequestBuilder)? updates]) =>
       (new CreateExitDocumentRequestBuilder()..update(updates)).build();
 
   _$CreateExitDocumentRequest._(
-      {required this.count, this.id, required this.name})
+      {required this.count, this.id, required this.name, this.validated})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         count, 'CreateExitDocumentRequest', 'count');
@@ -42,12 +44,14 @@ class _$CreateExitDocumentRequest extends CreateExitDocumentRequest {
     return other is CreateExitDocumentRequest &&
         count == other.count &&
         id == other.id &&
-        name == other.name;
+        name == other.name &&
+        validated == other.validated;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, count.hashCode), id.hashCode), name.hashCode));
+    return $jf($jc($jc($jc($jc(0, count.hashCode), id.hashCode), name.hashCode),
+        validated.hashCode));
   }
 
   @override
@@ -55,7 +59,8 @@ class _$CreateExitDocumentRequest extends CreateExitDocumentRequest {
     return (newBuiltValueToStringHelper('CreateExitDocumentRequest')
           ..add('count', count)
           ..add('id', id)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('validated', validated))
         .toString();
   }
 }
@@ -77,6 +82,10 @@ class CreateExitDocumentRequestBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  bool? _validated;
+  bool? get validated => _$this._validated;
+  set validated(bool? validated) => _$this._validated = validated;
+
   CreateExitDocumentRequestBuilder() {
     CreateExitDocumentRequest._initializeBuilder(this);
   }
@@ -87,6 +96,7 @@ class CreateExitDocumentRequestBuilder
       _count = $v.count;
       _id = $v.id;
       _name = $v.name;
+      _validated = $v.validated;
       _$v = null;
     }
     return this;
@@ -111,7 +121,8 @@ class CreateExitDocumentRequestBuilder
                 count, 'CreateExitDocumentRequest', 'count'),
             id: id,
             name: BuiltValueNullFieldError.checkNotNull(
-                name, 'CreateExitDocumentRequest', 'name'));
+                name, 'CreateExitDocumentRequest', 'name'),
+            validated: validated);
     replace(_$result);
     return _$result;
   }

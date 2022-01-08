@@ -13,18 +13,25 @@ class _$FindOneExitDocumentResponse extends FindOneExitDocumentResponse {
   final String? id;
   @override
   final String name;
+  @override
+  final bool validated;
 
   factory _$FindOneExitDocumentResponse(
           [void Function(FindOneExitDocumentResponseBuilder)? updates]) =>
       (new FindOneExitDocumentResponseBuilder()..update(updates)).build();
 
   _$FindOneExitDocumentResponse._(
-      {required this.count, this.id, required this.name})
+      {required this.count,
+      this.id,
+      required this.name,
+      required this.validated})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         count, 'FindOneExitDocumentResponse', 'count');
     BuiltValueNullFieldError.checkNotNull(
         name, 'FindOneExitDocumentResponse', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        validated, 'FindOneExitDocumentResponse', 'validated');
   }
 
   @override
@@ -42,12 +49,14 @@ class _$FindOneExitDocumentResponse extends FindOneExitDocumentResponse {
     return other is FindOneExitDocumentResponse &&
         count == other.count &&
         id == other.id &&
-        name == other.name;
+        name == other.name &&
+        validated == other.validated;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, count.hashCode), id.hashCode), name.hashCode));
+    return $jf($jc($jc($jc($jc(0, count.hashCode), id.hashCode), name.hashCode),
+        validated.hashCode));
   }
 
   @override
@@ -55,7 +64,8 @@ class _$FindOneExitDocumentResponse extends FindOneExitDocumentResponse {
     return (newBuiltValueToStringHelper('FindOneExitDocumentResponse')
           ..add('count', count)
           ..add('id', id)
-          ..add('name', name))
+          ..add('name', name)
+          ..add('validated', validated))
         .toString();
   }
 }
@@ -78,6 +88,10 @@ class FindOneExitDocumentResponseBuilder
   String? get name => _$this._name;
   set name(String? name) => _$this._name = name;
 
+  bool? _validated;
+  bool? get validated => _$this._validated;
+  set validated(bool? validated) => _$this._validated = validated;
+
   FindOneExitDocumentResponseBuilder() {
     FindOneExitDocumentResponse._initializeBuilder(this);
   }
@@ -88,6 +102,7 @@ class FindOneExitDocumentResponseBuilder
       _count = $v.count;
       _id = $v.id;
       _name = $v.name;
+      _validated = $v.validated;
       _$v = null;
     }
     return this;
@@ -112,7 +127,9 @@ class FindOneExitDocumentResponseBuilder
                 count, 'FindOneExitDocumentResponse', 'count'),
             id: id,
             name: BuiltValueNullFieldError.checkNotNull(
-                name, 'FindOneExitDocumentResponse', 'name'));
+                name, 'FindOneExitDocumentResponse', 'name'),
+            validated: BuiltValueNullFieldError.checkNotNull(
+                validated, 'FindOneExitDocumentResponse', 'validated'));
     replace(_$result);
     return _$result;
   }

@@ -112,4 +112,3 @@ lib/src/model/update_visio_room_request.dart
 lib/src/model/update_visio_room_response.dart
 lib/src/serializers.dart
 pubspec.yaml
-test/send_sms_request_test.dart

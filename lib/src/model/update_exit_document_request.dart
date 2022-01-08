@@ -13,6 +13,9 @@ abstract class UpdateExitDocumentRequest implements Built<UpdateExitDocumentRequ
     @BuiltValueField(wireName: r'count')
     int? get count;
 
+    @BuiltValueField(wireName: r'validated')
+    bool? get validated;
+
     UpdateExitDocumentRequest._();
 
     static void _initializeBuilder(UpdateExitDocumentRequestBuilder b) => b;
@@ -40,6 +43,12 @@ class _$UpdateExitDocumentRequestSerializer implements StructuredSerializer<Upda
                 ..add(serializers.serialize(object.count,
                     specifiedType: const FullType(int)));
         }
+        if (object.validated != null) {
+            result
+                ..add(r'validated')
+                ..add(serializers.serialize(object.validated,
+                    specifiedType: const FullType(bool)));
+        }
         return result;
     }
 
@@ -57,6 +66,10 @@ class _$UpdateExitDocumentRequestSerializer implements StructuredSerializer<Upda
                 case r'count':
                     result.count = serializers.deserialize(value,
                         specifiedType: const FullType(int)) as int;
+                    break;
+                case r'validated':
+                    result.validated = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }

@@ -19,6 +19,9 @@ abstract class UpdateExitDocumentResponse implements Built<UpdateExitDocumentRes
     @BuiltValueField(wireName: r'name')
     String get name;
 
+    @BuiltValueField(wireName: r'validated')
+    bool get validated;
+
     UpdateExitDocumentResponse._();
 
     static void _initializeBuilder(UpdateExitDocumentResponseBuilder b) => b;
@@ -54,6 +57,10 @@ class _$UpdateExitDocumentResponseSerializer implements StructuredSerializer<Upd
             ..add(r'name')
             ..add(serializers.serialize(object.name,
                 specifiedType: const FullType(String)));
+        result
+            ..add(r'validated')
+            ..add(serializers.serialize(object.validated,
+                specifiedType: const FullType(bool)));
         return result;
     }
 
@@ -79,6 +86,10 @@ class _$UpdateExitDocumentResponseSerializer implements StructuredSerializer<Upd
                 case r'name':
                     result.name = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'validated':
+                    result.validated = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }

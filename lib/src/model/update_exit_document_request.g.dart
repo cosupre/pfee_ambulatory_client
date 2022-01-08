@@ -9,12 +9,14 @@ part of 'update_exit_document_request.dart';
 class _$UpdateExitDocumentRequest extends UpdateExitDocumentRequest {
   @override
   final int? count;
+  @override
+  final bool? validated;
 
   factory _$UpdateExitDocumentRequest(
           [void Function(UpdateExitDocumentRequestBuilder)? updates]) =>
       (new UpdateExitDocumentRequestBuilder()..update(updates)).build();
 
-  _$UpdateExitDocumentRequest._({this.count}) : super._();
+  _$UpdateExitDocumentRequest._({this.count, this.validated}) : super._();
 
   @override
   UpdateExitDocumentRequest rebuild(
@@ -28,18 +30,21 @@ class _$UpdateExitDocumentRequest extends UpdateExitDocumentRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UpdateExitDocumentRequest && count == other.count;
+    return other is UpdateExitDocumentRequest &&
+        count == other.count &&
+        validated == other.validated;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, count.hashCode));
+    return $jf($jc($jc(0, count.hashCode), validated.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('UpdateExitDocumentRequest')
-          ..add('count', count))
+          ..add('count', count)
+          ..add('validated', validated))
         .toString();
   }
 }
@@ -53,6 +58,10 @@ class UpdateExitDocumentRequestBuilder
   int? get count => _$this._count;
   set count(int? count) => _$this._count = count;
 
+  bool? _validated;
+  bool? get validated => _$this._validated;
+  set validated(bool? validated) => _$this._validated = validated;
+
   UpdateExitDocumentRequestBuilder() {
     UpdateExitDocumentRequest._initializeBuilder(this);
   }
@@ -61,6 +70,7 @@ class UpdateExitDocumentRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _count = $v.count;
+      _validated = $v.validated;
       _$v = null;
     }
     return this;
@@ -79,7 +89,8 @@ class UpdateExitDocumentRequestBuilder
 
   @override
   _$UpdateExitDocumentRequest build() {
-    final _$result = _$v ?? new _$UpdateExitDocumentRequest._(count: count);
+    final _$result = _$v ??
+        new _$UpdateExitDocumentRequest._(count: count, validated: validated);
     replace(_$result);
     return _$result;
   }

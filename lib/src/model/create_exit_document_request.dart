@@ -19,6 +19,9 @@ abstract class CreateExitDocumentRequest implements Built<CreateExitDocumentRequ
     @BuiltValueField(wireName: r'name')
     String get name;
 
+    @BuiltValueField(wireName: r'validated')
+    bool? get validated;
+
     CreateExitDocumentRequest._();
 
     static void _initializeBuilder(CreateExitDocumentRequestBuilder b) => b;
@@ -54,6 +57,12 @@ class _$CreateExitDocumentRequestSerializer implements StructuredSerializer<Crea
             ..add(r'name')
             ..add(serializers.serialize(object.name,
                 specifiedType: const FullType(String)));
+        if (object.validated != null) {
+            result
+                ..add(r'validated')
+                ..add(serializers.serialize(object.validated,
+                    specifiedType: const FullType(bool)));
+        }
         return result;
     }
 
@@ -79,6 +88,10 @@ class _$CreateExitDocumentRequestSerializer implements StructuredSerializer<Crea
                 case r'name':
                     result.name = serializers.deserialize(value,
                         specifiedType: const FullType(String)) as String;
+                    break;
+                case r'validated':
+                    result.validated = serializers.deserialize(value,
+                        specifiedType: const FullType(bool)) as bool;
                     break;
             }
         }
